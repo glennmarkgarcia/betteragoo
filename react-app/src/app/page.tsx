@@ -184,7 +184,7 @@ export default function HomePage() {
                 <i className="bi bi-people-fill"></i>
               </div>
               <div className="home-stat-card-content">
-                <span className="home-stat-card-value">69,296</span>
+                <span className="home-stat-card-value">66,026</span>
                 <span className="home-stat-card-label">{t('stats-population-label')}</span>
                 <span className="home-stat-card-source">{t('stats-population-source')}</span>
               </div>
@@ -194,7 +194,7 @@ export default function HomePage() {
                 <i className="bi bi-geo-alt-fill"></i>
               </div>
               <div className="home-stat-card-content">
-                <span className="home-stat-card-value">22</span>
+                <span className="home-stat-card-value">49</span>
                 <span className="home-stat-card-label">{t('stats-barangays-label')}</span>
                 <span className="home-stat-card-source">{t('stats-barangays-source')}</span>
               </div>
@@ -214,7 +214,7 @@ export default function HomePage() {
                 <i className="bi bi-rulers"></i>
               </div>
               <div className="home-stat-card-content">
-                <span className="home-stat-card-value">162.70 km²</span>
+                <span className="home-stat-card-value">52.84 km²</span>
                 <span className="home-stat-card-label">{t('stats-land-area-label')}</span>
                 <span className="home-stat-card-source">{t('stats-land-area-source')}</span>
               </div>
@@ -271,7 +271,7 @@ export default function HomePage() {
                   data-map-loaded="iframe"
                 >
                   <iframe
-                    src="https://www.openstreetmap.org/export/embed.html?bbox=121.1633%2C16.5017%2C121.2033%2C16.5317&layer=mapnik&marker=16.3228%2C120.3551"
+                    src="https://www.openstreetmap.org/export/embed.html?bbox=120.3351%2C16.3078%2C120.3751%2C16.3378&layer=mapnik&marker=16.3228%2C120.3551"
                     className="map-iframe"
                     title="Map of Agoo, La Union"
                     aria-label="OpenStreetMap showing Agoo Municipal Hall, La Union"
@@ -279,8 +279,7 @@ export default function HomePage() {
                   ></iframe>
                 </div>
                 <p className="map-attribution">
-                  <i className="bi bi-geo-alt" aria-hidden="true"></i> Agoo Municipal Hall, Nueva
-                  Vizcaya 2504
+                  <i className="bi bi-geo-alt" aria-hidden="true"></i> Agoo Municipal Hall, La Union 2504
                 </p>
               </div>
             </div>
@@ -638,11 +637,11 @@ export default function HomePage() {
               <div className="home-leader-badge">{t('title-mayor')}</div>
               <h3>Hon. Philip A. Dacayo</h3>
               <div className="home-leader-contacts">
-                <a href="mailto:mayor@agoo.gov.ph">
-                  <i className="bi bi-envelope"></i> mayor@agoo.gov.ph
+                <a href="mailto:TBA">
+                  <i className="bi bi-envelope"></i> TBA
                 </a>
-                <a href="tel:0783265002">
-                  <i className="bi bi-telephone"></i> (078) 326-5002
+                <a href="tel:TBA">
+                  <i className="bi bi-telephone"></i> TBA
                 </a>
               </div>
             </div>
@@ -650,11 +649,11 @@ export default function HomePage() {
               <div className="home-leader-badge">{t('title-vice-mayor')}</div>
               <h3>Hon. Eduardo D. Tiongson</h3>
               <div className="home-leader-contacts">
-                <a href="mailto:vicemayor@agoo.gov.ph">
-                  <i className="bi bi-envelope"></i> vicemayor@agoo.gov.ph
+                <a href="mailto:TBA">
+                  <i className="bi bi-envelope"></i> TBA
                 </a>
-                <a href="tel:0783265003">
-                  <i className="bi bi-telephone"></i> (078) 326-5003
+                <a href="tel:TBA">
+                  <i className="bi bi-telephone"></i> TBA
                 </a>
               </div>
             </div>
@@ -672,13 +671,13 @@ export default function HomePage() {
             </Link>
           </div>
           <div className="home-contact-v2-grid">
-            <a href="tel:0788053581" className="home-contact-v2-card">
+            <a href="tel:TBA" className="home-contact-v2-card">
               <div className="home-contact-v2-icon">
                 <i className="bi bi-telephone-fill"></i>
               </div>
               <div className="home-contact-v2-content">
                 <h3>{t('contact-phone')}</h3>
-                <p className="home-contact-v2-value">(078) 805-3581</p>
+                <p className="home-contact-v2-value">TBA</p>
                 <span className="home-contact-v2-note">{t('contact-hours')}</span>
               </div>
             </a>

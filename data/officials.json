@@ -1,54 +1,54 @@
 {
   "mayor": {
-    "name": "Hon. Philip A. Dacayo",
+    "name": "Hon. Frank O. Sibuma",
     "title": "Municipal Mayor",
     "image": "assets/images/officials/mayor.jpg"
   },
   "vice_mayor": {
-    "name": "Hon. Eduardo D. Tiongson",
+    "name": "Hon. Antonio P. Eslao",
     "title": "Municipal Vice Mayor",
     "image": "assets/images/officials/vice-mayor.jpg"
   },
   "councilors": [
     {
-      "name": "Hon. Councilor One",
+      "name": "Hon. TBA",
       "title": "SB Member",
-      "image": "assets/images/officials/sb1.jpg"
+      "image": "assets/images/officials/placeholder.jpg"
     },
     {
-      "name": "Hon. Councilor Two",
+      "name": "Hon. TBA",
       "title": "SB Member",
-      "image": "assets/images/officials/sb2.jpg"
+      "image": "assets/images/officials/placeholder.jpg"
     },
     {
-      "name": "Hon. Councilor Three",
+      "name": "Hon. TBA",
       "title": "SB Member",
-      "image": "assets/images/officials/sb3.jpg"
+      "image": "assets/images/officials/placeholder.jpg"
     },
     {
-      "name": "Hon. Councilor Four",
+      "name": "Hon. TBA",
       "title": "SB Member",
-      "image": "assets/images/officials/sb4.jpg"
+      "image": "assets/images/officials/placeholder.jpg"
     },
     {
-      "name": "Hon. Councilor Five",
+      "name": "Hon. TBA",
       "title": "SB Member",
-      "image": "assets/images/officials/sb5.jpg"
+      "image": "assets/images/officials/placeholder.jpg"
     },
     {
-      "name": "Hon. Councilor Six",
+      "name": "Hon. TBA",
       "title": "SB Member",
-      "image": "assets/images/officials/sb6.jpg"
+      "image": "assets/images/officials/placeholder.jpg"
     },
     {
-      "name": "Hon. Councilor Seven",
+      "name": "Hon. TBA",
       "title": "SB Member",
-      "image": "assets/images/officials/sb7.jpg"
+      "image": "assets/images/officials/placeholder.jpg"
     },
     {
-      "name": "Hon. Councilor Eight",
+      "name": "Hon. TBA",
       "title": "SB Member",
-      "image": "assets/images/officials/sb8.jpg"
+      "image": "assets/images/officials/placeholder.jpg"
     }
   ]
 }

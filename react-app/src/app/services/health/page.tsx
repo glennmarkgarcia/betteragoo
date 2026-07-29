@@ -157,7 +157,7 @@ export default function HealthPage() {
               <div className="health-facility-meta">
                 <span>
                   <i className="bi bi-geo-alt"></i>
-                  <span>{t('health-bintawan-road-brgy-quezon')}</span>
+                  <span>{t('health-consolacion-road-brgy-consolacion')}</span>
                 </span>
               </div>
             </div>
@@ -294,7 +294,7 @@ export default function HealthPage() {
               <span>{t('health-tucal-bhs')}</span>
             </div>
             <div className="health-bhs-item">
-              <span>{t('health-uddiawan-bhs')}</span>
+              <span>{t('health-ambitacay-bhs')}</span>
             </div>
           </div>
         </div>

@@ -746,7 +746,7 @@
       "fee": "Varies",
       "processingTime": "Instant",
       "office": "BPLS Office",
-      "url": "https://www.filipizen.com/partners/nuevavizcaya_agoo/bpls/billing"
+      "url": "https://www.filipizen.com/partners/launion_agoo/bpls/billing"
     },
     {
       "id": "online-new-business",
@@ -758,7 +758,7 @@
       "fee": "Varies",
       "processingTime": "3-5 days",
       "office": "BPLS Office",
-      "url": "https://www.filipizen.com/partners/nuevavizcaya_agoo/bpls/newbusiness"
+      "url": "https://www.filipizen.com/partners/launion_agoo/bpls/newbusiness"
     },
     {
       "id": "online-business-renewal",
@@ -770,7 +770,7 @@
       "fee": "Varies",
       "processingTime": "Same day",
       "office": "BPLS Office",
-      "url": "https://www.filipizen.com/partners/nuevavizcaya_agoo/bpls/renewbusiness"
+      "url": "https://www.filipizen.com/partners/launion_agoo/bpls/renewbusiness"
     },
     {
       "id": "online-rpt-billing",
@@ -782,7 +782,7 @@
       "fee": "Varies",
       "processingTime": "Instant",
       "office": "Municipal Treasurer's Office",
-      "url": "https://www.filipizen.com/partners/nuevavizcaya_agoo/rptis/billing"
+      "url": "https://www.filipizen.com/partners/launion_agoo/rptis/billing"
     },
     {
       "id": "online-payment-order",
@@ -794,7 +794,7 @@
       "fee": "Varies",
       "processingTime": "Instant",
       "office": "Municipal Treasurer's Office",
-      "url": "https://www.filipizen.com/partners/nuevavizcaya_agoo/po/billing"
+      "url": "https://www.filipizen.com/partners/launion_agoo/po/billing"
     }
   ]
 }

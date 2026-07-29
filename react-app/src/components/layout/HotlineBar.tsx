@@ -3,17 +3,12 @@
 import { useEffect, useRef, useCallback } from 'react';
 
 const hotlines = [
-  { icon: 'bi-shield-fill', label: 'Police', number: '0927 400 8033', tel: '09274008033' },
-  { icon: 'bi-heart-fill', label: 'MSWDO', number: '0916 284 0885', tel: '09162840885' },
-  { icon: 'bi-fire', label: 'Fire', number: '0936 062 0305', tel: '09360620305' },
-  { icon: 'bi-building', label: 'DILG', number: '0906 188 086', tel: '0906188086' },
-  {
-    icon: 'bi-exclamation-triangle-fill',
-    label: 'MDRRMO',
-    number: '0926 383 3744',
-    tel: '09263833744',
-  },
-  { icon: 'bi-truck', label: 'R2TMC', number: '0906 819 5569', tel: '09068195569' },
+  { icon: 'bi-shield-fill', label: 'Police', number: '0998 598 5153', tel: '09985985153' },
+  { icon: 'bi-exclamation-triangle-fill', label: 'MDRRMO', number: '0929 558 7444', tel: '09295587444' },
+  { icon: 'bi-fire', label: 'Fire', number: '0949 641 0979', tel: '09496410979' },
+  { icon: 'bi-telephone', label: 'RHU', number: '(072) 607-4187', tel: '0726074187' },
+  { icon: 'bi-hospital', label: 'LUMC', number: '0928 998 2588', tel: '09289982588' },
+  { icon: 'bi-lightning-fill', label: 'LUELCO', number: '0917 130 4907', tel: '09171304907' },
 ];
 
 export default function HotlineBar() {

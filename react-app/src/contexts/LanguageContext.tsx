@@ -172,7 +172,7 @@ const translations: Record<string, Record<string, string>> = {
       'Medical Mission Group Hospital & Health Services Cooperative',
     'health-also-known-as-new-mmg-hospital-providing-quality':
       'Also known as New MMG Hospital, providing quality healthcare services to the community.',
-    'health-bintawan-road-brgy-quezon': 'Bintawan Road, Brgy. Quezon',
+    'health-consolacion-road-brgy-consolacion': 'Consolacion Road, Brgy. Consolacion',
     'health-salubris-inc-salubris-medical-center': 'SALUBRIS, INC. (Salubris Medical Center)',
     'health-private-medical-center-offering-various':
       'Private medical center offering various healthcare and diagnostic services.',
@@ -197,7 +197,7 @@ const translations: Record<string, Record<string, string>> = {
     'health-quirino-bhs': 'Quirino BHS',
     'health-roxas-bhs': 'Roxas BHS',
     'health-tucal-bhs': 'Tucal BHS',
-    'health-uddiawan-bhs': 'Uddiawan BHS',
+    'health-ambitacay-bhs': 'Ambitacay BHS',
     'health-hivcare-cta-eyebrow': 'Official DOH-Sourced Directory',
     'health-hivcare-cta-heading': 'Find HIV Treatment & Care Facilities Near You',
     'health-hivcare-cta-desc':
@@ -383,7 +383,7 @@ const translations: Record<string, Record<string, string>> = {
     'stats-at-a-glance': 'Agoo at a Glance',
     'stats-view-statistics': 'View Statistics',
     'stats-population-label': 'Population',
-    'stats-population-source': '2024 Census',
+    'stats-population-source': '2020 Census',
     'stats-barangays-label': 'Barangays',
     'stats-barangays-source': 'Administrative Units',
     'stats-municipality-label': 'Municipality',
@@ -642,7 +642,7 @@ const translations: Record<string, Record<string, string>> = {
       'Medical Mission Group Hospital & Health Mga serbisyo Cooperative',
     'health-also-known-as-new-mmg-hospital-providing-quality':
       'Also known as Bagong MMG Hospital, nagbibigay ng quality mga serbisyo sa kalusugan sa ang community.',
-    'health-bintawan-road-brgy-quezon': 'Bintawan Road, Brgy. Quezon',
+    'health-consolacion-road-brgy-consolacion': 'Consolacion Road, Brgy. Consolacion',
     'health-salubris-inc-salubris-medical-center': 'SALUBRIS, INC. (Salubris Medical Center)',
     'health-private-medical-center-offering-various':
       'Pribado medical center offering various healthcare and diagnostic mga serbisyo.',
@@ -667,7 +667,7 @@ const translations: Record<string, Record<string, string>> = {
     'health-quirino-bhs': 'Quirino BHS',
     'health-roxas-bhs': 'Roxas BHS',
     'health-tucal-bhs': 'Tucal BHS',
-    'health-uddiawan-bhs': 'Uddiawan BHS',
+    'health-ambitacay-bhs': 'Ambitacay BHS',
     'health-hivcare-cta-eyebrow': 'Opisyal na Direktoryo mula sa DOH',
     'health-hivcare-cta-heading': 'Hanapin ang Pasilidad para sa Paggamot at Pangangalaga sa HIV',
     'health-hivcare-cta-desc':
@@ -857,7 +857,7 @@ const translations: Record<string, Record<string, string>> = {
     'stats-at-a-glance': 'Isang Tingin sa Agoo',
     'stats-view-statistics': 'Tingnan ang Estadistika',
     'stats-population-label': 'Populasyon',
-    'stats-population-source': '2024 Senso',
+    'stats-population-source': '2020 Senso',
     'stats-barangays-label': 'Mga Barangay',
     'stats-barangays-source': 'Mga Yunit Administratibo',
     'stats-municipality-label': 'Munisipalidad',
@@ -1117,7 +1117,7 @@ const translations: Record<string, Record<string, string>> = {
       'Medical Mission Group Hospital & Health Dagiti serbisio Cooperative',
     'health-also-known-as-new-mmg-hospital-providing-quality':
       'Also known as Baro a MMG Hospital, nagbibigay ti quality dagiti serbisio iti kalusugan iti ti community.',
-    'health-bintawan-road-brgy-quezon': 'Bintawan Road, Brgy. Quezon',
+    'health-consolacion-road-brgy-consolacion': 'Consolacion Road, Brgy. Consolacion',
     'health-salubris-inc-salubris-medical-center': 'SALUBRIS, INC. (Salubris Medical Center)',
     'health-private-medical-center-offering-various':
       'Pribado medical center offering various healthcare and diagnostic dagiti serbisio.',
@@ -1142,7 +1142,7 @@ const translations: Record<string, Record<string, string>> = {
     'health-quirino-bhs': 'Quirino BHS',
     'health-roxas-bhs': 'Roxas BHS',
     'health-tucal-bhs': 'Tucal BHS',
-    'health-uddiawan-bhs': 'Uddiawan BHS',
+    'health-ambitacay-bhs': 'Ambitacay BHS',
     'health-hivcare-cta-eyebrow': 'Opisial a Direktorio manipud iti DOH',
     'health-hivcare-cta-heading':
       'Birukem ti Pasilidad para iti Panangagas ken Panangaywan iti HIV',
@@ -1336,7 +1336,7 @@ const translations: Record<string, Record<string, string>> = {
     'stats-at-a-glance': 'Maysa a Panagkita iti Agoo',
     'stats-view-statistics': 'Kitaen ti Estadistika',
     'stats-population-label': 'Populasion',
-    'stats-population-source': '2024 a Senso',
+    'stats-population-source': '2020 a Senso',
     'stats-barangays-label': 'Dagiti Barangay',
     'stats-barangays-source': 'Dagiti Yunit Administratibo',
     'stats-municipality-label': 'Munisipalidad',

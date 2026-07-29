@@ -390,7 +390,7 @@
                 scrolling="no" 
                 marginheight="0" 
                 marginwidth="0" 
-                src="https://www.openstreetmap.org/export/embed.html?bbox=121.1633%2C16.5017%2C121.2033%2C16.5317&layer=mapnik&marker=16.3228%2C120.3551"
+                src="https://www.openstreetmap.org/export/embed.html?bbox=120.3351%2C16.3078%2C120.3751%2C16.3378&layer=mapnik&marker=16.3228%2C120.3551"
                 style="border:0;display:block;"
                 title="Map of Agoo, La Union"
                 loading="lazy">
