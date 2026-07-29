@@ -1,28 +1,29 @@
 #!/bin/bash
-# BetterSolano — Production Build Script
+# BetterAgoo — Production Build Script
 # Usage:
-#   bash build.sh            — bump patch, build everything
-#   bash build.sh --no-bump  — keep current version, build everything
-#   bash build.sh minor      — bump minor, build everything
-#   bash build.sh major      — bump major, build everything
+#   bash build.sh            — build everything at the current version
+#   bash build.sh patch      — bump patch, then build everything
+#   bash build.sh minor      — bump minor, then build everything
+#   bash build.sh major      — bump major, then build everything
+#   bash build.sh --no-react — build without the React export
 
 set -e
 
 BUMP_TYPE="patch"
-SKIP_BUMP=false
+SKIP_BUMP=true
 REACT_BUILD=true
 
 for arg in "$@"; do
     case $arg in
         --no-bump) SKIP_BUMP=true ;;
         --no-react) REACT_BUILD=false ;;
-        major|minor|patch) BUMP_TYPE=$arg ;;
+        major|minor|patch) BUMP_TYPE=$arg; SKIP_BUMP=false ;;
     esac
 done
 
 echo ""
 echo "╔══════════════════════════════════════════╗"
-echo "║   BetterSolano — Production Build        ║"
+echo "║   BetterAgoo — Production Build          ║"
 echo "╚══════════════════════════════════════════╝"
 
 # ── 1. Version (single source of truth: version.json) ────────────────────────
@@ -33,7 +34,7 @@ if [ "$SKIP_BUMP" = false ]; then
     #                  → react-app/public/version.json
     node scripts/bump-version.js "$BUMP_TYPE"
 else
-    echo "  Skipping bump (--no-bump). Current: $(node -e "console.log(require('./version.json').version)")"
+    echo "  Release version unchanged. Current: $(node -e "console.log(require('./version.json').version)")"
 fi
 
 VERSION=$(node -e "console.log(require('./version.json').version)")

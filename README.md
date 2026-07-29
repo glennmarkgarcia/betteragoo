@@ -2,7 +2,7 @@
 
 A civic-tech initiative providing transparent access to municipal services, programs, and public funds of LGU Agoo, La Union, Philippines.
 
-![Version](https://img.shields.io/badge/version-1.1.15-green)
+![Version](https://img.shields.io/badge/version-1.5.0-green)
 ![License](https://img.shields.io/badge/license-MIT%20%7C%20CC%20BY%204.0-blue)
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white)
@@ -47,52 +47,52 @@ Visit the live website: [https://betteragoo.org](https://betteragoo.org)
 
 ## Technology Stack
 
-| Category            | Technologies                                                           |
-| ------------------- | ---------------------------------------------------------------------- |
-| **Frontend**        | HTML5, CSS3, JavaScript (ES6+)                                         |
-| **Styling**         | Custom CSS, CSS Variables, Flexbox, CSS Grid, Responsive Design        |
-| **Icons**           | Bootstrap Icons (CDN)                                                  |
-| **Fonts**           | Google Fonts (Inter)                                                   |
-| **Maps**            | Leaflet.js, OpenStreetMap                                              |
-| **Charts**          | Chart.js (Canvas-based)                                                |
-| **Animations**      | Lottie (dotlottie-player web component)                                |
-| **Data Format**     | JSON                                                                   |
-| **APIs**            | Open-Meteo (Weather), ExchangeRate API (Currency)                      |
-| **Build Tools**     | Node.js, npm, Bash, Babel (@babel/preset-env)                          |
-| **Minification**    | html-minifier-terser, clean-css-cli, terser                            |
-| **Code Formatting** | Prettier (auto-format on commit via git pre-commit hook)               |
-| **Version Control** | Git, GitHub                                                            |
-| **Server**          | Apache (.htaccess), mod_rewrite, mod_deflate                           |
-| **Hosting**         | cPanel (Production), Python HTTP Server (Development)                  |
+| Category            | Technologies                                                                                             |
+| ------------------- | -------------------------------------------------------------------------------------------------------- |
+| **Frontend**        | HTML5, CSS3, JavaScript (ES6+)                                                                           |
+| **Styling**         | Custom CSS, CSS Variables, Flexbox, CSS Grid, Responsive Design                                          |
+| **Icons**           | Bootstrap Icons (CDN)                                                                                    |
+| **Fonts**           | Google Fonts (Inter)                                                                                     |
+| **Maps**            | Leaflet.js, OpenStreetMap                                                                                |
+| **Charts**          | Chart.js (Canvas-based)                                                                                  |
+| **Animations**      | Lottie (dotlottie-player web component)                                                                  |
+| **Data Format**     | JSON                                                                                                     |
+| **APIs**            | Open-Meteo (Weather), ExchangeRate API (Currency)                                                        |
+| **Build Tools**     | Node.js, npm, Bash, Babel (@babel/preset-env)                                                            |
+| **Minification**    | html-minifier-terser, clean-css-cli, terser                                                              |
+| **Code Formatting** | Prettier (explicit local and CI formatting checks)                                                       |
+| **Version Control** | Git, GitHub                                                                                              |
+| **Server**          | Apache (.htaccess), mod_rewrite, mod_deflate                                                             |
+| **Hosting**         | cPanel (Production), Python HTTP Server (Development)                                                    |
 | **PWA**             | Service Worker (versioned caching, install prompt, seamless updates), Web App Manifest, offline fallback |
-| **SEO**             | Open Graph, Twitter Cards, XML Sitemap, robots.txt                     |
-| **Security**        | HTTPS, CSP Headers, HSTS, X-Frame-Options                              |
-| **Analytics**       | Google Analytics (gtag.js)                                             |
-| **Accessibility**   | WCAG 2.1, ARIA, Semantic HTML                                          |
-| **Performance**     | GZIP Compression, Browser Caching, Asset Minification                  |
+| **SEO**             | Open Graph, Twitter Cards, XML Sitemap, robots.txt                                                       |
+| **Security**        | HTTPS, CSP Headers, HSTS, X-Frame-Options                                                                |
+| **Analytics**       | Google Analytics (gtag.js)                                                                               |
+| **Accessibility**   | WCAG 2.1, ARIA, Semantic HTML                                                                            |
+| **Performance**     | GZIP Compression, Browser Caching, Asset Minification                                                    |
 
 ## Key Features
 
-| Feature                          | Description                                                                                                                                                                                                       |
-| -------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Municipal Services Directory** | Comprehensive guide to all LGU services with requirements, fees, and processing times                                                                                                                             |
-| **Government Officials**         | Directory of elected officials and department heads with contact information                                                                                                                                      |
-| **Budget Transparency**          | Financial reports, income/expenditure breakdowns, and infrastructure projects                                                                                                                                     |
-| **Legislative Documents**        | Searchable database of ordinances and resolutions from Sangguniang Bayan                                                                                                                                          |
-| **Municipal Statistics**         | Demographics, economic data, and competitive index rankings                                                                                                                                                       |
-| **Appointment Services**         | Online appointment scheduling integration with the Mayor's Office (OASYS), featuring branded Lottie animation                                                                                                     |
-| **Agoo Quiz**                  | Interactive quiz about Agoo history and culture, linked from homepage CTA and footer across all pages                                                                                                           |
-| **Real-time Information**        | Live weather updates, currency exchange rates, and Philippine time                                                                                                                                                |
-| **Emergency Hotline Marquee**    | Clickable scrolling marquee for emergency contacts on tablet and mobile viewports, with pause-on-hover/focus accessibility                                                                                        |
+| Feature                          | Description                                                                                                                                                                                                                            |
+| -------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Municipal Services Directory** | Comprehensive guide to all LGU services with requirements, fees, and processing times                                                                                                                                                  |
+| **Government Officials**         | Directory of elected officials and department heads with contact information                                                                                                                                                           |
+| **Budget Transparency**          | Financial reports, income/expenditure breakdowns, and infrastructure projects                                                                                                                                                          |
+| **Legislative Documents**        | Searchable database of ordinances and resolutions from Sangguniang Bayan                                                                                                                                                               |
+| **Municipal Statistics**         | Demographics, economic data, and competitive index rankings                                                                                                                                                                            |
+| **Appointment Services**         | Online appointment scheduling integration with the Mayor's Office (OASYS), featuring branded Lottie animation                                                                                                                          |
+| **Agoo Quiz**                    | Interactive quiz about Agoo history and culture, linked from homepage CTA and footer across all pages                                                                                                                                  |
+| **Real-time Information**        | Live weather updates, currency exchange rates, and Philippine time                                                                                                                                                                     |
+| **Emergency Hotline Marquee**    | Clickable scrolling marquee for emergency contacts on tablet and mobile viewports, with pause-on-hover/focus accessibility                                                                                                             |
 | **Progressive Web App**          | Installable PWA with "Install App" prompt, seamless auto-updates via skipWaiting (no manual refresh), versioned service worker caching (static + runtime), offline fallback page with emergency hotlines, push notification foundation |
-| **Auto Version Management**      | Dynamic version display from `version.json`, auto-bumped on every git commit via pre-commit hook, synced across all 51+ HTML files, `package.json`, and React app                                                 |
-| **Multi-language Support**       | Full i18n coverage in English, Filipino, and Ilocano (5,546 keys per language with perfect parity)                                                                                                                |
-| **Clean URLs**                   | SEO-friendly URLs without `.html` extensions, powered by Apache mod_rewrite                                                                                                                                       |
-| **Brief History of Agoo**      | Interactive timeline (1760–1957) with fully translated cards in all three languages                                                                                                                               |
-| **Mobile Navigation**            | Responsive menu with GPU-accelerated open/close transitions, body scroll lock, animation guard against rapid toggles, debounced resize handling, touch-safe hover scoping, click-outside-to-close, and focus trap |
-| **Accessibility**                | WCAG 2.1 compliant with skip links, ARIA labels, keyboard navigation, and semantic HTML                                                                                                                           |
-| **SEO Optimized**                | Meta tags, Open Graph, Twitter Cards, structured data, and XML sitemap                                                                                                                                            |
-| **Performance**                  | 90%+ size reduction through minification, GZIP compression, Babel transpilation, and browser caching                                                                                                              |
+| **Release Version Management**   | Semantic release version sourced from `version.json`, explicitly bumped for releases, and synchronized across all HTML files, package metadata, and the React app                                                                      |
+| **Multi-language Support**       | Full i18n coverage in English, Filipino, and Ilocano (5,546 keys per language with perfect parity)                                                                                                                                     |
+| **Clean URLs**                   | SEO-friendly URLs without `.html` extensions, powered by Apache mod_rewrite                                                                                                                                                            |
+| **Brief History of Agoo**        | Interactive timeline from the pre-colonial era to the present, with fully translated cards in English, Filipino, and Ilocano                                                                                                           |
+| **Mobile Navigation**            | Responsive menu with GPU-accelerated open/close transitions, body scroll lock, animation guard against rapid toggles, debounced resize handling, touch-safe hover scoping, click-outside-to-close, and focus trap                      |
+| **Accessibility**                | WCAG 2.1 compliant with skip links, ARIA labels, keyboard navigation, and semantic HTML                                                                                                                                                |
+| **SEO Optimized**                | Meta tags, Open Graph, Twitter Cards, structured data, and XML sitemap                                                                                                                                                                 |
+| **Performance**                  | 90%+ size reduction through minification, GZIP compression, Babel transpilation, and browser caching                                                                                                                                   |
 
 ## Quick Start
 
@@ -153,20 +153,20 @@ npm run dev
 
 ### Development Commands
 
-| Command                      | Description                                                           |
-| ---------------------------- | --------------------------------------------------------------------- |
-| `npm run dev`                | Start local development server (port 8000)                            |
-| `npm run build`              | Build minified production files to `dist/` (auto-bumps patch version) |
-| `npm run build -- --no-bump` | Build without incrementing the version number                         |
-| `npm run build:minor`        | Bump minor version and build                                          |
-| `npm run build:major`        | Bump major version and build                                          |
-| `npm run serve:dist`         | Serve production build (port 8080)                                    |
-| `npm run version:check`      | Display current version                                               |
-| `npm run version:patch`      | Bump patch version only                                               |
-| `npm run version:minor`      | Bump minor version only                                               |
-| `npm run version:major`      | Bump major version only                                               |
-| `npm run format`             | Format all files with Prettier                                        |
-| `npm run format:check`       | Check formatting without writing changes                              |
+| Command                  | Description                                                       |
+| ------------------------ | ----------------------------------------------------------------- |
+| `npm run dev`            | Start local development server (port 8000)                        |
+| `npm run build`          | Build minified production files to `dist/` at the current version |
+| `npm run build -- patch` | Explicitly bump the patch version, then build                     |
+| `npm run build:minor`    | Explicitly bump the minor version, then build                     |
+| `npm run build:major`    | Explicitly bump the major version, then build                     |
+| `npm run serve:dist`     | Serve production build (port 8080)                                |
+| `npm run version:check`  | Display current version                                           |
+| `npm run version:patch`  | Bump patch version only                                           |
+| `npm run version:minor`  | Bump minor version only                                           |
+| `npm run version:major`  | Bump major version only                                           |
+| `npm run format`         | Format all files with Prettier                                    |
+| `npm run format:check`   | Check formatting without writing changes                          |
 
 ### Production Deployment
 
@@ -257,7 +257,7 @@ betteragoo/
 ├── .htaccess             # Apache configuration (CSP, rewrites, caching)
 ├── .prettierrc           # Prettier code formatting configuration
 ├── .prettierignore       # Prettier ignore patterns
-├── version.json          # Version tracking (auto-bumped on commit)
+├── version.json          # Source of truth for explicit semantic releases
 ├── build.sh              # Build automation script
 ├── babel.config.json     # Babel transpilation configuration
 ├── package.json          # Node.js configuration
@@ -265,6 +265,18 @@ betteragoo/
 ```
 
 ## Recent Changes
+
+### v1.5.0 — Phase 3 Content Migration: History & Timeline
+
+- Rebuilt the homepage timeline with verified milestones from Agoo's pre-colonial trading era through the present
+- Added the 1578 founding by Franciscan friars and the 1582 Augustinian administration
+- Added Agoo's incorporation into the newly created province of La Union in 1850
+- Corrected the Basilica Minore elevation date to 15 July 1982
+- Added synchronized English, Filipino, and Ilocano history translations to the static and React implementations
+- Added responsive timeline navigation with a sticky-header-aware `#brief-history` anchor
+- Removed duplicated markup, obsolete Solano timeline entries, and unused historical translation keys
+- Completed the barangay portion of BA-F-0003 by correcting all 49 names and replacing fabricated population values with the supplied 2020/2015 census dataset (66,028 total population in 2020); elected-official profiles remain pending
+- Verified the production build across desktop, tablet, and mobile viewports
 
 ### v1.1.15 — Header, PWA, Version Automation & Code Quality
 
@@ -305,11 +317,11 @@ betteragoo/
 - Fixed theme-color from old green (#1a5f2a) to brand blue (#0032a0) across all files
 - Updated offline fallback page colors to match brand
 
-#### Automatic Version Management
+#### Version Management Foundation
 
 - Created cross-platform `scripts/bump-version.js` (Node.js) replacing the bash-only `version.sh` for Windows compatibility
 - Version bump updates `version.json`, `package.json`, all 51+ HTML files, and syncs to `react-app/public/version.json`
-- Git pre-commit hook auto-bumps patch version on every commit (skips version-only commits to prevent loops)
+- Version bumps are explicit release actions; ordinary builds preserve the current version
 - Footer version displayed dynamically at runtime via `version.js` fetching from `version.json`
 
 #### React App Sync
@@ -327,7 +339,7 @@ betteragoo/
 
 - Installed Prettier as dev dependency with project-wide configuration (`.prettierrc`, `.prettierignore`)
 - Formatted entire codebase (120+ files) for consistent code style
-- Git pre-commit hook auto-formats staged files with Prettier before each commit
+- Added project-wide Prettier commands for consistent local and CI formatting
 - Fixed `privacy/index.html` malformed HTML (duplicate `</body></html>` closing tags)
 - Resolved all npm vulnerabilities: upgraded `@lhci/cli` to ^0.15.1, added `tmp` override to 0.2.5 (0 vulnerabilities)
 - Added `npm run format` and `npm run format:check` scripts
@@ -338,7 +350,7 @@ betteragoo/
 
 - Added Agoo Quiz CTA section on homepage with branded Lottie animation (brand blue `#0032A0`)
 - Added Agoo Quiz link to footer Quick Links across all 51 HTML pages and React Footer
-- Added Brief History of Agoo interactive timeline section on homepage (1760–1957)
+- Added Brief History of Agoo interactive timeline section on the homepage, covering the pre-colonial era through the present
 - Added quiz entry to HTML sitemap page
 - Added Abakada education tools CTA on services/education page with local SVG logo
 
@@ -430,13 +442,13 @@ We welcome contributions from everyone! Whether you're a developer, designer, da
 
 All public information is sourced from official government portals:
 
-| Source                             | URL                                                                       | Data Type                 |
-| ---------------------------------- | ------------------------------------------------------------------------- | ------------------------- |
-| LGU Agoo Official Website        | [agoo.gov.ph](https://agoo.gov.ph/)                                   | Services, Officials       |
-| Sangguniang Bayan ng Agoo        | [sangguniangbayan.agoo.gov.ph](https://sangguniangbayan.agoo.gov.ph/) | Ordinances, Resolutions   |
-| Bureau of Local Government Finance | [blgf.gov.ph](https://blgf.gov.ph/)                                       | Budget, Financial Reports |
-| Philippine Statistics Authority    | [psa.gov.ph](https://psa.gov.ph/)                                         | Demographics, Census      |
-| DTI CMCI Portal                    | [cmci.dti.gov.ph](https://cmci.dti.gov.ph/)                               | Competitive Index         |
+| Source                             | URL                                                                   | Data Type                 |
+| ---------------------------------- | --------------------------------------------------------------------- | ------------------------- |
+| LGU Agoo Official Website          | [agoo.gov.ph](https://agoo.gov.ph/)                                   | Services, Officials       |
+| Sangguniang Bayan ng Agoo          | [sangguniangbayan.agoo.gov.ph](https://sangguniangbayan.agoo.gov.ph/) | Ordinances, Resolutions   |
+| Bureau of Local Government Finance | [blgf.gov.ph](https://blgf.gov.ph/)                                   | Budget, Financial Reports |
+| Philippine Statistics Authority    | [psa.gov.ph](https://psa.gov.ph/)                                     | Demographics, Census      |
+| DTI CMCI Portal                    | [cmci.dti.gov.ph](https://cmci.dti.gov.ph/)                           | Competitive Index         |
 
 ## License
 
@@ -451,13 +463,13 @@ See [LICENSE](LICENSE) for full details.
 
 ## Contact
 
-| Channel  | Link                                                                      |
-| -------- | ------------------------------------------------------------------------- |
-| Website  | [betteragoo.org](https://betteragoo.org)                              |
-| Email    | volunteer@betteragoo.org                                                |
-| Facebook | [@betteragoo.org](https://www.facebook.com/betteragoo.org)            |
-| LinkedIn | [BetterAgoo](https://www.linkedin.com/company/betteragoo/)            |
-| Discord  | [Join Community](https://discord.com/invite/qeSu7RJkjQ)                   |
+| Channel  | Link                                                              |
+| -------- | ----------------------------------------------------------------- |
+| Website  | [betteragoo.org](https://betteragoo.org)                          |
+| Email    | volunteer@betteragoo.org                                          |
+| Facebook | [@betteragoo.org](https://www.facebook.com/betteragoo.org)        |
+| LinkedIn | [BetterAgoo](https://www.linkedin.com/company/betteragoo/)        |
+| Discord  | [Join Community](https://discord.com/invite/qeSu7RJkjQ)           |
 | GitHub   | [BetterAgoo/betteragoo](https://github.com/BetterAgoo/betteragoo) |
 
 ## Acknowledgments
@@ -475,4 +487,4 @@ Made for the people of Agoo, La Union
 
 ## Developer
 
-[Glenn Mark P. Garcia](https://ramonloganjr.com/) is a UAE-based full-stack developer and IT professional specializing in web development, design, cloud services, and cybersecurity. He is the developer behind BetterAgoo.org, [Abakada.org](https://abakada.org), and the founder of the small cloud-based solutions initiative, [HelloPinas.com](https://hellopinas.com). Ramon actively contributes to civic-tech efforts like [BetterGov.ph](https://bettergov.ph) and is an individual participant in the [OpenJS Foundation](https://openjsf.org/).
+Hi, I’m [Glenn Mark P. Garcia](wkndprjkt.com), the Tech Lead and Co-Founder of WKNDPRJKT. I lead the technical direction of our projects and help turn business ideas into scalable, reliable digital products. My focus is on building effective solutions, guiding development teams, and ensuring that technology supports real business goals.

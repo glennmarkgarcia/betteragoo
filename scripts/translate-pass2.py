@@ -946,7 +946,7 @@ PASS2_FIL_4 = {
     "1x1 or 2x2 ID photo (2 copies)": "1x1 o 2x2 ID photo (2 kopya)",
     "Backhoe, Grader, Roller": "Backhoe, Grader, Roller",
     "Various KVA": "Iba't ibang KVA",
-    "2024 Census": "2024 Senso",
+    "2020 Census": "2020 Senso",
     "Trade &amp; Commerce": "Kalakalan at Komersyo",
     "Barangay": "Barangay",
     "Contents": "Mga Nilalaman",

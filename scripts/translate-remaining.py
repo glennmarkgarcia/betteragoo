@@ -565,7 +565,7 @@ FIL_SENTENCES = {
 
     # Statistics
     "2021 City and Municipal Level Poverty Estimates": "2021 Mga Tantiya ng Kahirapan sa Antas ng Lungsod at Munisipyo",
-    "2024 Census of Population": "2024 Senso ng Populasyon",
+    "2020 Census of Population": "2020 Senso ng Populasyon",
 
     # Education
     "22 schools": "22 paaralan",
@@ -718,7 +718,7 @@ ILO_SENTENCES = {
 
     # Statistics
     "2021 City and Municipal Level Poverty Estimates": "2021 Dagiti Tantia ti Kinapanglaw iti Lebel ti Siudad ken Munisipalidad",
-    "2024 Census of Population": "2024 Senso ti Populasion",
+    "2020 Census of Population": "2020 Senso ti Populasion",
 
     # Education
     "22 schools": "22 nga eskuelaan",

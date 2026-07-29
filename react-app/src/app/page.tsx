@@ -184,7 +184,7 @@ export default function HomePage() {
                 <i className="bi bi-people-fill"></i>
               </div>
               <div className="home-stat-card-content">
-                <span className="home-stat-card-value">66,026</span>
+                <span className="home-stat-card-value">66,028</span>
                 <span className="home-stat-card-label">{t('stats-population-label')}</span>
                 <span className="home-stat-card-source">{t('stats-population-source')}</span>
               </div>
@@ -232,11 +232,7 @@ export default function HomePage() {
           <div className="weather-map-grid">
             <div className="weather-column">
               <div id="weather-container" aria-live="polite">
-                <div
-                  className="weather-widget"
-                  role="region"
-                  aria-label="Current weather in Agoo"
-                >
+                <div className="weather-widget" role="region" aria-label="Current weather in Agoo">
                   <div className="weather-current">
                     <div className="weather-current-icon">
                       <i className="bi bi-cloud-sun-fill"></i>
@@ -279,7 +275,8 @@ export default function HomePage() {
                   ></iframe>
                 </div>
                 <p className="map-attribution">
-                  <i className="bi bi-geo-alt" aria-hidden="true"></i> Agoo Municipal Hall, La Union 2504
+                  <i className="bi bi-geo-alt" aria-hidden="true"></i> Agoo Municipal Hall, La Union
+                  2504
                 </p>
               </div>
             </div>
@@ -288,62 +285,59 @@ export default function HomePage() {
       </section>
 
       {/* Brief History of Agoo */}
-      <section className="section history-section">
+      <section
+        id="brief-history"
+        className="section history-section"
+        aria-labelledby="brief-history-title"
+      >
         <div className="container">
           <div className="home-stats-v2-header">
-            <h2>
+            <h2 id="brief-history-title">
               <i className="bi bi-book" aria-hidden="true"></i> {t('history-title')}
             </h2>
           </div>
           <div className="history-content">
             <div className="history-timeline">
-              <div className="timeline-item" data-year="1760">
+              <div className="timeline-item" data-year="Pre-Colonial">
                 <div className="timeline-marker"></div>
                 <div className="timeline-content">
-                  <span className="timeline-year">1760</span>
-                  <p>{t('history-1760')}</p>
+                  <span className="timeline-year">{t('history-era-precolonial')}</span>
+                  <p>{t('history-precolonial')}</p>
                 </div>
               </div>
-              <div className="timeline-item" data-year="1767">
+              <div className="timeline-item" data-year="1578">
                 <div className="timeline-marker"></div>
                 <div className="timeline-content">
-                  <span className="timeline-year">1767</span>
-                  <p>{t('history-1767')}</p>
+                  <span className="timeline-year">1578</span>
+                  <p>{t('history-1578')}</p>
                 </div>
               </div>
-              <div className="timeline-item" data-year="1768">
+              <div className="timeline-item" data-year="1582">
                 <div className="timeline-marker"></div>
                 <div className="timeline-content">
-                  <span className="timeline-year">1768</span>
-                  <p>{t('history-1768')}</p>
+                  <span className="timeline-year">1582</span>
+                  <p>{t('history-1582')}</p>
                 </div>
               </div>
-              <div className="timeline-item" data-year="1851">
+              <div className="timeline-item" data-year="1850">
                 <div className="timeline-marker"></div>
                 <div className="timeline-content">
-                  <span className="timeline-year">1851</span>
-                  <p>{t('history-1851')}</p>
+                  <span className="timeline-year">1850</span>
+                  <p>{t('history-1850')}</p>
                 </div>
               </div>
-              <div className="timeline-item" data-year="1853">
+              <div className="timeline-item" data-year="1982">
                 <div className="timeline-marker"></div>
                 <div className="timeline-content">
-                  <span className="timeline-year">1853</span>
-                  <p>{t('history-1853')}</p>
+                  <span className="timeline-year">1982</span>
+                  <p>{t('history-1982')}</p>
                 </div>
               </div>
-              <div className="timeline-item" data-year="1889">
+              <div className="timeline-item" data-year="Present">
                 <div className="timeline-marker"></div>
                 <div className="timeline-content">
-                  <span className="timeline-year">1889</span>
-                  <p>{t('history-1889')}</p>
-                </div>
-              </div>
-              <div className="timeline-item" data-year="1957">
-                <div className="timeline-marker"></div>
-                <div className="timeline-content">
-                  <span className="timeline-year">1957</span>
-                  <p>{t('history-1957')}</p>
+                  <span className="timeline-year">{t('history-era-present')}</span>
+                  <p>{t('history-present')}</p>
                 </div>
               </div>
             </div>
@@ -353,17 +347,17 @@ export default function HomePage() {
                   <i className="bi bi-geo-alt-fill"></i>
                 </div>
                 <div className="history-card-content">
-                  <h4>{t('history-once-largest-title')}</h4>
-                  <p>{t('history-once-largest-desc')}</p>
+                  <h4>{t('history-basilica-town-title')}</h4>
+                  <p>{t('history-basilica-town-desc')}</p>
                 </div>
               </div>
               <div className="history-card">
                 <div className="history-card-icon">
-                  <i className="bi bi-grid-3x3"></i>
+                  <i className="bi bi-shop"></i>
                 </div>
                 <div className="history-card-content">
-                  <h4>{t('history-urban-planning-title')}</h4>
-                  <p>{t('history-urban-planning-desc')}</p>
+                  <h4>{t('history-puerto-de-japon-title')}</h4>
+                  <p>{t('history-puerto-de-japon-desc')}</p>
                 </div>
               </div>
             </div>
@@ -372,6 +366,7 @@ export default function HomePage() {
         <style jsx>{`
           .history-section {
             background: linear-gradient(180deg, var(--color-bg-alt) 0%, var(--color-bg) 100%);
+            scroll-margin-top: 96px;
           }
           .history-section .home-stats-v2-header h2 {
             display: flex;

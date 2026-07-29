@@ -5,8 +5,60 @@ import { createContext, useContext, useState, useEffect, ReactNode } from 'react
 // Translation data
 const translations: Record<string, Record<string, string>> = {
   en: {
+    // Agoo barangays
+    'gov-brgy-ambitacay': 'Ambitacay',
+    'gov-brgy-balawarte': 'Balawarte',
+    'gov-brgy-capas': 'Capas',
+    'gov-brgy-consolacion': 'Consolacion',
+    'gov-brgy-macalva-central': 'Macalva Central',
+    'gov-brgy-macalva-norte': 'Macalva Norte',
+    'gov-brgy-macalva-sur': 'Macalva Sur',
+    'gov-brgy-nazareno': 'Nazareno',
+    'gov-brgy-purok': 'Purok',
+    'gov-brgy-san-agustin-east': 'San Agustin East',
+    'gov-brgy-san-agustin-norte': 'San Agustin Norte',
+    'gov-brgy-san-agustin-sur': 'San Agustin Sur',
+    'gov-brgy-san-antonino': 'San Antonino',
+    'gov-brgy-san-antonio': 'San Antonio',
+    'gov-brgy-san-francisco': 'San Francisco',
+    'gov-brgy-san-isidro': 'San Isidro',
+    'gov-brgy-san-joaquin-norte': 'San Joaquin Norte',
+    'gov-brgy-san-joaquin-sur': 'San Joaquin Sur',
+    'gov-brgy-san-jose-norte': 'San Jose Norte',
+    'gov-brgy-san-jose-sur': 'San Jose Sur',
+    'gov-brgy-san-juan': 'San Juan',
+    'gov-brgy-san-julian-central': 'San Julian Central',
+    'gov-brgy-san-julian-east': 'San Julian East',
+    'gov-brgy-san-julian-norte': 'San Julian Norte',
+    'gov-brgy-san-julian-west': 'San Julian West',
+    'gov-brgy-san-manuel-norte': 'San Manuel Norte',
+    'gov-brgy-san-manuel-sur': 'San Manuel Sur',
+    'gov-brgy-san-marcos': 'San Marcos',
+    'gov-brgy-san-miguel': 'San Miguel',
+    'gov-brgy-san-nicolas-central': 'San Nicolas Central',
+    'gov-brgy-san-nicolas-east': 'San Nicolas East',
+    'gov-brgy-san-nicolas-norte': 'San Nicolas Norte',
+    'gov-brgy-san-nicolas-sur': 'San Nicolas Sur',
+    'gov-brgy-san-nicolas-west': 'San Nicolas West',
+    'gov-brgy-san-pedro': 'San Pedro',
+    'gov-brgy-san-roque-east': 'San Roque East',
+    'gov-brgy-san-roque-west': 'San Roque West',
+    'gov-brgy-san-vicente-norte': 'San Vicente Norte',
+    'gov-brgy-san-vicente-sur': 'San Vicente Sur',
+    'gov-brgy-santa-ana': 'Santa Ana',
+    'gov-brgy-santa-barbara': 'Santa Barbara',
+    'gov-brgy-santa-fe': 'Santa Fe',
+    'gov-brgy-santa-maria': 'Santa Maria',
+    'gov-brgy-santa-monica': 'Santa Monica',
+    'gov-brgy-santa-rita': 'Santa Rita',
+    'gov-brgy-santa-rita-east': 'Santa Rita East',
+    'gov-brgy-santa-rita-norte': 'Santa Rita Norte',
+    'gov-brgy-santa-rita-sur': 'Santa Rita Sur',
+    'gov-brgy-santa-rita-west': 'Santa Rita West',
+
     // Navigation
     'nav-home': 'Home',
+    'nav-history': 'Brief History',
     'nav-services': 'Services',
     'nav-government': 'Government',
     'nav-statistics': 'Statistics',
@@ -398,28 +450,26 @@ const translations: Record<string, Record<string, string>> = {
 
     // Homepage - History
     'history-title': 'Brief History of Agoo',
-    'history-1760':
-      'The original name of the town was Bintauan, then a Gaddang settlement that is now a barangay of Villaverde.',
-    'history-1767':
-      'The town was formally founded by Father Alejandro Vidal, a Dominican priest who led a Spanish mission.',
-    'history-1768':
-      'Named Lungabang, from the Gaddang word for cave, lungab. Later changed to Lumabang by the Spaniards.',
-    'history-1851':
-      'Governor General Antonio Urbiztondo declared Lumabang a barrio of Bayombong for insufficient inhabitants and revenue.',
-    'history-1853':
-      'The first Ilocanos arrived, brought by Don Diego Lumicao, a former gobernadorcillo.',
-    'history-1889':
-      'Renamed Agoo in honor of Governor General Ramon Agoo y Llanderal. The town was redeveloped by Father Juan Villaverde with 14 parallel wide streets, each 20 meters wide, forming 100 square blocks.',
-    'history-1957':
-      "The barrios of Ibung and Bintawan were separated to form the town of Ibung, later renamed as Villaverde. Agoo's land area was reduced to 13,980 hectares.",
-    'history-once-largest-title': 'Once the Largest',
-    'history-once-largest-desc':
-      'Agoo was the largest municipality in the province until Caliat and Bintawan were separated to become Quezon and Villaverde respectively.',
-    'history-urban-planning-title': 'Urban Planning',
-    'history-urban-planning-desc':
-      'The 1889 redevelopment created a grid of 100 square blocks, each with an aggregate area of one hectare, with streets running north-south and east-west.',
-
-    // Homepage - News
+    'history-era-precolonial': 'Pre-Colonial',
+    'history-era-present': 'Present',
+    'history-precolonial':
+      'Known as "Puerto de Japón," Agoo was a bustling international port trading with Japanese, Chinese, and Ryukyuan merchants before Spanish colonization.',
+    'history-1578':
+      'Franciscan friars Father Juan Bautista Lucarelli and Father Sebastian de Baeza founded the town and parish of Agoo, with the mission dedicated to Santa Monica.',
+    'history-1582':
+      'Augustinian missionaries assumed administration of the settlement. Its name is associated with the "aroo," the pine-like Casuarina trees that once lined the coast and riverbanks.',
+    'history-1850':
+      'Agoo became part of the newly created province of La Union under the decree of Governor-General Antonio María Blanco.',
+    'history-1982':
+      'On 15 July 1982, Pope John Paul II elevated the Shrine of Our Lady of Charity to the rank of Basilica Minore.',
+    'history-present':
+      'Agoo continues to grow as an educational, commercial, and cultural center while celebrating its heritage through the annual Dinengdeng Festival.',
+    'history-basilica-town-title': 'The Basilica Town',
+    'history-basilica-town-desc':
+      "Founded in 1578, Agoo is La Union's oldest town and home to the historic Basilica Minore of Our Lady of Charity.",
+    'history-puerto-de-japon-title': 'Puerto de Japón',
+    'history-puerto-de-japon-desc':
+      'Before Spanish colonization, Agoo served as an international trading port for Japanese, Chinese, and Ryukyuan merchants.',
     'news-announcement': 'Announcement',
     'news-project': 'Project',
     'news-advisory': 'Advisory',
@@ -467,8 +517,60 @@ const translations: Record<string, Record<string, string>> = {
     'footer-skip-to-main': 'Skip to main content',
   },
   fil: {
+    // Agoo barangays
+    'gov-brgy-ambitacay': 'Ambitacay',
+    'gov-brgy-balawarte': 'Balawarte',
+    'gov-brgy-capas': 'Capas',
+    'gov-brgy-consolacion': 'Consolacion',
+    'gov-brgy-macalva-central': 'Macalva Central',
+    'gov-brgy-macalva-norte': 'Macalva Norte',
+    'gov-brgy-macalva-sur': 'Macalva Sur',
+    'gov-brgy-nazareno': 'Nazareno',
+    'gov-brgy-purok': 'Purok',
+    'gov-brgy-san-agustin-east': 'San Agustin East',
+    'gov-brgy-san-agustin-norte': 'San Agustin Norte',
+    'gov-brgy-san-agustin-sur': 'San Agustin Sur',
+    'gov-brgy-san-antonino': 'San Antonino',
+    'gov-brgy-san-antonio': 'San Antonio',
+    'gov-brgy-san-francisco': 'San Francisco',
+    'gov-brgy-san-isidro': 'San Isidro',
+    'gov-brgy-san-joaquin-norte': 'San Joaquin Norte',
+    'gov-brgy-san-joaquin-sur': 'San Joaquin Sur',
+    'gov-brgy-san-jose-norte': 'San Jose Norte',
+    'gov-brgy-san-jose-sur': 'San Jose Sur',
+    'gov-brgy-san-juan': 'San Juan',
+    'gov-brgy-san-julian-central': 'San Julian Central',
+    'gov-brgy-san-julian-east': 'San Julian East',
+    'gov-brgy-san-julian-norte': 'San Julian Norte',
+    'gov-brgy-san-julian-west': 'San Julian West',
+    'gov-brgy-san-manuel-norte': 'San Manuel Norte',
+    'gov-brgy-san-manuel-sur': 'San Manuel Sur',
+    'gov-brgy-san-marcos': 'San Marcos',
+    'gov-brgy-san-miguel': 'San Miguel',
+    'gov-brgy-san-nicolas-central': 'San Nicolas Central',
+    'gov-brgy-san-nicolas-east': 'San Nicolas East',
+    'gov-brgy-san-nicolas-norte': 'San Nicolas Norte',
+    'gov-brgy-san-nicolas-sur': 'San Nicolas Sur',
+    'gov-brgy-san-nicolas-west': 'San Nicolas West',
+    'gov-brgy-san-pedro': 'San Pedro',
+    'gov-brgy-san-roque-east': 'San Roque East',
+    'gov-brgy-san-roque-west': 'San Roque West',
+    'gov-brgy-san-vicente-norte': 'San Vicente Norte',
+    'gov-brgy-san-vicente-sur': 'San Vicente Sur',
+    'gov-brgy-santa-ana': 'Santa Ana',
+    'gov-brgy-santa-barbara': 'Santa Barbara',
+    'gov-brgy-santa-fe': 'Santa Fe',
+    'gov-brgy-santa-maria': 'Santa Maria',
+    'gov-brgy-santa-monica': 'Santa Monica',
+    'gov-brgy-santa-rita': 'Santa Rita',
+    'gov-brgy-santa-rita-east': 'Santa Rita East',
+    'gov-brgy-santa-rita-norte': 'Santa Rita Norte',
+    'gov-brgy-santa-rita-sur': 'Santa Rita Sur',
+    'gov-brgy-santa-rita-west': 'Santa Rita West',
+
     // Navigation - Filipino
     'nav-home': 'Tahanan',
+    'nav-history': 'Maikling Kasaysayan',
     'nav-services': 'Mga Serbisyo',
     'nav-government': 'Pamahalaan',
     'nav-statistics': 'Estadistika',
@@ -708,8 +810,7 @@ const translations: Record<string, Record<string, string>> = {
     'ord-cat-traffic': 'Trapiko at Transportasyon',
     'ord-cat-zoning': 'Zoning at Paggamit ng Lupa',
     'ord-2025-title': 'Mga Ordinansa ng 2025',
-    'ord-2025-subtitle':
-      'Mga opisyal na ordinansang ipinasa ng Sangguniang Bayan ng Agoo sa 2025',
+    'ord-2025-subtitle': 'Mga opisyal na ordinansang ipinasa ng Sangguniang Bayan ng Agoo sa 2025',
     'ord-table-number': 'Numero ng Ordinansa',
     'ord-table-title': 'Pamagat',
     'ord-table-date': 'Petsa ng Sesyon',
@@ -732,11 +833,9 @@ const translations: Record<string, Record<string, string>> = {
     'reso-type-authorization': 'Awtorisasyon',
     'reso-type-appropriation': 'Apropriyasyon',
     'reso-2026-title': 'Mga Resolusyon ng 2026',
-    'reso-2026-subtitle':
-      'Mga opisyal na resolusyong ipinasa ng Sangguniang Bayan ng Agoo sa 2026',
+    'reso-2026-subtitle': 'Mga opisyal na resolusyong ipinasa ng Sangguniang Bayan ng Agoo sa 2026',
     'reso-2025-title': 'Mga Resolusyon ng 2025',
-    'reso-2025-subtitle':
-      'Mga opisyal na resolusyong ipinasa ng Sangguniang Bayan ng Agoo sa 2025',
+    'reso-2025-subtitle': 'Mga opisyal na resolusyong ipinasa ng Sangguniang Bayan ng Agoo sa 2025',
     'reso-table-number': 'Numero ng Resolusyon',
     'reso-table-title': 'Pamagat',
     'reso-table-date': 'Petsa ng Sesyon',
@@ -872,28 +971,26 @@ const translations: Record<string, Record<string, string>> = {
 
     // Homepage - History
     'history-title': 'Maikling Kasaysayan ng Agoo',
-    'history-1760':
-      'Ang orihinal na pangalan ng bayan ay Bintauan, isang pamayanan ng Gaddang na ngayon ay barangay ng Villaverde.',
-    'history-1767':
-      'Ang bayan ay pormal na itinatag ni Padre Alejandro Vidal, isang paring Dominikano na namuno sa isang misyong Espanyol.',
-    'history-1768':
-      'Pinangalanang Lungabang, mula sa salitang Gaddang na lungab na nangangahulugang kuweba. Kalaunan ay binago ng mga Espanyol sa Lumabang.',
-    'history-1851':
-      'Idineklara ni Gobernador Heneral Antonio Urbiztondo ang Lumabang bilang baryo ng Bayombong dahil sa kakulangan ng mga naninirahan at kita.',
-    'history-1853':
-      'Dumating ang mga unang Ilocano, dinala ni Don Diego Lumicao, isang dating gobernadorcillo.',
-    'history-1889':
-      'Pinalitan ang pangalan ng Agoo bilang parangal kay Gobernador Heneral Ramon Agoo y Llanderal. Ang bayan ay muling binuo ni Padre Juan Villaverde na may 14 na magkakahanay na malapad na kalye, bawat isa ay 20 metro ang lapad, na bumubuo ng 100 parisukat na bloke.',
-    'history-1957':
-      'Ang mga baryo ng Ibung at Bintawan ay pinaghiwalay upang bumuo ng bayan ng Ibung, na kalaunan ay pinalitan ng pangalang Villaverde. Ang lawak ng lupa ng Agoo ay nabawasan sa 13,980 ektarya.',
-    'history-once-largest-title': 'Dating Pinakamalaki',
-    'history-once-largest-desc':
-      'Ang Agoo ang pinakamalaking munisipalidad sa probinsya hanggang sa pinaghiwalay ang Caliat at Bintawan upang maging Quezon at Villaverde.',
-    'history-urban-planning-title': 'Pagpaplano ng Lungsod',
-    'history-urban-planning-desc':
-      'Ang muling pagbuo noong 1889 ay lumikha ng grid na may 100 parisukat na bloke, bawat isa ay may kabuuang lawak na isang ektarya, na may mga kalye na patungo sa hilaga-timog at silangan-kanluran.',
-
-    // Homepage - News
+    'history-era-precolonial': 'Bago ang Pananakop',
+    'history-era-present': 'Kasalukuyan',
+    'history-precolonial':
+      'Kilala bilang "Puerto de Japón," ang Agoo ay isang masiglang daungang pandaigdig na nakikipagkalakalan sa mga Hapones, Tsino, at Ryukyuan bago ang pananakop ng Espanya.',
+    'history-1578':
+      'Itinatag nina Padre Juan Bautista Lucarelli at Padre Sebastian de Baeza, mga paring Pransiskano, ang bayan at parokya ng Agoo, at inialay ang misyon kay Santa Monica.',
+    'history-1582':
+      'Pinamahalaan ng mga misyonerong Agustino ang pamayanan. Iniuugnay ang pangalang Agoo sa "aroo," ang mga punong Casuarina na kahawig ng pino at dating nakahanay sa baybayin at mga pampang ng ilog.',
+    'history-1850':
+      'Naging bahagi ang Agoo ng bagong tatag na lalawigan ng La Union sa bisa ng kautusan ni Gobernador-Heneral Antonio María Blanco.',
+    'history-1982':
+      'Noong 15 Hulyo 1982, itinaas ni Papa Juan Pablo II ang Dambana ng Nuestra Señora de Caridad sa ranggong Basilica Minore.',
+    'history-present':
+      'Patuloy na umuunlad ang Agoo bilang sentro ng edukasyon, kalakalan, at kultura habang ipinagdiriwang ang pamana nito sa taunang Dinengdeng Festival.',
+    'history-basilica-town-title': 'Ang Bayan ng Basilica',
+    'history-basilica-town-desc':
+      'Itinatag noong 1578, ang Agoo ang pinakamatandang bayan sa La Union at tahanan ng makasaysayang Basilica Minore ng Nuestra Señora de Caridad.',
+    'history-puerto-de-japon-title': 'Puerto de Japón',
+    'history-puerto-de-japon-desc':
+      'Bago ang pananakop ng Espanya, nagsilbi ang Agoo bilang daungang pandaigdig para sa mga mangangalakal na Hapones, Tsino, at Ryukyuan.',
     'news-announcement': 'Anunsyo',
     'news-project': 'Proyekto',
     'news-advisory': 'Abiso',
@@ -942,8 +1039,60 @@ const translations: Record<string, Record<string, string>> = {
     'footer-skip-to-main': 'Lumaktaw sa pangunahing nilalaman',
   },
   ilo: {
+    // Agoo barangays
+    'gov-brgy-ambitacay': 'Ambitacay',
+    'gov-brgy-balawarte': 'Balawarte',
+    'gov-brgy-capas': 'Capas',
+    'gov-brgy-consolacion': 'Consolacion',
+    'gov-brgy-macalva-central': 'Macalva Central',
+    'gov-brgy-macalva-norte': 'Macalva Norte',
+    'gov-brgy-macalva-sur': 'Macalva Sur',
+    'gov-brgy-nazareno': 'Nazareno',
+    'gov-brgy-purok': 'Purok',
+    'gov-brgy-san-agustin-east': 'San Agustin East',
+    'gov-brgy-san-agustin-norte': 'San Agustin Norte',
+    'gov-brgy-san-agustin-sur': 'San Agustin Sur',
+    'gov-brgy-san-antonino': 'San Antonino',
+    'gov-brgy-san-antonio': 'San Antonio',
+    'gov-brgy-san-francisco': 'San Francisco',
+    'gov-brgy-san-isidro': 'San Isidro',
+    'gov-brgy-san-joaquin-norte': 'San Joaquin Norte',
+    'gov-brgy-san-joaquin-sur': 'San Joaquin Sur',
+    'gov-brgy-san-jose-norte': 'San Jose Norte',
+    'gov-brgy-san-jose-sur': 'San Jose Sur',
+    'gov-brgy-san-juan': 'San Juan',
+    'gov-brgy-san-julian-central': 'San Julian Central',
+    'gov-brgy-san-julian-east': 'San Julian East',
+    'gov-brgy-san-julian-norte': 'San Julian Norte',
+    'gov-brgy-san-julian-west': 'San Julian West',
+    'gov-brgy-san-manuel-norte': 'San Manuel Norte',
+    'gov-brgy-san-manuel-sur': 'San Manuel Sur',
+    'gov-brgy-san-marcos': 'San Marcos',
+    'gov-brgy-san-miguel': 'San Miguel',
+    'gov-brgy-san-nicolas-central': 'San Nicolas Central',
+    'gov-brgy-san-nicolas-east': 'San Nicolas East',
+    'gov-brgy-san-nicolas-norte': 'San Nicolas Norte',
+    'gov-brgy-san-nicolas-sur': 'San Nicolas Sur',
+    'gov-brgy-san-nicolas-west': 'San Nicolas West',
+    'gov-brgy-san-pedro': 'San Pedro',
+    'gov-brgy-san-roque-east': 'San Roque East',
+    'gov-brgy-san-roque-west': 'San Roque West',
+    'gov-brgy-san-vicente-norte': 'San Vicente Norte',
+    'gov-brgy-san-vicente-sur': 'San Vicente Sur',
+    'gov-brgy-santa-ana': 'Santa Ana',
+    'gov-brgy-santa-barbara': 'Santa Barbara',
+    'gov-brgy-santa-fe': 'Santa Fe',
+    'gov-brgy-santa-maria': 'Santa Maria',
+    'gov-brgy-santa-monica': 'Santa Monica',
+    'gov-brgy-santa-rita': 'Santa Rita',
+    'gov-brgy-santa-rita-east': 'Santa Rita East',
+    'gov-brgy-santa-rita-norte': 'Santa Rita Norte',
+    'gov-brgy-santa-rita-sur': 'Santa Rita Sur',
+    'gov-brgy-santa-rita-west': 'Santa Rita West',
+
     // Navigation - Ilocano
     'nav-home': 'Pagtaengan',
+    'nav-history': 'Ababa a Pakasaritaan',
     'nav-services': 'Dagiti Serbisyo',
     'nav-government': 'Gobierno',
     'nav-statistics': 'Estadistika',
@@ -1351,26 +1500,26 @@ const translations: Record<string, Record<string, string>> = {
 
     // Homepage - History
     'history-title': 'Ababa a Pakasaritaan ti Agoo',
-    'history-1760':
-      'Ti orihinal a nagan ti ili ket Bintauan, maysa a pagnaedanan ti Gaddang a ita ket barangay ti Villaverde.',
-    'history-1767':
-      'Ti ili ket pormal a naipasdek babaen ni Padre Alejandro Vidal, maysa a padi a Dominikano a nangidaulo iti misyon nga Espanyol.',
-    'history-1768':
-      'Napanaganan iti Lungabang, manipud iti sao a Gaddang a lungab a kaipapananna ket rukib. Nabaliwan dagiti Espanyol iti Lumabang.',
-    'history-1851':
-      'Indeklara ni Gobernador Heneral Antonio Urbiztondo ti Lumabang a kas baryo ti Bayombong gapu iti kaawan dagiti agnanaed ken sapul.',
-    'history-1853':
-      'Dimteng dagiti umuna nga Ilocano, inyeg ni Don Diego Lumicao, maysa a dati a gobernadorcillo.',
-    'history-1889':
-      'Nabaliwan ti nagan iti Agoo tapno padayawan ni Gobernador Heneral Ramon Agoo y Llanderal. Ti ili ket naipasayaat manen babaen ni Padre Juan Villaverde nga addaan 14 a magkakahanay a nalawa a kalsada, tunggal maysa ket 20 metro ti kalawa na, a mangbukel iti 100 a kuadrado a bloke.',
-    'history-1957':
-      'Dagiti baryo ti Ibung ken Bintawan ket naisina tapno mangbukel iti ili ti Ibung, a nabaliwan ti nagan iti Villaverde. Ti kalawa ti daga ti Agoo ket nabassitan iti 13,980 ektarya.',
-    'history-once-largest-title': 'Idi Kadakkelan',
-    'history-once-largest-desc':
-      'Ti Agoo ti kadakkelan a munisipalidad iti probinsia agingga a naisina ti Caliat ken Bintawan tapno agbalin a Quezon ken Villaverde.',
-    'history-urban-planning-title': 'Panagplano ti Ili',
-    'history-urban-planning-desc':
-      'Ti panagpasayaat idi 1889 ket nangaramid iti grid a 100 a kuadrado a bloke, tunggal maysa ket addaan dagup a kalawa a maysa nga ektarya, nga addaan kadagiti kalsada a mapan iti amianan-abagatan ken daya-laud.',
+    'history-era-precolonial': 'Sakbay ti Kolonisasion',
+    'history-era-present': 'Agdama',
+    'history-precolonial':
+      'Naam-ammo kas "Puerto de Japón," ti Agoo ket narang-ay nga internasional a puerto a nakilaklako kadagiti negosiante a Hapon, Tsino, ken Ryukyuan sakbay ti panangkolonia ti Espanya.',
+    'history-1578':
+      'Dagiti padi a Pransiskano a da Padre Juan Bautista Lucarelli ken Padre Sebastian de Baeza ti nangipasdek iti ili ken parokia ti Agoo, ket indatonda ti mision ken Santa Monica.',
+    'history-1582':
+      'Dagiti misionero nga Agustino ti nangimaton iti komunidad. Ti nagan nga Agoo ket mainaig iti "aroo," dagiti kasla pino a kayo a Casuarina a naglinia idi iti igid ti baybay ken karayan.',
+    'history-1850':
+      'Nairaman ti Agoo iti baro a naipasdek a probinsia ti La Union babaen iti bilin ni Gobernador-Heneral Antonio María Blanco.',
+    'history-1982':
+      'Idi 15 Hulio 1982, intan-ok ni Papa Juan Pablo II ti Santuario ti Nuestra Señora de Caridad iti ranggo kas Basilica Minore.',
+    'history-present':
+      'Agtultuloy a rumang-ay ti Agoo kas sentro ti edukasion, komersio, ken kultura bayat a rambakanna ti tawidna babaen iti tinawen a Dinengdeng Festival.',
+    'history-basilica-town-title': 'Ti Ili ti Basilica',
+    'history-basilica-town-desc':
+      'Naipasdek idi 1578, ti Agoo ti kadaanan nga ili iti La Union ken pagtaengan ti naipateg a Basilica Minore ti Nuestra Señora de Caridad.',
+    'history-puerto-de-japon-title': 'Puerto de Japón',
+    'history-puerto-de-japon-desc':
+      'Sakbay ti panangkolonia ti Espanya, nagserbi ti Agoo kas internasional a puerto dagiti negosiante a Hapon, Tsino, ken Ryukyuan.',
 
     // Homepage - News
     'news-announcement': 'Pakaammo',

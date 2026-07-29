@@ -15,6 +15,8 @@ const path = require('path');
 
 const VERSION_FILE = path.join(__dirname, '..', 'version.json');
 const PACKAGE_FILE = path.join(__dirname, '..', 'package.json');
+const PACKAGE_LOCK_FILE = path.join(__dirname, '..', 'package-lock.json');
+const README_FILE = path.join(__dirname, '..', 'README.md');
 
 // Read current version
 let versionData;
@@ -77,6 +79,34 @@ try {
   fs.writeFileSync(PACKAGE_FILE, JSON.stringify(pkg, null, 2) + '\n');
 } catch (e) {
   console.warn('Warning: Could not update package.json:', e.message);
+}
+
+// Keep the root npm lockfile synchronized without reinstalling dependencies.
+try {
+  if (fs.existsSync(PACKAGE_LOCK_FILE)) {
+    const lock = JSON.parse(fs.readFileSync(PACKAGE_LOCK_FILE, 'utf8'));
+    lock.version = newVersion;
+    if (lock.packages && lock.packages['']) {
+      lock.packages[''].version = newVersion;
+    }
+    fs.writeFileSync(PACKAGE_LOCK_FILE, JSON.stringify(lock, null, 2) + '\n');
+  }
+} catch (e) {
+  console.warn('Warning: Could not update package-lock.json:', e.message);
+}
+
+// Keep the README version badge synchronized with the release version.
+try {
+  if (fs.existsSync(README_FILE)) {
+    let readme = fs.readFileSync(README_FILE, 'utf8');
+    readme = readme.replace(
+      /img\.shields\.io\/badge\/version-\d+\.\d+\.\d+-green/g,
+      'img.shields.io/badge/version-' + newVersion + '-green'
+    );
+    fs.writeFileSync(README_FILE, readme);
+  }
+} catch (e) {
+  console.warn('Warning: Could not update README version badge:', e.message);
 }
 
 // Update all HTML files — replace hardcoded "Ver. X.X.X" in footer
@@ -142,6 +172,22 @@ try {
   }
 } catch (e) {
   console.warn('Warning: Could not update react-app/package.json:', e.message);
+}
+
+// Sync the React npm lockfile as part of the same release transaction.
+var reactLockFile = path.join(__dirname, '..', 'react-app', 'package-lock.json');
+try {
+  if (fs.existsSync(reactLockFile)) {
+    var reactLock = JSON.parse(fs.readFileSync(reactLockFile, 'utf8'));
+    reactLock.version = newVersion;
+    if (reactLock.packages && reactLock.packages['']) {
+      reactLock.packages[''].version = newVersion;
+    }
+    fs.writeFileSync(reactLockFile, JSON.stringify(reactLock, null, 2) + '\n');
+    console.log('Synced version → react-app/package-lock.json');
+  }
+} catch (e) {
+  console.warn('Warning: Could not update react-app/package-lock.json:', e.message);
 }
 
 console.log('Done! Version is now ' + newVersion);
