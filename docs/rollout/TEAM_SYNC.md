@@ -1,7 +1,7 @@
 # LGU Synchronization Protocol
 
 **LGU Name:** Municipality of Agoo, La Union
-**Last Sync Date:** 2026-02-03
+**Last Sync Date:** 2026-07-29
 
 ## Roles & Responsibilities
 
@@ -27,17 +27,29 @@
 
 The following hotlines must be verified monthly against official LGU records:
 
-| Service                 | Number         | Source                    |
-| ----------------------- | -------------- | ------------------------- |
-| Police (PNP)            | 0927 400 8033  | LGU Agoo Municipal Hall |
-| MSWDO                   | 0916 284 0885  | LGU Agoo Municipal Hall |
-| Fire (BFP)              | 0936 062 0305  | LGU Agoo Municipal Hall |
-| DILG                    | 0906 188 086   | LGU Agoo Municipal Hall |
-| MDRRMO                  | 0926 383 3744  | LGU Agoo Municipal Hall |
-| R2TMC                   | 0906 819 5569  | LGU Agoo Municipal Hall |
-| Municipal Hall Landline | (078) 805-3581 | Official records          |
+| Service                      | Primary number | Secondary number                               | Source                                     |
+| ---------------------------- | -------------- | ---------------------------------------------- | ------------------------------------------ |
+| MDRRMO – Agoo                | 0929 558 7444  | 0995 054 5741                                  | Supplied Agoo Emergency Hotlines reference |
+| Agoo RHU–MHO                 | (072) 607-4187 | 0905 235 8713                                  | Supplied Agoo Emergency Hotlines reference |
+| BFP – Agoo Station           | 0949 641 0979  | 0917 183 9711                                  | Supplied Agoo Emergency Hotlines reference |
+| PNP – Agoo Station           | 0998 598 5153  | 0915 857 4117                                  | Supplied Agoo Emergency Hotlines reference |
+| Coast Guard – Agoo           | 0981 746 6184  | 0945 781 6630                                  | Supplied Agoo Emergency Hotlines reference |
+| LUMC                         | (072) 607-5541 | (072) 607-5545 / 0928 998 2588 / 0915 187 9557 | Supplied Agoo Emergency Hotlines reference |
+| LUELCO                       | 0917 130 4907  | 0917 130 7491                                  | Supplied Agoo Emergency Hotlines reference |
+| La Union PDRRMO / Rescue 911 | 0998 561 1519  | 911                                            | Provincial Government of La Union          |
 
-**Last Verified:** [DATE]
+**Last Verified:** July 29, 2026
+
+---
+
+## Shared Footer Synchronization
+
+- **Static source of truth:** The complete site-footer block in `index.html`.
+- **Static scope:** 51 footer-bearing HTML files. `offline.html` and `admin/news-editor.html` intentionally do not use the standard footer.
+- **React counterpart:** `react-app/src/components/layout/Footer.tsx`, which must remain aligned because the Next.js export supplies production HTML for the homepage and health route.
+- **Current attribution:** One WKNDPRJKT terminal wordmark linked to `https://wkndprjkt.com`; former partner-logo links are no longer part of the footer.
+- **Link convention:** Internal footer links and the footer logo use site-root paths so the canonical block can be copied unchanged to nested pages.
+- **Last parity check:** July 29, 2026 — 51/51 source footers exact; 51/51 generated footers contained the canonical links.
 
 ---
 
@@ -109,6 +121,6 @@ The following hotlines must be verified monthly against official LGU records:
 
 ## Change Management Log
 
-| Date       | Change                       | Verified By     |
-| ---------- | ---------------------------- | --------------- |
+| Date       | Change                       | Verified By          |
+| ---------- | ---------------------------- | -------------------- |
 | 2026-02-03 | Initial TEAM_SYNC.md created | Glenn Mark P. Garcia |

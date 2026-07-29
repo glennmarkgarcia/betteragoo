@@ -2,7 +2,7 @@
 
 A civic-tech initiative providing transparent access to municipal services, programs, and public funds of LGU Agoo, La Union, Philippines.
 
-![Version](https://img.shields.io/badge/version-1.5.0-green)
+![Version](https://img.shields.io/badge/version-1.6.0-green)
 ![License](https://img.shields.io/badge/license-MIT%20%7C%20CC%20BY%204.0-blue)
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white)
@@ -222,7 +222,7 @@ betteragoo/
 ├── assets/
 │   ├── css/              # Stylesheets (9 files)
 │   ├── js/               # JavaScript modules (18 files)
-│   ├── images/           # Images, icons, banners, partner logos
+│   ├── images/           # Images, icons, banners, and site graphics
 │   └── animation/        # Lottie JSON animation files
 ├── data/                 # JSON data files
 │   ├── officials.json    # Government officials data
@@ -265,6 +265,20 @@ betteragoo/
 ```
 
 ## Recent Changes
+
+### v1.6.0 — Phase 4 Content Migration: Emergency & Contacts
+
+- Added a canonical Agoo emergency-hotline dataset covering MDRRMO, RHU–MHO, BFP, PNP, Coast Guard, LUMC, LUELCO, and La Union Rescue 911
+- Synchronized eight primary contacts across all 51 static hotline bars and the React header
+- Rebuilt the contact and public-safety directories so every supplied number is independently callable
+- Expanded the offline fallback to retain the complete emergency directory without network access
+- Corrected the municipal contact email and added the Agoo Municipal Hall address on Cases Boulevard
+- Reworked the tablet/mobile marquee into two equal groups for seamless looping without clipping
+- Added matching English, Filipino, and Ilocano emergency-directory translations
+- Established the root `index.html` footer as the canonical static footer and synchronized it exactly across all 51 footer-bearing HTML pages
+- Replaced the former partner-logo group with the WKNDPRJKT terminal wordmark linked to `https://wkndprjkt.com`
+- Normalized internal footer links to site-root paths so the same footer works from nested routes
+- Synchronized the React `Footer.tsx` links and wordmark with the canonical footer to prevent the production build from reintroducing divergent content
 
 ### v1.5.0 — Phase 3 Content Migration: History & Timeline
 
@@ -487,4 +501,4 @@ Made for the people of Agoo, La Union
 
 ## Developer
 
-Hi, I’m [Glenn Mark P. Garcia](wkndprjkt.com), the Tech Lead and Co-Founder of WKNDPRJKT. I lead the technical direction of our projects and help turn business ideas into scalable, reliable digital products. My focus is on building effective solutions, guiding development teams, and ensuring that technology supports real business goals.
+Hi, I’m [Glenn Mark P. Garcia](https://wkndprjkt.com), the Tech Lead and Co-Founder of WKNDPRJKT. I lead the technical direction of our projects and help turn business ideas into scalable, reliable digital products. My focus is on building effective solutions, guiding development teams, and ensuring that technology supports real business goals.

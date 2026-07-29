@@ -67,28 +67,19 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href="/sitemap-page">{t('footer-sitemap')}</a>
+                <a href="/sitemap/">{t('footer-sitemap')}</a>
               </li>
               <li>
-                <a
-                  href="https://agoo.gov.ph/wp-content/uploads/2025/10/As-of-October-21-2025-2.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {t('footer-citizens-charter')}
-                </a>
+                <a href="/terms/">{t('footer-terms')}</a>
               </li>
               <li>
-                <a href="/terms">{t('footer-terms')}</a>
+                <a href="/privacy/">{t('footer-privacy')}</a>
               </li>
               <li>
-                <a href="/privacy">{t('footer-privacy')}</a>
+                <a href="/accessibility/">{t('footer-accessibility')}</a>
               </li>
               <li>
-                <a href="/accessibility">{t('footer-accessibility')}</a>
-              </li>
-              <li>
-                <a href="/faq">{t('footer-faq')}</a>
+                <a href="/faq/">{t('footer-faq')}</a>
               </li>
             </ul>
           </div>
@@ -106,22 +97,13 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href="https://agoo.gov.ph/" target="_blank" rel="noopener noreferrer">
+                <a href="https://agoolaunion.gov.ph/" target="_blank" rel="noopener noreferrer">
                   {t('footer-lgu-portal')}
                 </a>
               </li>
               <li>
                 <a
-                  href="https://sangguniangbayan.agoo.gov.ph/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {t('footer-sb')}
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://www.facebook.com/OfficialLguAgooFanpage/"
+                  href="https://www.facebook.com/MunicipalityofAgooLaUnion/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -161,49 +143,27 @@ export default function Footer() {
             </a>
             <div className="footer-partners">
               <a
-                href="https://abakada.org"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Abakada.org"
+                className="wordmark"
+                href="https://wkndprjkt.com"
+                aria-label="WKNDPRJKT home"
               >
-                <img
-                  src="/assets/images/logo/abakada-footer.svg"
-                  alt="Abakada.org"
-                  className="footer-partner-logo"
-                  width="120"
-                  height="28"
-                  loading="lazy"
-                />
-              </a>
-              <a
-                href="https://hivcareph.org/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="HIV Care Philippines"
-              >
-                <img
-                  src="/assets/images/logo/hiv-care-logo-footer.svg"
-                  alt="HIV Care Philippines"
-                  className="footer-partner-logo"
-                  width="120"
-                  height="28"
-                  loading="lazy"
-                />
-              </a>
-              <a
-                href="https://bettergov.ph"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="BetterGov.ph"
-              >
-                <img
-                  src="/assets/images/logo/bettergov-footer.svg"
-                  alt="BetterGov.ph"
-                  className="footer-partner-logo"
-                  width="120"
-                  height="28"
-                  loading="lazy"
-                />
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="#f97316"
+                  strokeWidth="3"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="lucide wordmark-icon wordmark-terminal lucide-terminal"
+                  aria-hidden="true"
+                >
+                  <path d="M12 19h8"></path>
+                  <path d="m4 17 6-6-6-6"></path>
+                </svg>
+                <span>WKNDPRJKT</span>
               </a>
             </div>
           </div>

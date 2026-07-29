@@ -56,9 +56,12 @@ if ('serviceWorker' in navigator) {
       .register('/sw.js')
       .then(function (reg) {
         // Check for updates every 30 minutes
-        setInterval(function () {
-          reg.update();
-        }, 30 * 60 * 1000);
+        setInterval(
+          function () {
+            reg.update();
+          },
+          30 * 60 * 1000
+        );
 
         reg.addEventListener('updatefound', function () {
           var newWorker = reg.installing;
@@ -163,15 +166,21 @@ document.addEventListener('DOMContentLoaded', () => {
       track = document.createElement('div');
       track.className = 'hotline-items-track';
       track.setAttribute('aria-label', 'Emergency contacts scrolling');
-      while (hotlineItems.firstChild) {
-        track.appendChild(hotlineItems.firstChild);
-      }
+
+      var originalGroup = document.createElement('div');
+      originalGroup.className = 'hotline-items-group';
       originalItems.forEach(function (item) {
-        var clone = item.cloneNode(true);
-        clone.setAttribute('aria-hidden', 'true');
-        clone.setAttribute('tabindex', '-1');
-        track.appendChild(clone);
+        originalGroup.appendChild(item);
       });
+
+      var cloneGroup = originalGroup.cloneNode(true);
+      cloneGroup.setAttribute('aria-hidden', 'true');
+      Array.from(cloneGroup.querySelectorAll('a, button')).forEach(function (item) {
+        item.setAttribute('tabindex', '-1');
+      });
+
+      track.appendChild(originalGroup);
+      track.appendChild(cloneGroup);
       hotlineItems.appendChild(track);
     };
 
@@ -307,7 +316,12 @@ document.addEventListener('DOMContentLoaded', () => {
       if (!link) return;
       // If it's a dropdown trigger, don't close menu (handled by dropdown init)
       if (link.getAttribute('aria-haspopup') === 'true') return;
-      if (link.parentElement && link.parentElement.classList.contains('has-dropdown') && link.parentElement.querySelector('.dropdown-menu')) return;
+      if (
+        link.parentElement &&
+        link.parentElement.classList.contains('has-dropdown') &&
+        link.parentElement.querySelector('.dropdown-menu')
+      )
+        return;
       closeMobileMenu();
     });
 

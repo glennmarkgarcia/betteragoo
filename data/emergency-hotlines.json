@@ -1,0 +1,172 @@
+{
+  "_schema_version": "1.0",
+  "_status": "complete",
+  "_updated": "2026-07-29",
+  "_note": "Agoo agency contacts are based on the user-supplied emergency hotline reference. Provincial contacts are from the Provincial Government of La Union.",
+  "municipality": "Agoo",
+  "province": "La Union",
+  "agencies": [
+    {
+      "id": "mdrrmo-agoo",
+      "name": "MDRRMO – Agoo",
+      "description": "Disaster and emergency response",
+      "icon": "bi-exclamation-triangle-fill",
+      "source": "User-supplied Agoo Emergency Hotlines reference",
+      "numbers": [
+        {
+          "type": "Smart",
+          "display": "0929 558 7444",
+          "tel": "09295587444"
+        },
+        {
+          "type": "Globe",
+          "display": "0995 054 5741",
+          "tel": "09950545741"
+        }
+      ]
+    },
+    {
+      "id": "rhu-mho-agoo",
+      "name": "Agoo RHU–MHO",
+      "description": "Health concerns",
+      "icon": "bi-heart-pulse-fill",
+      "source": "User-supplied Agoo Emergency Hotlines reference",
+      "numbers": [
+        {
+          "type": "Landline",
+          "display": "(072) 607-4187",
+          "tel": "0726074187"
+        },
+        {
+          "type": "Globe",
+          "display": "0905 235 8713",
+          "tel": "09052358713"
+        }
+      ]
+    },
+    {
+      "id": "bfp-agoo",
+      "name": "BFP – Agoo Station",
+      "description": "Fire safety and other emergencies",
+      "icon": "bi-fire",
+      "source": "User-supplied Agoo Emergency Hotlines reference",
+      "numbers": [
+        {
+          "type": "Smart",
+          "display": "0949 641 0979",
+          "tel": "09496410979"
+        },
+        {
+          "type": "Globe",
+          "display": "0917 183 9711",
+          "tel": "09171839711"
+        }
+      ]
+    },
+    {
+      "id": "pnp-agoo",
+      "name": "PNP – Agoo Station",
+      "description": "Peace, order, and security",
+      "icon": "bi-shield-fill",
+      "source": "User-supplied Agoo Emergency Hotlines reference",
+      "numbers": [
+        {
+          "type": "Smart",
+          "display": "0998 598 5153",
+          "tel": "09985985153"
+        },
+        {
+          "type": "Globe",
+          "display": "0915 857 4117",
+          "tel": "09158574117"
+        }
+      ]
+    },
+    {
+      "id": "coast-guard-agoo",
+      "name": "Coast Guard – Agoo",
+      "description": "Coastal safety and emergencies",
+      "icon": "bi-water",
+      "source": "User-supplied Agoo Emergency Hotlines reference",
+      "numbers": [
+        {
+          "type": "Smart",
+          "display": "0981 746 6184",
+          "tel": "09817466184"
+        },
+        {
+          "type": "Globe",
+          "display": "0945 781 6630",
+          "tel": "09457816630"
+        }
+      ]
+    },
+    {
+      "id": "lumc",
+      "name": "La Union Medical Center (LUMC)",
+      "description": "Hospital and health concerns",
+      "icon": "bi-hospital-fill",
+      "source": "User-supplied Agoo Emergency Hotlines reference",
+      "numbers": [
+        {
+          "type": "Landline",
+          "display": "(072) 607-5541",
+          "tel": "0726075541"
+        },
+        {
+          "type": "Landline",
+          "display": "(072) 607-5545",
+          "tel": "0726075545"
+        },
+        {
+          "type": "Smart",
+          "display": "0928 998 2588",
+          "tel": "09289982588"
+        },
+        {
+          "type": "Globe",
+          "display": "0915 187 9557",
+          "tel": "09151879557"
+        }
+      ]
+    },
+    {
+      "id": "luelco",
+      "name": "LUELCO",
+      "description": "Electrical safety concerns",
+      "icon": "bi-lightning-fill",
+      "source": "User-supplied Agoo Emergency Hotlines reference",
+      "numbers": [
+        {
+          "type": "Globe",
+          "display": "0917 130 4907",
+          "tel": "09171304907"
+        },
+        {
+          "type": "Globe",
+          "display": "0917 130 7491",
+          "tel": "09171307491"
+        }
+      ]
+    },
+    {
+      "id": "pdrrmo-la-union",
+      "name": "La Union PDRRMO / Rescue 911",
+      "description": "Provincial emergency response",
+      "icon": "bi-life-preserver",
+      "source": "https://launion.gov.ph/contact-us/",
+      "numbers": [
+        {
+          "type": "Mobile",
+          "display": "0998 561 1519",
+          "tel": "09985611519"
+        },
+        {
+          "type": "Emergency",
+          "display": "911",
+          "tel": "911"
+        }
+      ]
+    }
+  ]
+}

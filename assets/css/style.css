@@ -247,7 +247,7 @@ p {
 }
 
 .logo-img {
-  height: 48px;
+  height: 58px;
   width: auto;
 }
 
@@ -984,6 +984,20 @@ body.mobile-menu-open {
   font-size: 0.75rem;
 }
 
+.hotline-items-react .hotline-items-track {
+  display: contents;
+}
+
+.hotline-items-react .hotline-items-group {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.hotline-items-react .hotline-items-group[aria-hidden='true'] {
+  display: none;
+}
+
 /* Tablet + Mobile: Hotline marquee */
 @media (max-width: 1024px) {
   .hotline-bar {
@@ -1020,10 +1034,22 @@ body.mobile-menu-open {
 
   .hotline-items-track {
     display: flex;
-    gap: var(--spacing-sm);
+    width: max-content;
+    gap: 0;
     animation: hotlineScroll 25s linear infinite;
     will-change: transform;
-    padding: 8px 0;
+  }
+
+  .hotline-items-group {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    padding: 8px var(--spacing-sm) 8px 0;
+  }
+
+  .hotline-items-react .hotline-items-track,
+  .hotline-items-react .hotline-items-group[aria-hidden='true'] {
+    display: flex;
   }
 
   .hotline-items-track:hover,
@@ -2932,6 +2958,82 @@ h6 {
 .hotline-card:hover .hotline-card-action {
   opacity: 1;
   transform: translateX(0);
+}
+
+.emergency-directory {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--spacing-md);
+}
+
+.emergency-directory-card {
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-md);
+  box-shadow: var(--shadow-sm);
+}
+
+.emergency-directory-header {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-sm);
+}
+
+.emergency-directory-header > i {
+  flex-shrink: 0;
+  width: 42px;
+  height: 42px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #fef2f2;
+  color: #dc2626;
+  font-size: 1.125rem;
+}
+
+.emergency-directory-header h3 {
+  margin: 0 0 2px;
+  font-size: 1.0625rem;
+}
+
+.emergency-directory-header p {
+  margin: 0;
+  color: var(--color-text-light);
+  font-size: 0.875rem;
+}
+
+.emergency-directory-numbers {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 6px;
+}
+
+.emergency-directory-numbers li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-xs);
+}
+
+.emergency-network {
+  color: var(--color-text-light);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.emergency-number {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 600;
+  white-space: nowrap;
 }
 
 @media (max-width: 575px) {
@@ -6016,7 +6118,9 @@ cklist with Icons - Proper Indentation */
   padding: 12px 22px;
   border-radius: var(--border-radius);
   text-decoration: none;
-  transition: background 0.18s ease, transform 0.15s ease;
+  transition:
+    background 0.18s ease,
+    transform 0.15s ease;
 }
 
 .home-fb-cta:hover,
@@ -6104,12 +6208,26 @@ cklist with Icons - Proper Indentation */
   animation: skeleton-shimmer 1.4s infinite ease-in-out;
 }
 
-.fb-skel-bar--title { height: 13px; width: 72%; margin-bottom: 8px; }
-.fb-skel-bar--100   { width: 100%; }
-.fb-skel-bar--80    { width: 80%; }
-.fb-skel-bar--60    { width: 60%; }
-.fb-skel-bar--45    { width: 45%; }
-.fb-skel-bar--sm    { height: 8px; }
+.fb-skel-bar--title {
+  height: 13px;
+  width: 72%;
+  margin-bottom: 8px;
+}
+.fb-skel-bar--100 {
+  width: 100%;
+}
+.fb-skel-bar--80 {
+  width: 80%;
+}
+.fb-skel-bar--60 {
+  width: 60%;
+}
+.fb-skel-bar--45 {
+  width: 45%;
+}
+.fb-skel-bar--sm {
+  height: 8px;
+}
 
 /* ── Post cards ── */
 .fb-feed-local {
@@ -9813,7 +9931,9 @@ a.a11y-contact-item:hover i {
   justify-content: center;
   font-size: 1rem;
   z-index: 2;
-  transition: background 0.18s ease, transform 0.18s ease;
+  transition:
+    background 0.18s ease,
+    transform 0.18s ease;
 }
 
 .vol-popup-close:hover,
@@ -9958,7 +10078,9 @@ a.a11y-contact-item:hover i {
   text-decoration: none;
   border: none;
   cursor: pointer;
-  transition: transform 0.18s ease, box-shadow 0.18s ease;
+  transition:
+    transform 0.18s ease,
+    box-shadow 0.18s ease;
   box-shadow: 0 4px 16px rgba(0, 50, 160, 0.32);
   font-family: var(--font-main);
 }

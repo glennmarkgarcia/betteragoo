@@ -676,13 +676,13 @@ export default function HomePage() {
                 <span className="home-contact-v2-note">{t('contact-hours')}</span>
               </div>
             </a>
-            <a href="mailto:lguagoonv@gmail.com" className="home-contact-v2-card">
+            <a href="mailto:lgu_agoo@yahoo.com" className="home-contact-v2-card">
               <div className="home-contact-v2-icon">
                 <i className="bi bi-envelope-fill"></i>
               </div>
               <div className="home-contact-v2-content">
                 <h3>{t('contact-email')}</h3>
-                <p className="home-contact-v2-value">lguagoonv@gmail.com</p>
+                <p className="home-contact-v2-value">lgu_agoo@yahoo.com</p>
                 <span className="home-contact-v2-note">{t('contact-response')}</span>
               </div>
             </a>
