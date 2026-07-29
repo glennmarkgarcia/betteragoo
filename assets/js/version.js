@@ -1,4 +1,4 @@
-// Version loader for BetterSolano
+// Version loader for BetterAgoo
 // Dynamically updates version display across all pages
 
 (function () {
@@ -15,7 +15,7 @@
       updateVersionDisplay(data.version);
 
       // Store in window for programmatic access
-      window.BETTERSOLANO_VERSION = data;
+      window.BETTERAGOO_VERSION = data;
     } catch (error) {
       console.warn('Could not load version:', error.message);
     }

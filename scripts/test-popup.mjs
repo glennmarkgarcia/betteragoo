@@ -11,8 +11,9 @@
 // re-render or class thrash — the necessary precondition for a flash-free reveal.
 
 import { chromium } from 'playwright';
-import { spawn } from 'node:child_process';
+import { spawn, execSync } from 'node:child_process';
 import { setTimeout as sleep } from 'node:timers/promises';
+import { fileURLToPath } from 'node:url';
 
 const PORT = 8911;
 const BASE = `http://localhost:${PORT}`;
@@ -23,9 +24,27 @@ const VIEWPORTS = [
   { name: 'mobile', width: 390, height: 844 },
 ];
 
+function getPythonPath() {
+  if (process.platform === 'win32') {
+    try {
+      const paths = execSync('where.exe python', { encoding: 'utf8' }).trim().split('\r\n');
+      return paths[0];
+    } catch (e) {
+      return 'python';
+    }
+  } else {
+    try {
+      return execSync('which python3', { encoding: 'utf8' }).trim();
+    } catch (e) {
+      return 'python3';
+    }
+  }
+}
+
 function startServer() {
-  const srv = spawn('python3', ['-m', 'http.server', String(PORT)], {
-    cwd: new URL('..', import.meta.url).pathname,
+  const cmd = getPythonPath();
+  const srv = spawn(cmd, ['-m', 'http.server', String(PORT)], {
+    cwd: fileURLToPath(new URL('..', import.meta.url)),
     stdio: 'ignore',
   });
   return srv;

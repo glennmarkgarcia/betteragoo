@@ -1,6 +1,6 @@
 /**
  * Transparency Page - Charts & Animations
- * Better Solano Portal
+ * Better Agoo Portal
  */
 
 // Brand colors

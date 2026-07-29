@@ -1,7 +1,7 @@
 {
   "name": "bs-web",
   "version": "1.1.19",
-  "description": "BetterSolano.org - Official Portal for LGU Solano",
+  "description": "BetterAgoo.org - Official Portal for LGU Agoo",
   "scripts": {
     "dev": "python3 -m http.server 8000",
     "build": "bash build.sh",
@@ -18,12 +18,12 @@
     "format:check": "prettier --check ."
   },
   "keywords": [
-    "solano",
-    "nueva-vizcaya",
+    "agoo",
+    "la-union",
     "government",
     "lgu"
   ],
-  "author": "Ramon Logan Jr.",
+  "author": "Glenn Mark P. Garcia",
   "license": "MIT",
   "devDependencies": {
     "@babel/cli": "^7.23.9",
