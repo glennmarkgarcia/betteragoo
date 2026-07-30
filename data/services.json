@@ -1,4 +1,8 @@
 {
+  "schemaVersion": "1.7.0",
+  "lastReviewed": "2026-07-30",
+  "serviceStandardStatus": "pending-official-agoo-citizens-charter",
+  "accuracyNotice": "The Agoo Citizen's Charter was not available from an official public source during this review. Confirm walk-in requirements, fees, processing times, and office routing with LGU Agoo before transacting. Filipizen links in this registry were verified as live Agoo partner routes on 2026-07-30.",
   "services": [
     {
       "id": "birth-certificate",
@@ -151,7 +155,7 @@
       "category": "Business, Trade & Investment",
       "categoryId": "business",
       "description": "Obtain cedula for individuals and businesses",
-      "keywords": ["cedula", "community", "tax", "certificate", "ctc"],
+      "keywords": ["cedula", "community", "tax", "buwis", "certificate", "ctc"],
       "fee": "₱5+",
       "processingTime": "Same day",
       "office": "Municipal Treasurer's Office",
@@ -271,7 +275,7 @@
       "category": "Taxation & Payments",
       "categoryId": "tax-payments",
       "description": "Pay annual real property tax (amilyar)",
-      "keywords": ["property", "tax", "real", "amilyar", "land", "house", "lot"],
+      "keywords": ["property", "tax", "buwis", "real", "amilyar", "land", "house", "lot"],
       "fee": "Varies",
       "processingTime": "Same day",
       "office": "Municipal Treasurer's Office",
@@ -283,7 +287,7 @@
       "category": "Taxation & Payments",
       "categoryId": "tax-payments",
       "description": "Pay quarterly or annual business taxes",
-      "keywords": ["business", "tax", "payment", "quarterly", "annual"],
+      "keywords": ["business", "tax", "buwis", "payment", "quarterly", "annual"],
       "fee": "Varies",
       "processingTime": "Same day",
       "office": "Municipal Treasurer's Office",
@@ -446,8 +450,8 @@
       "url": "environment.html"
     },
     {
-      "id": "seedo-slaughterhouse",
-      "title": "SEEDO Slaughterhouse",
+      "id": "agoo-slaughterhouse",
+      "title": "Agoo Slaughterhouse Services",
       "category": "Business, Trade & Investment",
       "categoryId": "business",
       "description": "Hog, cattle, goat, and carabao slaughter with meat inspection services",
@@ -461,12 +465,12 @@
         "meat",
         "inspection",
         "butcher",
-        "SEEDO"
+        "Agoo"
       ],
-      "fee": "₱40-350",
-      "processingTime": "37 min - 1.5 hrs",
-      "office": "SEEDO Slaughterhouse",
-      "url": "../service-details/seedo-slaughterhouse.html"
+      "fee": "Confirm with office",
+      "processingTime": "Confirm with office",
+      "office": "Agoo Slaughterhouse Administration",
+      "url": "../service-details/slaughterhouse.html"
     },
     {
       "id": "mswdo-services",
@@ -504,8 +508,8 @@
       "url": "environment.html"
     },
     {
-      "id": "seedo-public-market",
-      "title": "SEEDO Public Market",
+      "id": "agoo-public-market",
+      "title": "Agoo Public Market Services",
       "category": "Business, Trade & Investment",
       "categoryId": "business",
       "description": "Market clearance, entrance fees, vendor services, and CTC issuance",
@@ -516,13 +520,13 @@
         "stall",
         "clearance",
         "entrance",
-        "SEEDO",
+        "Agoo",
         "palengke"
       ],
-      "fee": "₱5-50",
-      "processingTime": "Same day",
-      "office": "SEEDO Public Market",
-      "url": "../service-details/seedo-public-market.html"
+      "fee": "Confirm with office",
+      "processingTime": "Confirm with office",
+      "office": "Agoo Public Market Administration",
+      "url": "../service-details/public-market.html"
     },
     {
       "id": "business-permits-licensing",
@@ -795,6 +799,78 @@
       "processingTime": "Instant",
       "office": "Municipal Treasurer's Office",
       "url": "https://www.filipizen.com/partners/launion_agoo/po/billing"
+    },
+    {
+      "id": "online-market-billing",
+      "title": "Public Market Online Billing & Payment",
+      "category": "Online Services",
+      "categoryId": "online",
+      "description": "View and pay Agoo public market rental bills online via Filipizen",
+      "keywords": ["online", "market", "rental", "stall", "billing", "payment", "filipizen"],
+      "fee": "Varies by account",
+      "processingTime": "Online",
+      "office": "Agoo Public Market Administration",
+      "url": "https://www.filipizen.com/partners/launion_agoo/market/billing"
+    },
+    {
+      "id": "online-water-billing",
+      "title": "Water Online Billing & Payment",
+      "category": "Online Services",
+      "categoryId": "online",
+      "description": "Access Agoo water billing and payment services through Filipizen",
+      "keywords": ["online", "water", "waterworks", "billing", "payment", "filipizen"],
+      "fee": "Varies by account",
+      "processingTime": "Online",
+      "office": "Agoo Water Services",
+      "url": "https://www.filipizen.com/partners/launion_agoo/water/billing"
+    },
+    {
+      "id": "online-waterworks-billing",
+      "title": "Waterworks Online Billing & Payment",
+      "category": "Online Services",
+      "categoryId": "online",
+      "description": "Access Agoo waterworks billing and payment services through Filipizen",
+      "keywords": ["online", "waterworks", "water", "billing", "payment", "filipizen"],
+      "fee": "Varies by account",
+      "processingTime": "Online",
+      "office": "Agoo Waterworks",
+      "url": "https://www.filipizen.com/partners/launion_agoo/waterworks/billing"
+    },
+    {
+      "id": "online-building-requirements",
+      "title": "Building Permit Requirements Online",
+      "category": "Online Services",
+      "categoryId": "online",
+      "description": "Open Agoo's Filipizen building permit application requirements page",
+      "keywords": ["online", "building", "permit", "requirements", "construction", "filipizen"],
+      "fee": "See Filipizen assessment",
+      "processingTime": "Online information",
+      "office": "Office of the Building Official",
+      "url": "https://www.filipizen.com/partners/launion_agoo/obo/requirement/building"
+    },
+    {
+      "id": "online-occupancy-requirements",
+      "title": "Certificate of Occupancy Requirements Online",
+      "category": "Online Services",
+      "categoryId": "online",
+      "description": "Open Agoo's Filipizen certificate of occupancy requirements page",
+      "keywords": ["online", "occupancy", "certificate", "requirements", "building", "filipizen"],
+      "fee": "See Filipizen assessment",
+      "processingTime": "Online information",
+      "office": "Office of the Building Official",
+      "url": "https://www.filipizen.com/partners/launion_agoo/obo/requirement/occupancy"
+    },
+    {
+      "id": "online-terminal-pass",
+      "title": "Terminal Pass Online",
+      "category": "Online Services",
+      "categoryId": "online",
+      "description": "Access Agoo's terminal pass service through Filipizen",
+      "keywords": ["online", "terminal", "pass", "transport", "ticketing", "filipizen"],
+      "fee": "See Filipizen assessment",
+      "processingTime": "Online",
+      "office": "Agoo Terminal Administration",
+      "url": "https://www.filipizen.com/partners/launion_agoo/ticketing/terminalpass"
     }
   ]
 }

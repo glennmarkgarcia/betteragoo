@@ -31,6 +31,22 @@ export default function HealthPage() {
         </div>
       </section>
 
+      <section className="service-accuracy-notice" aria-labelledby="service-accuracy-title">
+        <div className="container">
+          <div className="service-accuracy-card">
+            <i className="bi bi-info-circle-fill service-accuracy-icon" aria-hidden="true"></i>
+            <div>
+              <h2 id="service-accuracy-title">Service information status</h2>
+              <p>
+                Agoo&apos;s official Citizen&apos;s Charter was not available from a public official
+                source during the 30 July 2026 review. Confirm exact requirements, fees, schedules,
+                and routing with the Agoo RHU–MHO before transacting.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Service Cards */}
       <section className="section">
         <div className="container">
@@ -43,10 +59,10 @@ export default function HealthPage() {
               <p className="service-item-desc">{t('health-consultation-desc')}</p>
               <div className="service-item-meta">
                 <span>
-                  <strong>{t('label-fee')}</strong> {t('label-free')}
+                  <strong>{t('label-fee')}</strong> Confirm with office
                 </span>
                 <span>
-                  <strong>{t('label-time')}</strong> {t('label-walk-in')}
+                  <strong>{t('label-time')}</strong> Confirm with office
                 </span>
               </div>
             </div>
@@ -59,10 +75,10 @@ export default function HealthPage() {
               <p className="service-item-desc">{t('health-vaccination-desc')}</p>
               <div className="service-item-meta">
                 <span>
-                  <strong>{t('label-fee')}</strong> {t('label-free')}
+                  <strong>{t('label-fee')}</strong> Confirm with office
                 </span>
                 <span>
-                  <strong>{t('label-time')}</strong> {t('label-schedule-varies')}
+                  <strong>{t('label-time')}</strong> Confirm with office
                 </span>
               </div>
             </div>
@@ -75,10 +91,10 @@ export default function HealthPage() {
               <p className="service-item-desc">{t('health-maternal-desc')}</p>
               <div className="service-item-meta">
                 <span>
-                  <strong>{t('label-fee')}</strong> {t('label-free')}
+                  <strong>{t('label-fee')}</strong> Confirm with office
                 </span>
                 <span>
-                  <strong>{t('label-time')}</strong> {t('label-by-appointment')}
+                  <strong>{t('label-time')}</strong> Confirm with office
                 </span>
               </div>
             </div>
@@ -91,10 +107,10 @@ export default function HealthPage() {
               <p className="service-item-desc">{t('health-medicine-desc')}</p>
               <div className="service-item-meta">
                 <span>
-                  <strong>{t('label-fee')}</strong> {t('label-free-subsidy')}
+                  <strong>{t('label-fee')}</strong> Confirm with office
                 </span>
                 <span>
-                  <strong>{t('label-time')}</strong> {t('label-1-3-days')}
+                  <strong>{t('label-time')}</strong> Confirm with office
                 </span>
               </div>
             </div>
@@ -102,25 +118,33 @@ export default function HealthPage() {
         </div>
       </section>
 
-      {/* Health Facilities Statistics */}
+      {/* Verified municipal health contact */}
       <section className="section section-compact">
         <div className="container">
           <div className="health-stats-grid">
             <div className="health-stat-card">
-              <span className="health-stat-num">88</span>
-              <span className="health-stat-label">{t('health-stat-facilities')}</span>
+              <span className="health-stat-num">
+                <i className="bi bi-telephone" aria-hidden="true"></i>
+              </span>
+              <span className="health-stat-label">Landline: 072 607 4187</span>
             </div>
             <div className="health-stat-card">
-              <span className="health-stat-num">3</span>
-              <span className="health-stat-label">{t('health-stat-hospitals')}</span>
+              <span className="health-stat-num">
+                <i className="bi bi-phone" aria-hidden="true"></i>
+              </span>
+              <span className="health-stat-label">Globe: 0905 235 8713</span>
             </div>
             <div className="health-stat-card">
-              <span className="health-stat-num">22</span>
-              <span className="health-stat-label">{t('health-stat-bhs')}</span>
+              <span className="health-stat-num">
+                <i className="bi bi-hospital" aria-hidden="true"></i>
+              </span>
+              <span className="health-stat-label">Agoo RHU–MHO</span>
             </div>
             <div className="health-stat-card">
-              <span className="health-stat-num">1</span>
-              <span className="health-stat-label">{t('health-stat-mho')}</span>
+              <span className="health-stat-num">
+                <i className="bi bi-geo-alt" aria-hidden="true"></i>
+              </span>
+              <span className="health-stat-label">Agoo, La Union 2504</span>
             </div>
           </div>
         </div>
@@ -221,87 +245,33 @@ export default function HealthPage() {
         </div>
       </section>
 
-      {/* Barangay Health Stations */}
+      {/* Barangay health service routing */}
       <section className="section section-compact">
         <div className="container">
           <h2 className="section-title">
             <i className="bi bi-plus-circle"></i>
-            <span>{t('health-section-bhs')}</span>
+            <span>Barangay Health Services</span>
           </h2>
-          <p className="section-subtitle">{t('health-bhs-subtitle')}</p>
+          <p className="section-subtitle">
+            Contact the Agoo RHU–MHO to confirm the correct health station, service schedule, and
+            referral path for your barangay.
+          </p>
           <div className="health-bhs-grid">
-            <div className="health-bhs-item">
-              <span>{t('health-aggub-bhs')}</span>
-            </div>
-            <div className="health-bhs-item">
-              <span>{t('health-bagahabag-bhs')}</span>
-            </div>
-            <div className="health-bhs-item">
-              <span>{t('health-bangaan-bhs')}</span>
-            </div>
-            <div className="health-bhs-item">
-              <span>{t('health-bangar-bhs')}</span>
-            </div>
-            <div className="health-bhs-item">
-              <span>{t('health-buenavista-bhs')}</span>
-            </div>
-            <div className="health-bhs-item">
-              <span>{t('health-calaocan-bhs')}</span>
-            </div>
-            <div className="health-bhs-item">
-              <span>{t('health-commando-bhs')}</span>
-            </div>
-            <div className="health-bhs-item">
-              <span>{t('health-concepcion-bhs')}</span>
-            </div>
-            <div className="health-bhs-item">
-              <span>{t('health-curifang-bhs')}</span>
-            </div>
-            <div className="health-bhs-item">
-              <span>{t('health-dadap-bhs')}</span>
-            </div>
-            <div className="health-bhs-item">
-              <span>{t('health-lactawan-bhs')}</span>
-            </div>
-            <div className="health-bhs-item">
-              <span>{t('health-nangalisan-bhs')}</span>
-            </div>
-            <div className="health-bhs-item">
-              <span>{t('health-ocapon-bhs')}</span>
-            </div>
-            <div className="health-bhs-item">
-              <span>{t('health-osmea-bhs')}</span>
-            </div>
-            <div className="health-bhs-item">
-              <span>{t('health-paitan-bhs')}</span>
-            </div>
-            <div className="health-bhs-item">
-              <span>{t('health-pilar-bhs')}</span>
-            </div>
-            <div className="health-bhs-item">
-              <span>{t('health-poblacion-bhs')}</span>
-            </div>
-            <div className="health-bhs-item">
-              <span>{t('health-quezon-bhs')}</span>
-            </div>
-            <div className="health-bhs-item">
-              <span>{t('health-quirino-bhs')}</span>
-            </div>
-            <div className="health-bhs-item">
-              <span>{t('health-roxas-bhs')}</span>
-            </div>
-            <div className="health-bhs-item">
-              <span>{t('health-tucal-bhs')}</span>
-            </div>
-            <div className="health-bhs-item">
-              <span>{t('health-ambitacay-bhs')}</span>
-            </div>
+            <a className="health-bhs-item" href="tel:0726074187">
+              <span>Call 072 607 4187</span>
+            </a>
+            <a className="health-bhs-item" href="tel:09052358713">
+              <span>Call 0905 235 8713</span>
+            </a>
           </div>
         </div>
       </section>
 
       {/* HIV Care Philippines CTA */}
-      <section className="section hivcare-cta-section" aria-label="HIV Care Philippines facility directory">
+      <section
+        className="section hivcare-cta-section"
+        aria-label="HIV Care Philippines facility directory"
+      >
         <div className="container">
           <div className="hivcare-cta-card">
             <span className="hivcare-cta-eyebrow">

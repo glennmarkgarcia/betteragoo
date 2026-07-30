@@ -188,7 +188,19 @@
       const response = await fetch(`${basePath}data/services.json`);
       if (!response.ok) throw new Error('Failed to load services data');
       const data = await response.json();
-      servicesData = data.services || [];
+      servicesData = (data.services || []).map((service) => {
+        if (
+          data.serviceStandardStatus === 'pending-official-agoo-citizens-charter' &&
+          service.categoryId !== 'online'
+        ) {
+          return {
+            ...service,
+            fee: 'Confirm with office',
+            processingTime: 'Confirm with office',
+          };
+        }
+        return service;
+      });
       searchIndex = buildSearchIndex(servicesData);
       isDataLoaded = true;
       return servicesData;
@@ -209,8 +221,8 @@
         category: 'Certificates & Vital Records',
         keywords: ['birth', 'certificate'],
         office: 'Local Civil Registrar',
-        fee: '₱150',
-        processingTime: '15-30 minutes',
+        fee: 'Confirm with office',
+        processingTime: 'Confirm with office',
         url: '../service-details/birth-certificate.html',
       },
       {
@@ -219,8 +231,8 @@
         category: 'Business Trade & Investment',
         keywords: ['business', 'permit'],
         office: 'BPLS',
-        fee: 'Varies',
-        processingTime: '3-5 days',
+        fee: 'Confirm with office',
+        processingTime: 'Confirm with office',
         url: 'business.html',
       },
     ];

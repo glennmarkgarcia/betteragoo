@@ -1,9 +1,9 @@
 {
-  "version": "1.6.0",
+  "version": "1.7.0",
   "major": 1,
-  "minor": 6,
+  "minor": 7,
   "patch": 0,
-  "lastUpdated": "2026-07-29",
+  "lastUpdated": "2026-07-30",
   "changelog": {
     "1.0.0": "Initial release",
     "1.1.0": "Added version management system",

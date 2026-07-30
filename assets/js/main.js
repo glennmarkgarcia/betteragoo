@@ -556,6 +556,99 @@ document.addEventListener('DOMContentLoaded', () => {
 
   initAccordion();
 
+  // BA-F-0006: Clearly distinguish verified online routes from local service
+  // standards that still require confirmation against Agoo's official charter.
+  const initServiceAccuracyNotice = () => {
+    const path = window.location.pathname.toLowerCase();
+    const isServicePage =
+      path.includes('/services/') ||
+      path.endsWith('/services') ||
+      path.includes('/service-details/');
+
+    if (!isServicePage) return;
+
+    const pageHeader = document.querySelector('#main-content .page-header');
+    if (!pageHeader || document.querySelector('.service-accuracy-notice')) return;
+
+    const isDetailPage = path.includes('/service-details/');
+    const notice = document.createElement('section');
+    notice.className = 'service-accuracy-notice';
+    notice.setAttribute('aria-labelledby', 'service-accuracy-title');
+    notice.innerHTML = `
+      <div class="container">
+        <div class="service-accuracy-card">
+          <i class="bi bi-info-circle-fill service-accuracy-icon" aria-hidden="true"></i>
+          <div>
+            <h2 id="service-accuracy-title">Service information status</h2>
+            <p>
+              Agoo's official Citizen's Charter was not available from a public official source
+              during the 30 July 2026 review. ${
+                isDetailPage
+                  ? 'Use this page as preparation guidance only.'
+                  : 'Use the directory to find the responsible office.'
+              }
+              Confirm exact walk-in requirements, fees, processing times, and routing with LGU
+              Agoo before transacting. Links labeled Filipizen were verified as live Agoo partner
+              routes.
+            </p>
+            <a href="https://www.filipizen.com/partners/launion_agoo"
+               target="_blank"
+               rel="noopener noreferrer">
+              Open the verified Agoo Filipizen portal
+              <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    `;
+    pageHeader.insertAdjacentElement('afterend', notice);
+
+    if (isDetailPage) {
+      const legacyPersonnelNames = [
+        'Evangeline B. Ramos',
+        'Mary Jane C. Salvador',
+        'Jocelyn L. Gatan',
+        'Rosalinda M. Fernandez',
+        'Marcial L. Ramos, CPA',
+        'Melisa Claire Leal',
+        'Darby Gold Abalos',
+        'Ma. Theresa',
+      ];
+      const mainContent = document.getElementById('main-content');
+      if (mainContent) {
+        const walker = document.createTreeWalker(mainContent, NodeFilter.SHOW_TEXT);
+        const textNodes = [];
+        while (walker.nextNode()) textNodes.push(walker.currentNode);
+        textNodes.forEach((node) => {
+          if (legacyPersonnelNames.some((name) => node.nodeValue.includes(name))) {
+            node.nodeValue = 'Office personnel — confirm with LGU Agoo';
+          }
+        });
+
+        mainContent.querySelectorAll('table').forEach((table) => {
+          table.classList.add('service-standard-unverified');
+          table.setAttribute(
+            'aria-description',
+            'Preparation guidance only; confirm all entries with LGU Agoo.'
+          );
+        });
+      }
+    }
+
+    // Category-card values copied from the former municipality are not valid
+    // Agoo service standards. Keep public-safety response information intact.
+    if (!isDetailPage && !path.includes('/services/public-safety')) {
+      document.querySelectorAll('.service-item-meta').forEach((meta) => {
+        meta.innerHTML = `
+          <span><strong>Fee:</strong> Confirm with office</span>
+          <span><strong>Time:</strong> Confirm with office</span>
+        `;
+      });
+    }
+  };
+
+  initServiceAccuracyNotice();
+
   // Education Category Accordion
   const initEduAccordion = () => {
     const categoryHeaders = document.querySelectorAll('.edu-category-header');

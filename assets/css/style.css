@@ -10158,3 +10158,51 @@ a.a11y-contact-item:hover i {
     padding: 20px 20px 24px;
   }
 }
+
+/* Service-directory accuracy notice (BA-F-0006) */
+.service-accuracy-notice {
+  padding: var(--spacing-md) 0 0;
+}
+
+.service-accuracy-card {
+  display: flex;
+  gap: var(--spacing-sm);
+  align-items: flex-start;
+  padding: var(--spacing-md);
+  border: 1px solid #f59e0b;
+  border-left: 5px solid #f59e0b;
+  border-radius: var(--radius-md);
+  background: #fffbeb;
+  color: #78350f;
+}
+
+.service-accuracy-icon {
+  flex: 0 0 auto;
+  margin-top: 2px;
+  color: #d97706;
+  font-size: 1.25rem;
+}
+
+.service-accuracy-card h2 {
+  margin: 0 0 6px;
+  color: #78350f;
+  font-size: 1rem;
+}
+
+.service-accuracy-card p {
+  margin: 0 0 8px;
+  line-height: 1.6;
+}
+
+.service-accuracy-card a {
+  color: #92400e;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+@media (max-width: 575px) {
+  .service-accuracy-card {
+    padding: var(--spacing-sm);
+  }
+}

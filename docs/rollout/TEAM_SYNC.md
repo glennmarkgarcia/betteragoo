@@ -1,7 +1,7 @@
 # LGU Synchronization Protocol
 
 **LGU Name:** Municipality of Agoo, La Union
-**Last Sync Date:** 2026-07-29
+**Last Sync Date:** 2026-07-30
 
 ## Roles & Responsibilities
 
@@ -68,6 +68,9 @@ The following hotlines must be verified monthly against official LGU records:
 - **Frequency:** Annually, or when fees/requirements change
 - **File to update:** `data/services.json`
 - **Approver:** MPDC
+- **Current status:** The official Agoo Citizen's Charter was not available from a public official source during the 30 July 2026 review. Release `1.7.0` therefore labels walk-in requirements, fees, processing times, routing, and personnel for confirmation.
+- **Verified scope:** 11 Agoo Filipizen routes passed live HTTP validation on 30 July 2026.
+- **Validation:** Run `npm run services:validate` and `npm run services:validate:online`.
 
 ### Legislative Data (Ordinances & Resolutions)
 
@@ -121,6 +124,7 @@ The following hotlines must be verified monthly against official LGU records:
 
 ## Change Management Log
 
-| Date       | Change                       | Verified By          |
-| ---------- | ---------------------------- | -------------------- |
-| 2026-02-03 | Initial TEAM_SYNC.md created | Glenn Mark P. Garcia |
+| Date       | Change                                                                                                               | Verified By          |
+| ---------- | -------------------------------------------------------------------------------------------------------------------- | -------------------- |
+| 2026-02-03 | Initial TEAM_SYNC.md created                                                                                         | Glenn Mark P. Garcia |
+| 2026-07-30 | BA-F-0006 services baseline: 63 registry entries, 11 live Filipizen routes, and official-charter verification status | Glenn Mark P. Garcia |
