@@ -98,7 +98,7 @@ function renderResolutionTable(resolutions, tableBodyId, year) {
     const emptyRow = document.createElement('tr');
     emptyRow.innerHTML = `
             <td colspan="3" class="text-center text-muted">
-                No resolutions found for ${year}
+                Official Agoo resolutions for ${year} are pending source verification.
             </td>
         `;
     tableBody.appendChild(emptyRow);

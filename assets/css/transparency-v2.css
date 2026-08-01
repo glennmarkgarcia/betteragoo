@@ -400,6 +400,58 @@
   color: var(--color-primary);
 }
 
+.sre-detail-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.sre-detail-card {
+  padding: 1.25rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  background: #fff;
+}
+
+.sre-detail-card h3 {
+  margin: 0 0 0.75rem;
+  font-size: 1rem;
+}
+
+.sre-detail-card dl {
+  margin: 0;
+}
+
+.sre-detail-card dl div {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.45rem 0;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.sre-detail-card dl div:last-child {
+  border-bottom: 0;
+}
+
+.sre-detail-card dt {
+  color: #475569;
+}
+
+.sre-detail-card dd {
+  margin: 0;
+  color: #0f172a;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.sre-data-note {
+  margin: 1rem 0 0;
+  color: #475569;
+  font-size: 0.875rem;
+}
+
 /* Infrastructure Section V5 - Minimal Professional Design */
 .infra-section-v5 {
   padding: 64px 0;
@@ -520,6 +572,12 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 24px;
+}
+
+.infra-detail-row-secondary {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #e5e7eb;
 }
 
 .infra-detail-col {
@@ -712,6 +770,10 @@
   }
 
   .sre-breakdown-v2 {
+    grid-template-columns: 1fr;
+  }
+
+  .sre-detail-grid {
     grid-template-columns: 1fr;
   }
 

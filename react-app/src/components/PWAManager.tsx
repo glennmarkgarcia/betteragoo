@@ -57,13 +57,27 @@ export default function PWAManager() {
         });
       });
 
-      // Seamless reload on controller change
+      // A first-time install may claim a page that started without a controller.
+      // Do not reload in that case: it interrupts initial UI and can make the
+      // volunteer popup appear twice. Reload only when an existing controller is
+      // replaced after the user accepts an update.
       let refreshing = false;
-      navigator.serviceWorker.addEventListener('controllerchange', () => {
+      let hadController = Boolean(navigator.serviceWorker.controller);
+      const onControllerChange = () => {
+        if (!hadController) {
+          hadController = true;
+          return;
+        }
         if (refreshing) return;
         refreshing = true;
         window.location.reload();
-      });
+      };
+      navigator.serviceWorker.addEventListener('controllerchange', onControllerChange);
+
+      return () => {
+        window.removeEventListener('beforeinstallprompt', onBeforeInstall);
+        navigator.serviceWorker.removeEventListener('controllerchange', onControllerChange);
+      };
     }
 
     return () => window.removeEventListener('beforeinstallprompt', onBeforeInstall);
@@ -78,7 +92,11 @@ export default function PWAManager() {
             <span>Install BetterAgoo for quick access to services.</span>
           </div>
           <div className="pwa-install-actions">
-            <button className="pwa-install-btn" onClick={handleInstall} aria-label="Install BetterAgoo app">
+            <button
+              className="pwa-install-btn"
+              onClick={handleInstall}
+              aria-label="Install BetterAgoo app"
+            >
               Install
             </button>
             <button

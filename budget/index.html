@@ -126,7 +126,6 @@
       </div>
     </div>
 
-
     <header class="site-header">
       <div class="container header-inner">
         <div class="logo-container">
@@ -142,7 +141,13 @@
           <ul>
             <li><a href="../" data-i18n="budget-home">Home</a></li>
             <li class="has-dropdown">
-              <a href="../services/" data-i18n="budget-services" aria-haspopup="true" aria-expanded="false">Services</a>
+              <a
+                href="../services/"
+                data-i18n="budget-services"
+                aria-haspopup="true"
+                aria-expanded="false"
+                >Services</a
+              >
               <ul class="dropdown-menu">
                 <li>
                   <a href="../services/certificates" data-i18n="budget-certificates"
@@ -183,7 +188,13 @@
             <li><a href="../government/" data-i18n="budget-government">Government</a></li>
             <li><a href="../statistics/" data-i18n="budget-statistics">Statistics</a></li>
             <li class="has-dropdown">
-              <a href="../legislative/" data-i18n="budget-legislative" aria-haspopup="true" aria-expanded="false">Legislative</a>
+              <a
+                href="../legislative/"
+                data-i18n="budget-legislative"
+                aria-haspopup="true"
+                aria-expanded="false"
+                >Legislative</a
+              >
               <ul class="dropdown-menu">
                 <li>
                   <a
@@ -278,44 +289,28 @@
                 Statement of Receipts & Expenditures
               </h2>
               <p data-i18n="budget-fy-2025-quarterly-financial-performance">
-                FY 2025 quarterly financial performance
+                First reporting period of FY 2025 (treated as Q1)
               </p>
             </div>
-            <div class="sre-period-toggle" role="tablist" aria-label="Select fiscal quarter">
-              <button
-                type="button"
-                class="sre-period-btn active"
-                role="tab"
-                aria-selected="true"
-                data-quarter="q1"
-              >
-                <span class="sre-period-q" data-i18n="budget-q1">Q1</span>
-                <span class="sre-period-range" data-i18n="budget-jan-mar">Jan - Mar</span>
-              </button>
-              <button
-                type="button"
-                class="sre-period-btn"
-                role="tab"
-                aria-selected="false"
-                data-quarter="q2"
-              >
-                <span class="sre-period-q" data-i18n="budget-q2">Q2</span>
-                <span class="sre-period-range" data-i18n="budget-apr-jun">Apr - Jun</span>
-              </button>
+            <div class="sre-period-toggle" aria-label="Reporting period">
+              <span class="sre-period-btn active">
+                <span class="sre-period-q">Q1 FY 2025</span>
+                <span class="sre-period-range">First reporting period</span>
+              </span>
             </div>
           </div>
           <div class="sre-metrics-row">
             <div class="sre-metric-card sre-metric-income">
               <div class="sre-metric-icon"><i class="bi bi-arrow-down-circle"></i></div>
               <div class="sre-metric-data">
-                <span class="sre-metric-value" id="sre-total-income">₱158.47 M</span>
+                <span class="sre-metric-value" id="sre-total-income">₱141.59 M</span>
                 <span class="sre-metric-label" data-i18n="budget-total-income">Total Income</span>
               </div>
             </div>
             <div class="sre-metric-card sre-metric-expense">
               <div class="sre-metric-icon"><i class="bi bi-arrow-up-circle"></i></div>
               <div class="sre-metric-data">
-                <span class="sre-metric-value" id="sre-total-expense">₱67.51 M</span>
+                <span class="sre-metric-value" id="sre-total-expense">₱43.65 M</span>
                 <span class="sre-metric-label" data-i18n="budget-total-expenditures"
                   >Total Expenditures</span
                 >
@@ -324,7 +319,7 @@
             <div class="sre-metric-card sre-metric-net">
               <div class="sre-metric-icon"><i class="bi bi-plus-slash-minus"></i></div>
               <div class="sre-metric-data">
-                <span class="sre-metric-value" id="sre-net-income">₱90.96 M</span>
+                <span class="sre-metric-value" id="sre-net-income">₱97.94 M</span>
                 <span class="sre-metric-label" data-i18n="budget-net-operating-income"
                   >Net Operating Income</span
                 >
@@ -333,7 +328,7 @@
             <div class="sre-metric-card sre-metric-balance">
               <div class="sre-metric-icon"><i class="bi bi-wallet2"></i></div>
               <div class="sre-metric-data">
-                <span class="sre-metric-value" id="sre-fund-balance">₱283.29 M</span>
+                <span class="sre-metric-value" id="sre-fund-balance">₱332.91 M</span>
                 <span class="sre-metric-label" data-i18n="budget-fund-balance-end"
                   >Fund Balance (End)</span
                 >
@@ -365,8 +360,8 @@
                       >
                     </div>
                     <div class="sre-item-values">
-                      <span class="sre-item-amount" id="sre-income-local">₱88.85 M</span>
-                      <span class="sre-item-pct" id="sre-income-local-pct">56.1%</span>
+                      <span class="sre-item-amount" id="sre-income-local">₱77.84 M</span>
+                      <span class="sre-item-pct" id="sre-income-local-pct">55.0%</span>
                     </div>
                   </div>
                   <div class="sre-breakdown-item" data-type="external">
@@ -380,8 +375,8 @@
                       >
                     </div>
                     <div class="sre-item-values">
-                      <span class="sre-item-amount" id="sre-income-external">₱69.62 M</span>
-                      <span class="sre-item-pct" id="sre-income-external-pct">43.9%</span>
+                      <span class="sre-item-amount" id="sre-income-external">₱63.75 M</span>
+                      <span class="sre-item-pct" id="sre-income-external-pct">45.0%</span>
                     </div>
                   </div>
                 </div>
@@ -410,8 +405,8 @@
                       >
                     </div>
                     <div class="sre-item-values">
-                      <span class="sre-item-amount" id="sre-exp-gps">₱42.76 M</span>
-                      <span class="sre-item-pct" id="sre-exp-gps-pct">63.3%</span>
+                      <span class="sre-item-amount" id="sre-exp-gps">₱22.93 M</span>
+                      <span class="sre-item-pct" id="sre-exp-gps-pct">52.5%</span>
                     </div>
                   </div>
                   <div class="sre-breakdown-item" data-type="social">
@@ -425,8 +420,8 @@
                       >
                     </div>
                     <div class="sre-item-values">
-                      <span class="sre-item-amount" id="sre-exp-social">₱13.33 M</span>
-                      <span class="sre-item-pct" id="sre-exp-social-pct">19.7%</span>
+                      <span class="sre-item-amount" id="sre-exp-social">₱12.44 M</span>
+                      <span class="sre-item-pct" id="sre-exp-social-pct">28.5%</span>
                     </div>
                   </div>
                   <div class="sre-breakdown-item" data-type="economic">
@@ -440,8 +435,8 @@
                       >
                     </div>
                     <div class="sre-item-values">
-                      <span class="sre-item-amount" id="sre-exp-economic">₱11.07 M</span>
-                      <span class="sre-item-pct" id="sre-exp-economic-pct">16.4%</span>
+                      <span class="sre-item-amount" id="sre-exp-economic">₱8.11 M</span>
+                      <span class="sre-item-pct" id="sre-exp-economic-pct">18.6%</span>
                     </div>
                   </div>
                   <div class="sre-breakdown-item" data-type="debt">
@@ -455,8 +450,8 @@
                       >
                     </div>
                     <div class="sre-item-values">
-                      <span class="sre-item-amount" id="sre-exp-debt">₱0.35 M</span>
-                      <span class="sre-item-pct" id="sre-exp-debt-pct">0.5%</span>
+                      <span class="sre-item-amount" id="sre-exp-debt">₱0.17 M</span>
+                      <span class="sre-item-pct" id="sre-exp-debt-pct">0.4%</span>
                     </div>
                   </div>
                 </div>
@@ -464,6 +459,111 @@
             </div>
           </div>
 
+          <div class="sre-detail-grid" aria-label="Detailed fiscal breakdown">
+            <section class="sre-detail-card">
+              <h3>Local income detail</h3>
+              <dl>
+                <div>
+                  <dt>Total tax revenue</dt>
+                  <dd>₱44.30 M</dd>
+                </div>
+                <div>
+                  <dt>Real property tax (General + SEF)</dt>
+                  <dd>₱11.59 M</dd>
+                </div>
+                <div>
+                  <dt>Business tax</dt>
+                  <dd>₱30.64 M</dd>
+                </div>
+                <div>
+                  <dt>Other taxes</dt>
+                  <dd>₱2.08 M</dd>
+                </div>
+                <div>
+                  <dt>Total non-tax revenue</dt>
+                  <dd>₱33.54 M</dd>
+                </div>
+                <div>
+                  <dt>Regulatory fees</dt>
+                  <dd>₱10.43 M</dd>
+                </div>
+                <div>
+                  <dt>Service and user charges</dt>
+                  <dd>₱22.84 M</dd>
+                </div>
+                <div>
+                  <dt>Other receipts</dt>
+                  <dd>₱0.27 M</dd>
+                </div>
+              </dl>
+            </section>
+            <section class="sre-detail-card">
+              <h3>Social services detail</h3>
+              <dl>
+                <div>
+                  <dt>Education, culture, sports and manpower</dt>
+                  <dd>₱1.08 M</dd>
+                </div>
+                <div>
+                  <dt>Health, nutrition and population</dt>
+                  <dd>₱7.36 M</dd>
+                </div>
+                <div>
+                  <dt>Labor and employment</dt>
+                  <dd>₱0.32 M</dd>
+                </div>
+                <div>
+                  <dt>Housing and community development</dt>
+                  <dd>₱0.00 M</dd>
+                </div>
+                <div>
+                  <dt>Social welfare services</dt>
+                  <dd>₱3.68 M</dd>
+                </div>
+              </dl>
+            </section>
+            <section class="sre-detail-card">
+              <h3>Fund movements</h3>
+              <dl>
+                <div>
+                  <dt>Beginning fund balance</dt>
+                  <dd>₱263.03 M</dd>
+                </div>
+                <div>
+                  <dt>Capital and investment expenditures</dt>
+                  <dd>₱1.29 M</dd>
+                </div>
+                <div>
+                  <dt>Net increase in funds</dt>
+                  <dd>₱96.66 M</dd>
+                </div>
+                <div>
+                  <dt>Cash available</dt>
+                  <dd>₱359.68 M</dd>
+                </div>
+                <div>
+                  <dt>Prior-year accounts payable</dt>
+                  <dd>₱23.47 M</dd>
+                </div>
+                <div>
+                  <dt>Continuing appropriations</dt>
+                  <dd>₱3.31 M</dd>
+                </div>
+                <div>
+                  <dt>Ending fund balance</dt>
+                  <dd>₱332.91 M</dd>
+                </div>
+              </dl>
+            </section>
+          </div>
+          <p class="sre-data-note" id="sre-data-notice" hidden>
+            Live fiscal data could not be loaded; the published values remain shown above.
+          </p>
+          <p class="sre-data-note">
+            <i class="bi bi-info-circle"></i> The source workbook contains no separate Q2 reporting
+            period. Values are rounded to two decimal places, so displayed subtotals may differ by
+            ₱0.01 M.
+          </p>
           <p class="sre-source">
             <i class="bi bi-info-circle"></i> Source:
             <a
@@ -489,194 +589,7 @@
               Major development projects serving the community
             </p>
           </div>
-          <div class="infra-project-v5">
-            <div class="infra-project-main">
-              <div class="infra-project-tags">
-                <span class="infra-tag-year">2024</span>
-                <span class="infra-tag-category"
-                  ><i class="bi bi-water"></i>
-                  <span data-i18n="budget-flood-control">Flood Control</span></span
-                >
-              </div>
-              <h3 data-i18n="budget-fcds-package-5-magat-river-flood-control">
-                FCDS Package 5 - Magat River Flood Control
-              </h3>
-              <p class="infra-location">
-                <i class="bi bi-geo-alt"></i>
-                <span data-i18n="budget-magat-river-bagahabag-section-agoo-la-union"
-                  >Magat River, Bagahabag Section, Agoo, La Union</span
-                >
-              </p>
-            </div>
-            <div class="infra-project-details">
-              <div class="infra-detail-row">
-                <div class="infra-detail-col">
-                  <span class="infra-detail-label" data-i18n="budget-type-of-work"
-                    >Type of Work</span
-                  >
-                  <span
-                    class="infra-detail-value"
-                    data-i18n="budget-construction-of-flood-mitigation-structure"
-                    >Construction of Flood Mitigation Structure</span
-                  >
-                </div>
-                <div class="infra-detail-col">
-                  <span class="infra-detail-label" data-i18n="budget-contractor">Contractor</span>
-                  <span class="infra-detail-value" data-i18n="budget-egb-construction-corporation"
-                    >EGB Construction Corporation</span
-                  >
-                </div>
-                <div class="infra-detail-col infra-detail-cost">
-                  <span class="infra-detail-label" data-i18n="budget-contract-cost"
-                    >Contract Cost</span
-                  >
-                  <span class="infra-detail-value">₱144,750,000</span>
-                </div>
-              </div>
-            </div>
-            <div class="infra-project-footer">
-              <span class="infra-source"
-                ><i class="bi bi-info-circle"></i>
-                <span data-i18n="budget-source-sumbong-sa-pangulo"
-                  >Source: Sumbong sa Pangulo</span
-                ></span
-              >
-              <a
-                href="https://sumbongsapangulo.ph/flood-control-map/"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="infra-link"
-                ><i class="bi bi-arrow-up-right"></i>
-                <span data-i18n="budget-view-on-map">View on Map</span></a
-              >
-            </div>
-          </div>
-
-          <div class="infra-project-v5">
-            <div class="infra-project-main">
-              <div class="infra-project-tags">
-                <span class="infra-tag-year">2021</span>
-                <span class="infra-tag-category"
-                  ><i class="bi bi-water"></i>
-                  <span data-i18n="budget-flood-control">Flood Control</span></span
-                >
-              </div>
-              <h3 data-i18n="budget-repairrehabilitation-of-flood-control-and">
-                Repair/Rehabilitation of Flood Control and Drainage Structure - Section 1
-              </h3>
-              <p class="infra-location">
-                <i class="bi bi-geo-alt"></i>
-                <span data-i18n="budget-magat-river-bangar-section-1-brgy-bangar-agoo"
-                  >Magat River, Bangar Section 1, Brgy. Bangar, Agoo, La Union</span
-                >
-              </p>
-            </div>
-            <div class="infra-project-details">
-              <div class="infra-detail-row">
-                <div class="infra-detail-col">
-                  <span class="infra-detail-label" data-i18n="budget-type-of-work"
-                    >Type of Work</span
-                  >
-                  <span
-                    class="infra-detail-value"
-                    data-i18n="budget-rehabilitation-major-repair-of-flood-control"
-                    >Rehabilitation / Major Repair of Flood Control Structure</span
-                  >
-                </div>
-                <div class="infra-detail-col">
-                  <span class="infra-detail-label" data-i18n="budget-contractor">Contractor</span>
-                  <span class="infra-detail-value" data-i18n="budget-shanley-construction"
-                    >Shanley Construction</span
-                  >
-                </div>
-                <div class="infra-detail-col infra-detail-cost">
-                  <span class="infra-detail-label" data-i18n="budget-contract-cost"
-                    >Contract Cost</span
-                  >
-                  <span class="infra-detail-value">₱29,700,000</span>
-                </div>
-              </div>
-            </div>
-            <div class="infra-project-footer">
-              <span class="infra-source"
-                ><i class="bi bi-info-circle"></i>
-                <span data-i18n="budget-source-sumbong-sa-pangulo"
-                  >Source: Sumbong sa Pangulo</span
-                ></span
-              >
-              <a
-                href="https://sumbongsapangulo.ph/flood-control-map/"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="infra-link"
-                ><i class="bi bi-arrow-up-right"></i>
-                <span data-i18n="budget-view-on-map">View on Map</span></a
-              >
-            </div>
-          </div>
-
-          <div class="infra-project-v5">
-            <div class="infra-project-main">
-              <div class="infra-project-tags">
-                <span class="infra-tag-year">2021</span>
-                <span class="infra-tag-category"
-                  ><i class="bi bi-water"></i>
-                  <span data-i18n="budget-flood-control">Flood Control</span></span
-                >
-              </div>
-              <h3 data-i18n="budget-repairrehabilitation-of-flood-control-and">
-                Repair/Rehabilitation of Flood Control and Drainage Structure - Section 2
-              </h3>
-              <p class="infra-location">
-                <i class="bi bi-geo-alt"></i>
-                <span data-i18n="budget-magat-river-bangar-section-2-brgy-bangar-agoo"
-                  >Magat River, Bangar Section 2, Brgy. Bangar, Agoo, La Union</span
-                >
-              </p>
-            </div>
-            <div class="infra-project-details">
-              <div class="infra-detail-row">
-                <div class="infra-detail-col">
-                  <span class="infra-detail-label" data-i18n="budget-type-of-work"
-                    >Type of Work</span
-                  >
-                  <span
-                    class="infra-detail-value"
-                    data-i18n="budget-rehabilitation-major-repair-of-flood-control"
-                    >Rehabilitation / Major Repair of Flood Control Structure</span
-                  >
-                </div>
-                <div class="infra-detail-col">
-                  <span class="infra-detail-label" data-i18n="budget-contractor">Contractor</span>
-                  <span class="infra-detail-value" data-i18n="budget-shanley-construction"
-                    >Shanley Construction</span
-                  >
-                </div>
-                <div class="infra-detail-col infra-detail-cost">
-                  <span class="infra-detail-label" data-i18n="budget-contract-cost"
-                    >Contract Cost</span
-                  >
-                  <span class="infra-detail-value">₱29,700,000</span>
-                </div>
-              </div>
-            </div>
-            <div class="infra-project-footer">
-              <span class="infra-source"
-                ><i class="bi bi-info-circle"></i>
-                <span data-i18n="budget-source-sumbong-sa-pangulo"
-                  >Source: Sumbong sa Pangulo</span
-                ></span
-              >
-              <a
-                href="https://sumbongsapangulo.ph/flood-control-map/"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="infra-link"
-                ><i class="bi bi-arrow-up-right"></i>
-                <span data-i18n="budget-view-on-map">View on Map</span></a
-              >
-            </div>
-          </div>
+          <div id="infrastructure-investments-container" aria-live="polite"></div>
         </div>
       </section>
 
@@ -693,11 +606,17 @@
               DPWH Infrastructure Projects in Agoo
             </h2>
             <p data-i18n="budget-implementing-agency-la-union-district">
-              Implementing Agency: La Union District Engineering Office
+              Implementing Agency: La Union 2nd District Engineering Office
             </p>
           </div>
 
           <div id="dpwh-projects-container"></div>
+
+          <p class="sre-data-note dpwh-source-margin">
+            <i class="bi bi-info-circle"></i> Official DPWH API snapshot retrieved on July 31, 2026.
+            All 40 reported pages and 1,996 unique La Union contracts were audited before filtering
+            201 verified Agoo matches.
+          </p>
 
           <p class="sre-source dpwh-source-margin">
             <i class="bi bi-info-circle"></i> Source:
@@ -881,7 +800,7 @@
             <span class="footer-copyright-disclaimer"
               >All public information sourced from official government portals.</span
             >
-            <span class="footer-version"><i class="bi bi-boxes"></i> Ver. 1.7.0</span>
+            <span class="footer-version"><i class="bi bi-boxes"></i> Ver. 1.8.4</span>
           </div>
         </div>
       </div>
@@ -892,6 +811,7 @@
     <script defer src="../assets/js/main.js"></script>
     <script defer src="../assets/js/version.js"></script>
     <script defer src="../assets/js/transparency-v2.js"></script>
+    <script defer src="../assets/js/infrastructure-investments.js"></script>
     <script defer src="../assets/js/dpwh-projects.js"></script>
   </body>
 </html>

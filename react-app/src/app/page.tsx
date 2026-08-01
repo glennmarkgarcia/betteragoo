@@ -607,7 +607,7 @@ export default function HomePage() {
                 <span className="home-news-badge home-news-badge--warning">
                   {t('news-advisory')}
                 </span>
-                <span className="home-news-date">Nov 10, 2025</span>
+                <span className="home-news-date">Official updates</span>
               </div>
               <h3>
                 <Link href="/news">{t('news-power-title')}</Link>

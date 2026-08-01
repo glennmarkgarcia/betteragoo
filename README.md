@@ -2,7 +2,7 @@
 
 A civic-tech initiative providing transparent access to municipal services, programs, and public funds of LGU Agoo, La Union, Philippines.
 
-![Version](https://img.shields.io/badge/version-1.7.0-green)
+![Version](https://img.shields.io/badge/version-1.8.4-green)
 ![License](https://img.shields.io/badge/license-MIT%20%7C%20CC%20BY%204.0-blue)
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white)
@@ -47,52 +47,52 @@ Visit the live website: [https://betteragoo.org](https://betteragoo.org)
 
 ## Technology Stack
 
-| Category            | Technologies                                                                                             |
-| ------------------- | -------------------------------------------------------------------------------------------------------- |
-| **Frontend**        | HTML5, CSS3, JavaScript (ES6+)                                                                           |
-| **Styling**         | Custom CSS, CSS Variables, Flexbox, CSS Grid, Responsive Design                                          |
-| **Icons**           | Bootstrap Icons (CDN)                                                                                    |
-| **Fonts**           | Google Fonts (Inter)                                                                                     |
-| **Maps**            | Leaflet.js, OpenStreetMap                                                                                |
-| **Charts**          | Chart.js (Canvas-based)                                                                                  |
-| **Animations**      | Lottie (dotlottie-player web component)                                                                  |
-| **Data Format**     | JSON                                                                                                     |
-| **APIs**            | Open-Meteo (Weather), ExchangeRate API (Currency)                                                        |
-| **Build Tools**     | Node.js, npm, Bash, Babel (@babel/preset-env)                                                            |
-| **Minification**    | html-minifier-terser, clean-css-cli, terser                                                              |
-| **Code Formatting** | Prettier (explicit local and CI formatting checks)                                                       |
-| **Version Control** | Git, GitHub                                                                                              |
-| **Server**          | Apache (.htaccess), mod_rewrite, mod_deflate                                                             |
-| **Hosting**         | cPanel (Production), Python HTTP Server (Development)                                                    |
-| **PWA**             | Service Worker (versioned caching, install prompt, seamless updates), Web App Manifest, offline fallback |
-| **SEO**             | Open Graph, Twitter Cards, XML Sitemap, robots.txt                                                       |
-| **Security**        | HTTPS, CSP Headers, HSTS, X-Frame-Options                                                                |
-| **Analytics**       | Google Analytics (gtag.js)                                                                               |
-| **Accessibility**   | WCAG 2.1, ARIA, Semantic HTML                                                                            |
-| **Performance**     | GZIP Compression, Browser Caching, Asset Minification                                                    |
+| Category            | Technologies                                                                                                  |
+| ------------------- | ------------------------------------------------------------------------------------------------------------- |
+| **Frontend**        | HTML5, CSS3, JavaScript (ES6+)                                                                                |
+| **Styling**         | Custom CSS, CSS Variables, Flexbox, CSS Grid, Responsive Design                                               |
+| **Icons**           | Bootstrap Icons (CDN)                                                                                         |
+| **Fonts**           | Google Fonts (Inter)                                                                                          |
+| **Maps**            | Leaflet.js, OpenStreetMap                                                                                     |
+| **Charts**          | Chart.js (Canvas-based)                                                                                       |
+| **Animations**      | Lottie (dotlottie-player web component)                                                                       |
+| **Data Format**     | JSON                                                                                                          |
+| **APIs**            | Open-Meteo (Weather), ExchangeRate API (Currency)                                                             |
+| **Build Tools**     | Node.js, npm, Bash, Babel (@babel/preset-env)                                                                 |
+| **Minification**    | html-minifier-terser, clean-css-cli, terser                                                                   |
+| **Code Formatting** | Prettier (explicit local and CI formatting checks)                                                            |
+| **Version Control** | Git, GitHub                                                                                                   |
+| **Server**          | Apache (.htaccess), mod_rewrite, mod_deflate                                                                  |
+| **Hosting**         | cPanel (Production), Python HTTP Server (Development)                                                         |
+| **PWA**             | Service Worker (versioned caching, install prompt, user-approved updates), Web App Manifest, offline fallback |
+| **SEO**             | Open Graph, Twitter Cards, XML Sitemap, robots.txt                                                            |
+| **Security**        | HTTPS, CSP Headers, HSTS, X-Frame-Options                                                                     |
+| **Analytics**       | Google Analytics (gtag.js)                                                                                    |
+| **Accessibility**   | WCAG 2.1, ARIA, Semantic HTML                                                                                 |
+| **Performance**     | GZIP Compression, Browser Caching, Asset Minification                                                         |
 
 ## Key Features
 
-| Feature                          | Description                                                                                                                                                                                                                            |
-| -------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Municipal Services Directory** | Comprehensive guide to all LGU services with requirements, fees, and processing times                                                                                                                                                  |
-| **Government Officials**         | Directory of elected officials and department heads with contact information                                                                                                                                                           |
-| **Budget Transparency**          | Financial reports, income/expenditure breakdowns, and infrastructure projects                                                                                                                                                          |
-| **Legislative Documents**        | Searchable database of ordinances and resolutions from Sangguniang Bayan                                                                                                                                                               |
-| **Municipal Statistics**         | Demographics, economic data, and competitive index rankings                                                                                                                                                                            |
-| **Appointment Services**         | Online appointment scheduling integration with the Mayor's Office (OASYS), featuring branded Lottie animation                                                                                                                          |
-| **Agoo Quiz**                    | Interactive quiz about Agoo history and culture, linked from homepage CTA and footer across all pages                                                                                                                                  |
-| **Real-time Information**        | Live weather updates, currency exchange rates, and Philippine time                                                                                                                                                                     |
-| **Emergency Hotline Marquee**    | Clickable scrolling marquee for emergency contacts on tablet and mobile viewports, with pause-on-hover/focus accessibility                                                                                                             |
-| **Progressive Web App**          | Installable PWA with "Install App" prompt, seamless auto-updates via skipWaiting (no manual refresh), versioned service worker caching (static + runtime), offline fallback page with emergency hotlines, push notification foundation |
-| **Release Version Management**   | Semantic release version sourced from `version.json`, explicitly bumped for releases, and synchronized across all HTML files, package metadata, and the React app                                                                      |
-| **Multi-language Support**       | Full i18n coverage in English, Filipino, and Ilocano (5,546 keys per language with perfect parity)                                                                                                                                     |
-| **Clean URLs**                   | SEO-friendly URLs without `.html` extensions, powered by Apache mod_rewrite                                                                                                                                                            |
-| **Brief History of Agoo**        | Interactive timeline from the pre-colonial era to the present, with fully translated cards in English, Filipino, and Ilocano                                                                                                           |
-| **Mobile Navigation**            | Responsive menu with GPU-accelerated open/close transitions, body scroll lock, animation guard against rapid toggles, debounced resize handling, touch-safe hover scoping, click-outside-to-close, and focus trap                      |
-| **Accessibility**                | WCAG 2.1 compliant with skip links, ARIA labels, keyboard navigation, and semantic HTML                                                                                                                                                |
-| **SEO Optimized**                | Meta tags, Open Graph, Twitter Cards, structured data, and XML sitemap                                                                                                                                                                 |
-| **Performance**                  | 90%+ size reduction through minification, GZIP compression, Babel transpilation, and browser caching                                                                                                                                   |
+| Feature                          | Description                                                                                                                                                                                                                  |
+| -------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Municipal Services Directory** | Comprehensive guide to all LGU services with requirements, fees, and processing times                                                                                                                                        |
+| **Government Officials**         | Directory of elected officials and department heads with contact information                                                                                                                                                 |
+| **Budget Transparency**          | Financial reports, income/expenditure breakdowns, and infrastructure projects                                                                                                                                                |
+| **Legislative Documents**        | Searchable database of ordinances and resolutions from Sangguniang Bayan                                                                                                                                                     |
+| **Municipal Statistics**         | Demographics, economic data, and competitive index rankings                                                                                                                                                                  |
+| **Appointment Services**         | Online appointment scheduling integration with the Mayor's Office (OASYS), featuring branded Lottie animation                                                                                                                |
+| **Agoo Quiz**                    | Interactive quiz about Agoo history and culture, linked from homepage CTA and footer across all pages                                                                                                                        |
+| **Real-time Information**        | Live weather updates, currency exchange rates, and Philippine time                                                                                                                                                           |
+| **Emergency Hotline Marquee**    | Clickable scrolling marquee for emergency contacts on tablet and mobile viewports, with pause-on-hover/focus accessibility                                                                                                   |
+| **Progressive Web App**          | Installable PWA with an install prompt, versioned static/runtime caching, offline emergency fallback, and user-approved worker updates that reload once after controller replacement without reloading on first installation |
+| **Release Version Management**   | Semantic release version sourced from `version.json`, explicitly bumped for releases, and synchronized across all HTML files, package metadata, and the React app                                                            |
+| **Multi-language Support**       | Full i18n coverage in English, Filipino, and Ilocano (5,545 keys per language with perfect parity)                                                                                                                           |
+| **Clean URLs**                   | SEO-friendly URLs without `.html` extensions, powered by Apache mod_rewrite                                                                                                                                                  |
+| **Brief History of Agoo**        | Interactive timeline from the pre-colonial era to the present, with fully translated cards in English, Filipino, and Ilocano                                                                                                 |
+| **Mobile Navigation**            | Responsive menu with GPU-accelerated open/close transitions, body scroll lock, animation guard against rapid toggles, debounced resize handling, touch-safe hover scoping, click-outside-to-close, and focus trap            |
+| **Accessibility**                | WCAG 2.1 compliant with skip links, ARIA labels, keyboard navigation, and semantic HTML                                                                                                                                      |
+| **SEO Optimized**                | Meta tags, Open Graph, Twitter Cards, structured data, and XML sitemap                                                                                                                                                       |
+| **Performance**                  | 90%+ size reduction through minification, GZIP compression, Babel transpilation, and browser caching                                                                                                                         |
 
 ## Quick Start
 
@@ -197,9 +197,9 @@ The site supports three languages with full translation coverage:
 
 | Language | Code  | Status                |
 | -------- | ----- | --------------------- |
-| English  | `en`  | Complete (5,546 keys) |
-| Filipino | `fil` | Complete (5,546 keys) |
-| Ilocano  | `ilo` | Complete (5,546 keys) |
+| English  | `en`  | Complete (5,545 keys) |
+| Filipino | `fil` | Complete (5,545 keys) |
+| Ilocano  | `ilo` | Complete (5,545 keys) |
 
 The static site uses a `TranslationEngine` in `assets/js/translations.js` with `data-i18n` attributes on HTML elements. The React version uses a `LanguageContext` provider with a `t()` function. Both systems support fallback to English for any missing keys.
 
@@ -207,13 +207,13 @@ The static site uses a `TranslationEngine` in `assets/js/translations.js` with `
 
 The project maintains three synchronized versions:
 
-| Version                | Location        | Purpose                              |
-| ---------------------- | --------------- | ------------------------------------ |
-| **Static Legacy**      | Root HTML files | Source of truth for all 52 pages     |
-| **React + TypeScript** | `react-app/`    | Modern component-based homepage      |
-| **Production Dist**    | `dist/`         | Minified build for cPanel deployment |
+| Version                | Location        | Purpose                                                  |
+| ---------------------- | --------------- | -------------------------------------------------------- |
+| **Static Legacy**      | Root HTML files | Canonical source for static routes                       |
+| **React + TypeScript** | `react-app/`    | Component-based reference plus production health route   |
+| **Production Dist**    | `dist/`         | Minified static site with the React health export merged |
 
-All CSS, images, animations, and translations are kept in sync across all three versions. The build script (`build.sh`) generates the dist from the static legacy source.
+Shared CSS, images, animations, and translations are kept aligned between the static and React workspaces. The build script (`build.sh`) generates `dist/` from the static source and then replaces only `services/health.html` with the React export; the static homepage remains canonical in production.
 
 ## Project Structure
 
@@ -266,6 +266,47 @@ betteragoo/
 
 ## Recent Changes
 
+### v1.8.4 — First-Load Popup Stability
+
+- Prevented first-time service-worker activation from reloading the homepage and recreating the volunteer popup
+- Changed service-worker updates to remain waiting until the visitor accepts the update banner
+- Applied the same controller-change guard to the static and React PWA implementations
+- Extended popup regression tests to detect unexpected full-page navigation on desktop, tablet, and mobile
+
+### v1.8.3 — BA-F-0007 Official DPWH Completion
+
+- Retrieved all 40 pages and all 1,996 unique La Union contracts directly from the official DPWH Transparency API
+- Published 201 verified whole-word Agoo matches covering 2016–2026, including nine contracts absent from the previous public-mirror snapshot
+- Refreshed twelve existing contracts from current official fields and recorded 176 completed, 7 ongoing, 17 for-procurement, and 1 not-yet-started project
+- Added a reproducible paginated DPWH synchronization script and marked BA-F-0007 completed
+
+### v1.8.2 — Official LGU Website Correction
+
+- Replaced the invalid legacy LGU website host across source pages, documentation, metadata, and downloadable-form links with `agoolaunion.gov.ph`
+- Updated legislative links to use the official LGU department-and-offices directory
+- Corrected the sitemap so the official LGU homepage and Sangguniang Bayan resource resolve to their appropriate official pages
+
+### v1.8.1 — BA-F-0001/0002 Corrective Audit
+
+- Corrected the remaining Better Solano configuration references and the homepage map bounding box
+- Removed the contaminated resolution register and added a visible official-source verification notice
+- Removed obsolete Magat River, Bagahabag, Bangar, Dadap, and other inherited directory translations
+- Removed the unverified Solano-era school directory and school counts pending an official Agoo DepEd/LGU source
+- Added structured Agoo coordinates and calculated population density to the demographic dataset
+- Removed the inherited Solano CMCI score series from the data, statistics page, and chart JavaScript
+- Published only verified 2024 Agoo regional CMCI standings: 1st overall, 1st in Infrastructure, and 3rd in Economic Dynamism among Region I's 1st–2nd class municipalities
+- Corrected BA-F-0002's 2015–2020 annual population growth rate requirement to the reconciled 0.76%
+
+### v1.8.0 — Phase 6 Fiscal Transparency & Infrastructure Baseline
+
+- Replaced the sample Q1/Q2 comparison with Agoo's BLGF first reporting period for FY 2025 and clearly identified it as Q1 without presenting unsupported Q2 data
+- Published the full income, expenditure, social-services, and fund-movement breakdown in `data/fiscal_transparency.json`
+- Replaced all three sample infrastructure cards with 14 supplied Agoo flood-control, shore-protection, and slope-protection records from Sumbong sa Pangulo
+- Added exact project and contract IDs, coordinates, approved budgets, contract costs, dates, and contractors to `data/infrastructure-investments.json`
+- Replaced the stale 63-row national-project dataset with 192 unique Agoo contracts from a January 22, 2026 public snapshot of the DPWH Transparency API
+- Added visible source, snapshot, retrieval, rounding, and API-availability notes to the budget page
+- At the `1.8.0` baseline, the official DPWH API was blocked by a Cloudflare challenge, so the direct audit was deferred and later completed in `1.8.3`
+
 ### v1.7.0 — Phase 5 Public Services Baseline
 
 - Versioned the municipal services registry and expanded it from 57 to 63 searchable entries
@@ -307,11 +348,11 @@ betteragoo/
 
 ### v1.1.15 — Header, PWA, Version Automation & Code Quality
 
-#### PWA Install Prompt & Seamless Updates
+#### PWA Install Prompt & Update Lifecycle
 
 - Added "Install App" prompt banner using the `beforeinstallprompt` API with Install/Dismiss buttons, respecting standalone mode and session dismissal
-- Replaced manual-refresh update flow with seamless `skipWaiting` + `controllerchange` auto-reload pattern
-- Service worker now accepts `SKIP_WAITING` message from clients to activate waiting worker on demand
+- Added a waiting-worker update flow: the visitor accepts the update banner, the client sends `SKIP_WAITING`, and `controllerchange` reloads the page once
+- First-time service-worker control is explicitly excluded from auto-reload as of `1.8.4`, preventing initial UI such as the volunteer popup from being recreated
 - Install banner goes full-width (no border-radius, no margins) on mobile viewports (<=575px) with slide-up animation
 - Created `PWAManager.tsx` React component handling both install prompt and SW update lifecycle
 - Added `.pwa-install-banner` CSS styles to both static and React versions
@@ -338,7 +379,7 @@ betteragoo/
 - Rewrote `sw.js` with dual-cache architecture: `STATIC_CACHE` (precached app shell) and `RUNTIME_CACHE` (dynamic content, 80-item FIFO, 7-day TTL)
 - Navigation uses network-first with offline fallback; static assets use stale-while-revalidate; data/API uses network-first with cache fallback
 - Added push notification and background sync foundations
-- Enhanced SW registration with 30-minute update polling and non-intrusive refresh banner on new version activation
+- Enhanced SW registration with 30-minute update polling and a non-intrusive approval banner for waiting versions
 - Upgraded `manifest.webmanifest` with maskable icons, app shortcuts (Services, Contact, Government, Transparency), and `orientation: any`
 - Added iOS PWA meta tags (`apple-mobile-web-app-capable`, `apple-mobile-web-app-status-bar-style`, `apple-mobile-web-app-title`)
 - Fixed theme-color from old green (#1a5f2a) to brand blue (#0032a0) across all files
@@ -356,7 +397,7 @@ betteragoo/
 - Created `HotlineBar.tsx` component with tablet/mobile marquee matching static site behavior
 - Created `InfoBar.tsx` component with live exchange rates, weather, and Philippine time
 - Created `SearchAutocomplete.tsx` component with service search dropdown
-- Created `PWAManager.tsx` component handling install prompt and seamless SW updates
+- Created `PWAManager.tsx` component handling the install prompt and user-approved SW updates
 - Updated `Footer.tsx` to dynamically fetch version from `/version.json` instead of hardcoded value
 - Updated `Header.tsx` breakpoint from 991px to 1024px, fixed ARIA attribute string values
 - Updated `layout.tsx` with corrected theme-color, manifest link, Apple PWA meta tags, and PWAManager integration
@@ -383,7 +424,7 @@ betteragoo/
 
 ### Internationalization (i18n)
 
-- Upgraded translation engine to 5,546 keys per language with perfect en/fil/ilo parity
+- Upgraded translation engine; the current dictionaries contain 5,545 keys per language with perfect en/fil/ilo parity
 - Fixed Brief History timeline cards — full paragraph translations now applied via `data-i18n` on `<p>` elements (previously only proper nouns inside `<strong>` tags were translated, leaving surrounding English text intact)
 - Corrected Filipino translations: proper religious title "Padre" (not "Ama"), fully translated historical paragraphs (no half-English)
 - Corrected Ilocano translations: proper Ilocano vocabulary ("Ababa a Pakasaritaan" not Filipino "Maikling Kasaysayan", "Dimteng" not "Dumating", "Ili" not "Lungsod"), fully translated paragraphs
@@ -469,13 +510,13 @@ We welcome contributions from everyone! Whether you're a developer, designer, da
 
 All public information is sourced from official government portals:
 
-| Source                             | URL                                                                   | Data Type                 |
-| ---------------------------------- | --------------------------------------------------------------------- | ------------------------- |
-| LGU Agoo Official Website          | [agoo.gov.ph](https://agoo.gov.ph/)                                   | Services, Officials       |
-| Sangguniang Bayan ng Agoo          | [sangguniangbayan.agoo.gov.ph](https://sangguniangbayan.agoo.gov.ph/) | Ordinances, Resolutions   |
-| Bureau of Local Government Finance | [blgf.gov.ph](https://blgf.gov.ph/)                                   | Budget, Financial Reports |
-| Philippine Statistics Authority    | [psa.gov.ph](https://psa.gov.ph/)                                     | Demographics, Census      |
-| DTI CMCI Portal                    | [cmci.dti.gov.ph](https://cmci.dti.gov.ph/)                           | Competitive Index         |
+| Source                             | URL                                                                       | Data Type                   |
+| ---------------------------------- | ------------------------------------------------------------------------- | --------------------------- |
+| LGU Agoo Official Website          | [agoolaunion.gov.ph](https://agoolaunion.gov.ph/)                         | Services, Officials         |
+| Sangguniang Bayan ng Agoo          | [Departments and Offices](https://agoolaunion.gov.ph/department-offices/) | Official office information |
+| Bureau of Local Government Finance | [blgf.gov.ph](https://blgf.gov.ph/)                                       | Budget, Financial Reports   |
+| Philippine Statistics Authority    | [psa.gov.ph](https://psa.gov.ph/)                                         | Demographics, Census        |
+| DTI CMCI Portal                    | [cmci.dti.gov.ph](https://cmci.dti.gov.ph/)                               | Competitive Index           |
 
 ## License
 

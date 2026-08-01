@@ -1,5 +1,7 @@
 # Release Notes: React + TypeScript Version
 
+> **Maintenance note (August 1, 2026):** The active workspace now uses Next.js 15.5.19, React 18.3.1, and release `1.8.4`. Its PWA manager ignores the first service-worker controller claim, waits for visitor approval before activating updates, and reloads once after an accepted controller replacement. The original `1.0.0-react` notes below remain a historical release record.
+
 **Version:** 1.0.0-react  
 **Branch:** react-typescript  
 **Date:** January 2026

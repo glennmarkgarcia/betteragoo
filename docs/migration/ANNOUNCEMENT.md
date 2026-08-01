@@ -1,5 +1,7 @@
 # Announcement: React + TypeScript Version Available
 
+> **Maintenance note (August 1, 2026):** On the current `main` workspace, the static homepage remains canonical and `build.sh` merges only the React health route into production. The React workspace uses Next.js 15.5.19 and React 18.3.1 at project release `1.8.4`. The announcement below describes the original parallel-version launch.
+
 ## Summary
 
 We are pleased to announce that a React + TypeScript version of BetterAgoo.org is now available on the `react-typescript` branch. This modernized version offers improved developer experience, type safety, and component-based architecture while maintaining full feature parity with the static HTML version.

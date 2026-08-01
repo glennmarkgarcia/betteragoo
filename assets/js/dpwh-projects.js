@@ -30,9 +30,11 @@
   }
 
   function formatCurrency(amount) {
-    return (
-      '₱' + amount.toLocaleString('en-PH', { minimumFractionDigits: 2, maximumFractionDigits: 2 })
-    );
+    return new Intl.NumberFormat('en-PH', {
+      style: 'currency',
+      currency: 'PHP',
+      minimumFractionDigits: 2,
+    }).format(amount);
   }
 
   function formatDate(dateStr) {
@@ -47,6 +49,7 @@
   }
 
   function getCategoryClass(category) {
+    category = category || '';
     if (category.includes('Flood')) return 'flood';
     if (category.includes('Road')) return 'roads';
     if (category.includes('Water')) return 'water';
@@ -54,6 +57,7 @@
   }
 
   function getCategoryLabel(category) {
+    category = category || '';
     if (category.includes('Flood')) return 'Flood Control';
     if (category.includes('Road')) return 'Roads';
     if (category.includes('Water')) return 'Water';
@@ -61,16 +65,26 @@
   }
 
   function getStatusBadge(status) {
-    if (status === 100) return '<span class="dpwh-badge complete">Completed</span>';
-    return `<span class="dpwh-badge ongoing">${status.toFixed(0)}%</span>`;
+    if (status === 'Completed') return '<span class="dpwh-badge complete">Completed</span>';
+    return `<span class="dpwh-badge ongoing">${escapeHtml(status || 'Status unavailable')}</span>`;
+  }
+
+  function escapeHtml(value) {
+    return String(value ?? '')
+      .replaceAll('&', '&amp;')
+      .replaceAll('<', '&lt;')
+      .replaceAll('>', '&gt;')
+      .replaceAll('"', '&quot;')
+      .replaceAll("'", '&#039;');
   }
 
   function getCategoryCounts(projects) {
     const counts = { all: projects.length, buildings: 0, roads: 0, flood: 0, water: 0 };
     projects.forEach((p) => {
-      if (p.category.includes('Flood')) counts.flood++;
-      else if (p.category.includes('Road')) counts.roads++;
-      else if (p.category.includes('Water')) counts.water++;
+      const category = p.category || '';
+      if (category.includes('Flood')) counts.flood++;
+      else if (category.includes('Road')) counts.roads++;
+      else if (category.includes('Water')) counts.water++;
       else counts.buildings++;
     });
     return counts;
@@ -82,20 +96,20 @@
     return allProjects.filter((p) => {
       if (filter === 'buildings')
         return (
-          !p.category.includes('Flood') &&
-          !p.category.includes('Road') &&
-          !p.category.includes('Water')
+          !(p.category || '').includes('Flood') &&
+          !(p.category || '').includes('Road') &&
+          !(p.category || '').includes('Water')
         );
-      if (filter === 'roads') return p.category.includes('Road');
-      if (filter === 'flood') return p.category.includes('Flood');
-      if (filter === 'water') return p.category.includes('Water');
+      if (filter === 'roads') return (p.category || '').includes('Road');
+      if (filter === 'flood') return (p.category || '').includes('Flood');
+      if (filter === 'water') return (p.category || '').includes('Water');
       return true;
     });
   }
 
   function renderSection(container, data) {
     const counts = getCategoryCounts(allProjects);
-    const completedCount = allProjects.filter((p) => p.status === 100).length;
+    const completedCount = allProjects.filter((p) => p.status === 'Completed').length;
 
     const html = `
             <div class="dpwh-summary-bar">
@@ -104,8 +118,8 @@
                     <span class="dpwh-summary-label">Projects</span>
                 </div>
                 <div class="dpwh-summary-item">
-                    <span class="dpwh-summary-value">₱${(data.summary.totalCost / 1000000).toFixed(1)}M</span>
-                    <span class="dpwh-summary-label">Total Investment</span>
+                    <span class="dpwh-summary-value">₱${(data.summary.totalApprovedBudget / 1000000000).toFixed(2)}B</span>
+                    <span class="dpwh-summary-label">Approved Budget</span>
                 </div>
                 <div class="dpwh-summary-item">
                     <span class="dpwh-summary-value">${completedCount}</span>
@@ -113,7 +127,7 @@
                 </div>
                 <div class="dpwh-summary-item">
                     <span class="dpwh-summary-value">${data.summary.totalProjects - completedCount}</span>
-                    <span class="dpwh-summary-label">Ongoing</span>
+                    <span class="dpwh-summary-label">Not Completed</span>
                 </div>
             </div>
 
@@ -133,7 +147,7 @@
                         <tr>
                             <th scope="col" class="col-desc">Contract Description</th>
                             <th scope="col" class="col-contractor">Contractor</th>
-                            <th scope="col" class="col-cost">Cost</th>
+                            <th scope="col" class="col-cost">Approved Budget</th>
                             <th scope="col" class="col-status">Status</th>
                             <th scope="col" class="col-date">Completed</th>
                         </tr>
@@ -160,17 +174,17 @@
                 <tr class="dpwh-row" tabindex="0">
                     <td class="col-desc">
                         <div class="dpwh-desc-wrap">
-                            <span class="dpwh-proj-id">${p.id}</span>
+                        <span class="dpwh-proj-id">${escapeHtml(p.contractId)}</span>
                             <span class="dpwh-cat-badge ${getCategoryClass(p.category)}">${getCategoryLabel(p.category)}</span>
                         </div>
-                        <span class="dpwh-proj-title" title="${p.name}">${truncateText(p.name, CONFIG.truncateLength)}</span>
-                        <span class="dpwh-proj-location"><i class="bi bi-geo-alt"></i>${p.location}</span>
+                        <span class="dpwh-proj-title" title="${escapeHtml(p.name)}">${escapeHtml(truncateText(p.name, CONFIG.truncateLength))}</span>
+                        <span class="dpwh-proj-location"><i class="bi bi-geo-alt"></i>${escapeHtml(p.location)} · ${escapeHtml(p.office)} · ${escapeHtml(p.year)}</span>
                     </td>
                     <td class="col-contractor">
-                        <span class="dpwh-contractor">${p.contractor}</span>
-                        <span class="dpwh-contractor-id">#${p.contractorId}</span>
+                        <span class="dpwh-contractor">${escapeHtml(p.contractor || 'Not listed')}</span>
+                        <span class="dpwh-contractor-id">${escapeHtml(p.programName || '')}</span>
                     </td>
-                    <td class="col-cost">${formatCurrency(p.cost)}</td>
+                    <td class="col-cost">${formatCurrency(p.approvedBudget)}</td>
                     <td class="col-status">${getStatusBadge(p.status)}</td>
                     <td class="col-date">${formatDate(p.completionDate)}</td>
                 </tr>

@@ -9,7 +9,7 @@ BetterAgoo.org now has two versions:
 | Version            | Branch             | Status             | Technology                       |
 | ------------------ | ------------------ | ------------------ | -------------------------------- |
 | Static HTML        | `main`             | Stable (Legacy)    | HTML5, CSS3, Vanilla JavaScript  |
-| React + TypeScript | `react-typescript` | Active Development | Next.js 14, React 18, TypeScript |
+| React + TypeScript | `react-typescript` | Active Development | Next.js 15, React 18, TypeScript |
 
 ## Version Comparison
 
@@ -37,7 +37,7 @@ BetterAgoo.org now has two versions:
 
 **Characteristics:**
 
-- Next.js 14 with App Router
+- Next.js 15 with App Router
 - TypeScript for type safety
 - React 18 with Server Components
 - Component-based architecture
@@ -118,16 +118,14 @@ betteragoo/
 
 ## Component Mapping
 
-This table shows which static HTML files correspond to which React components:
+The current workspace contains these React routes:
 
-| Static HTML             | React Component | Location                      |
-| ----------------------- | --------------- | ----------------------------- |
-| `index.html`            | `page.tsx`      | `src/app/page.tsx`            |
-| `services/index.html`   | `page.tsx`      | `src/app/services/page.tsx`   |
-| `government/index.html` | `page.tsx`      | `src/app/government/page.tsx` |
-| `budget/index.html`     | `page.tsx`      | `src/app/budget/page.tsx`     |
-| `statistics/index.html` | `page.tsx`      | `src/app/statistics/page.tsx` |
-| `contact/index.html`    | `page.tsx`      | `src/app/contact/page.tsx`    |
+| Static HTML equivalent | React Component | Location                           | Production merge status                                         |
+| ---------------------- | --------------- | ---------------------------------- | --------------------------------------------------------------- |
+| `index.html`           | `page.tsx`      | `src/app/page.tsx`                 | Development/export reference; static homepage remains canonical |
+| `services/health.html` | `page.tsx`      | `src/app/services/health/page.tsx` | React export replaces this route in `build.sh`                  |
+
+Government, budget, statistics, contact, and the remaining service routes currently use their static implementations. Do not document or configure a React route until its `page.tsx` exists and `build.sh` explicitly merges its export.
 
 ## Key Differences
 
@@ -154,6 +152,16 @@ Both versions share the same CSS files from `public/assets/css/`. The React vers
 **Static HTML:** DOM manipulation with vanilla JavaScript
 
 **React:** React Context API for global state (e.g., `LanguageContext` for translations)
+
+### PWA Update Lifecycle
+
+Both implementations must preserve the same service-worker behavior:
+
+- A first-time worker may claim an uncontrolled page without reloading it.
+- Updated workers remain waiting until the visitor accepts the update banner.
+- Acceptance sends `SKIP_WAITING`; the subsequent controller replacement reloads exactly once.
+- Static behavior lives in `assets/js/main.js`; React parity lives in `react-app/src/components/PWAManager.tsx`.
+- Run `node scripts/test-popup.mjs` after changing either implementation so first-load popup stability and navigation count remain covered.
 
 ### Data Fetching
 
@@ -235,4 +243,4 @@ export default function ExampleCard({ title, description }: ExampleCardProps) {
 
 ---
 
-Last updated: January 2026
+Last updated: August 2026

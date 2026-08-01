@@ -1,7 +1,7 @@
 # LGU Synchronization Protocol
 
 **LGU Name:** Municipality of Agoo, La Union
-**Last Sync Date:** 2026-07-30
+**Last Sync Date:** 2026-08-01
 
 ## Roles & Responsibilities
 
@@ -46,10 +46,10 @@ The following hotlines must be verified monthly against official LGU records:
 
 - **Static source of truth:** The complete site-footer block in `index.html`.
 - **Static scope:** 51 footer-bearing HTML files. `offline.html` and `admin/news-editor.html` intentionally do not use the standard footer.
-- **React counterpart:** `react-app/src/components/layout/Footer.tsx`, which must remain aligned because the Next.js export supplies production HTML for the homepage and health route.
+- **React counterpart:** `react-app/src/components/layout/Footer.tsx`, which must remain aligned for React development and exported routes. The current production merge replaces only `services/health.html`; the static `index.html` remains the production homepage source.
 - **Current attribution:** One WKNDPRJKT terminal wordmark linked to `https://wkndprjkt.com`; former partner-logo links are no longer part of the footer.
 - **Link convention:** Internal footer links and the footer logo use site-root paths so the canonical block can be copied unchanged to nested pages.
-- **Last parity check:** July 29, 2026 — 51/51 source footers exact; 51/51 generated footers contained the canonical links.
+- **Last parity check:** August 1, 2026 — 51/51 source footers exact; the 1.8.4 production build contains the canonical links and WKNDPRJKT attribution across all footer-bearing routes.
 
 ---
 
@@ -88,10 +88,12 @@ The following hotlines must be verified monthly against official LGU records:
 
 ### DPWH Infrastructure Projects
 
-- **Source:** DPWH Regional Office / data.gov.ph
+- **Source:** Official DPWH Transparency API (`api.transparency.dpwh.gov.ph`)
 - **Frequency:** Quarterly or after new project listings
 - **File to update:** `data/dpwh-projects.json`
 - **Approver:** Lead Maintainer
+- **Current snapshot:** July 31, 2026 — all 40 pages retrieved, covering 1,996 unique La Union contracts and 201 verified Agoo matches.
+- **Refresh command:** `powershell -ExecutionPolicy Bypass -File scripts/sync-dpwh-projects.ps1`
 
 ### Budget & Fiscal Transparency
 
@@ -116,6 +118,7 @@ The following hotlines must be verified monthly against official LGU records:
 - [ ] Service fees and processing times verified with department heads
 - [ ] Legislative data reflects latest SB sessions
 - [ ] Budget/fiscal data matches official documents
+- [ ] `node scripts/test-popup.mjs` passes all 33 popup/PWA checks, including exactly one first-load navigation
 - [ ] Lighthouse accessibility audit score >= 90
 - [ ] Content reviewed by Information Officer
 - [ ] Staging site approved by Content Approver
@@ -128,3 +131,5 @@ The following hotlines must be verified monthly against official LGU records:
 | ---------- | -------------------------------------------------------------------------------------------------------------------- | -------------------- |
 | 2026-02-03 | Initial TEAM_SYNC.md created                                                                                         | Glenn Mark P. Garcia |
 | 2026-07-30 | BA-F-0006 services baseline: 63 registry entries, 11 live Filipizen routes, and official-charter verification status | Glenn Mark P. Garcia |
+| 2026-07-31 | BA-F-0007 official DPWH audit: 40 pages, 1,996 source contracts, and 201 verified Agoo matches                       | Glenn Mark P. Garcia |
+| 2026-08-01 | Release 1.8.4: first service-worker claim no longer reloads or recreates the volunteer popup                         | Glenn Mark P. Garcia |

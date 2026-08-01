@@ -78,9 +78,17 @@ if ('serviceWorker' in navigator) {
         console.warn('SW registration failed:', err);
       });
 
-    // When a new SW takes over, reload seamlessly
+    // A first-time service worker install can claim this previously uncontrolled
+    // page. That controllerchange must not reload the page: doing so interrupts
+    // initial UI such as the volunteer popup and makes it appear twice. Only
+    // reload when a page that already had a controller receives a replacement.
     var refreshing = false;
+    var hadController = Boolean(navigator.serviceWorker.controller);
     navigator.serviceWorker.addEventListener('controllerchange', function () {
+      if (!hadController) {
+        hadController = true;
+        return;
+      }
       if (refreshing) return;
       refreshing = true;
       window.location.reload();

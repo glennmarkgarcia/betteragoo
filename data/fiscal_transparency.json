@@ -1,9 +1,92 @@
 {
-  "_schema_version": "1.0",
-  "_status": "draft",
-  "_source": "Bureau of Local Government Finance (BLGF) / LGU Agoo Budget Office",
-  "_note": "Awaiting official fiscal data",
+  "_schemaVersion": "2.0",
+  "_status": "published",
   "municipality": "Agoo",
   "province": "La Union",
-  "fiscal_years": []
+  "currency": "PHP",
+  "unit": "millions",
+  "report": {
+    "fiscalYear": 2025,
+    "period": "Q1",
+    "periodLabel": "First reporting period (treated as Q1 FY 2025)",
+    "workbookSheet": "FY 2025-1",
+    "source": "Bureau of Local Government Finance (BLGF) spreadsheet obtained outside this repository",
+    "sourceUrl": "https://blgf.gov.ph/",
+    "publishedAt": "2026-07-30",
+    "limitations": [
+      "The workbook contains no separate Q2 reporting period; no Q1-versus-Q2 comparison is presented.",
+      "Displayed values are rounded to two decimal places, so subtotals may differ by 0.01 million."
+    ],
+    "summary": {
+      "totalCurrentOperatingIncome": 141.59,
+      "currentOperatingExpenditures": 43.65,
+      "netOperatingIncome": 97.94,
+      "beginningFundBalance": 263.03,
+      "endingFundBalance": 332.91
+    },
+    "income": {
+      "localSources": {
+        "total": 77.84,
+        "sharePercent": 55,
+        "taxRevenue": {
+          "realPropertyTaxGeneral": 5.15,
+          "realPropertyTaxSpecialEducationFund": 6.44,
+          "realPropertyTaxTotal": 11.59,
+          "businessTax": 30.64,
+          "otherTaxes": 2.08,
+          "total": 44.3
+        },
+        "nonTaxRevenue": {
+          "regulatoryFees": 10.43,
+          "serviceAndUserCharges": 22.84,
+          "economicEnterpriseReceipts": 0,
+          "otherReceipts": 0.27,
+          "total": 33.54
+        }
+      },
+      "externalSources": {
+        "total": 63.75,
+        "sharePercent": 45,
+        "nationalTaxAllotment": 63.75,
+        "otherNationalTaxShares": 0,
+        "interLocalTransfers": 0,
+        "grantsAndDonations": 0
+      }
+    },
+    "expenditures": {
+      "generalPublicServices": {
+        "amount": 22.93,
+        "sharePercent": 52.5
+      },
+      "socialServices": {
+        "amount": 12.44,
+        "sharePercent": 28.5,
+        "breakdown": {
+          "educationCultureSportsAndManpowerDevelopment": 1.08,
+          "healthNutritionAndPopulationControl": 7.36,
+          "laborAndEmployment": 0.32,
+          "housingAndCommunityDevelopment": 0,
+          "socialWelfareServices": 3.68
+        }
+      },
+      "economicServices": {
+        "amount": 8.11,
+        "sharePercent": 18.6
+      },
+      "debtServiceInterestAndCharges": {
+        "amount": 0.17,
+        "sharePercent": 0.4
+      }
+    },
+    "otherMovements": {
+      "nonIncomeReceipts": 0,
+      "capitalAndInvestmentExpenditures": 1.29,
+      "nonOperatingExpenditures": 1.29,
+      "netIncreaseInFunds": 96.66,
+      "cashAvailable": 359.68,
+      "priorYearAccountsPayable": 23.47,
+      "continuingAppropriations": 3.31,
+      "endingFundBalance": 332.91
+    }
+  }
 }

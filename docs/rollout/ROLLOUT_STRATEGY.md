@@ -35,7 +35,7 @@ Given the mobile data context in the Philippines (prepaid metering, fluctuating 
   - Images must be served in WebP format with high-compression settings.
   - Decorative images are strictly prohibited; visual assets must serve a communicative purpose.
 - **Contrast & Readability:** Text contrast ratios must meet the WCAG 2.1 AA standard (minimum 4.5:1 for normal text).
-- **Offline First:** Service Workers must be configured to cache "Core Modules" (Emergency Numbers, Service Directory) for offline access.
+- **Offline First:** Service workers must cache core modules such as emergency numbers and the service directory for offline access. First-time worker control must not reload an open page; updated workers must wait for visitor approval and reload only once after the accepted controller replacement.
 
 ---
 
@@ -74,7 +74,7 @@ This section defines the architectural modularity required to allow LGUs to sele
 
 ### 3.1 Stack Comparison Matrix
 
-| Feature         | **BetterAgoo A (Lightweight)** | **BetterAgoo B (React/TS)**              |
+| Feature         | **BetterAgoo A (Lightweight)**   | **BetterAgoo B (React/TS)**                |
 | :-------------- | :------------------------------- | :----------------------------------------- |
 | **Core Tech**   | Vanilla JS, Bootstrap 5, Leaflet | React, TypeScript, Tailwind                |
 | **Data Store**  | Static JSON Fetching             | Typed JSON Imports / Context API           |

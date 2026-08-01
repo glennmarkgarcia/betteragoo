@@ -1,6 +1,6 @@
 {
   "name": "bs-web",
-  "version": "1.7.0",
+  "version": "1.8.4",
   "description": "BetterAgoo.org - Official Portal for LGU Agoo",
   "scripts": {
     "dev": "python3 -m http.server 8000",

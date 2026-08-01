@@ -4,8 +4,10 @@
 
 | Version | Supported |
 | ------- | --------- |
-| 1.1.x   | Yes       |
-| < 1.1   | No        |
+| 1.8.x   | Yes       |
+| < 1.8   | No        |
+
+The current supported release is `1.8.4`.
 
 ## Reporting a Vulnerability
 
@@ -65,7 +67,7 @@ Include in your report:
 | Service          | Purpose          | Data Shared          |
 | ---------------- | ---------------- | -------------------- |
 | Google Analytics | Usage statistics | Anonymous page views |
-| Open-Meteo API   | Weather data     | Location (Agoo)    |
+| Open-Meteo API   | Weather data     | Location (Agoo)      |
 | ExchangeRate API | Currency rates   | None                 |
 | OpenStreetMap    | Map tiles        | None                 |
 

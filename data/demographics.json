@@ -6,6 +6,11 @@
   "municipality": "Agoo",
   "province": "La Union",
   "region": "Region I - Ilocos Region",
+  "coordinates": {
+    "latitude": 16.3228,
+    "longitude": 120.3551,
+    "reference_point": "Agoo town center / Municipal Hall"
+  },
   "population": {
     "total": 66028,
     "year": 2020,
@@ -16,6 +21,8 @@
     "source": "PSA Census"
   },
   "land_area_km2": 52.84,
+  "population_density_per_km2": 1249.58,
+  "population_density_display": "approximately 1,200 per km²",
   "barangay_count": 49,
   "income_class": "1st",
   "barangays": [

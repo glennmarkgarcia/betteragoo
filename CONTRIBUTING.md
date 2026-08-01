@@ -160,6 +160,16 @@ Types:
 - Verify information before submitting
 - Do not include unverified or speculative data
 
+### Testing PWA and Popup Changes
+
+Changes to `sw.js`, `assets/js/main.js`, `react-app/src/components/PWAManager.tsx`, the homepage popup, or related styles must run:
+
+```bash
+node scripts/test-popup.mjs
+```
+
+The regression suite verifies desktop, tablet, and mobile behavior, including a single popup reveal, exactly one initial top-level navigation, focus-safe dismissal, persistent show-once state, and no reappearance after refresh. First-time service-worker control must never reload the open page. A genuine accepted worker replacement must still reload once.
+
 ## Pull Request Process
 
 1. Ensure your code follows the style guidelines

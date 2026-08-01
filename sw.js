@@ -3,7 +3,7 @@
  * Enterprise-grade PWA with versioned caching, runtime strategies, and offline resilience.
  */
 
-var CACHE_VERSION = 'v3';
+var CACHE_VERSION = 'v4';
 var STATIC_CACHE = 'betteragoo-static-' + CACHE_VERSION;
 var RUNTIME_CACHE = 'betteragoo-runtime-' + CACHE_VERSION;
 var OFFLINE_URL = '/offline.html';
@@ -35,15 +35,12 @@ var RUNTIME_MAX_AGE = 7 * 24 * 60 * 60 * 1000;
 // ─── Install ────────────────────────────────────────────────────────────────
 self.addEventListener('install', function (event) {
   event.waitUntil(
-    caches
-      .open(STATIC_CACHE)
-      .then(function (cache) {
-        // Use addAll for atomic precaching — if any fail, install fails
-        return cache.addAll(PRECACHE_URLS);
-      })
-      .then(function () {
-        return self.skipWaiting();
-      })
+    caches.open(STATIC_CACHE).then(function (cache) {
+      // Use addAll for atomic precaching — if any fail, install fails
+      // Updated workers stay waiting until the user accepts the update banner.
+      // A first installation activates normally without forcing a page reload.
+      return cache.addAll(PRECACHE_URLS);
+    })
   );
 });
 
