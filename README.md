@@ -266,27 +266,27 @@ betteragoo/
 
 ## Recent Changes
 
-### v1.8.4 — First-Load Popup Stability
+### v1.8.4: First-Load Popup Stability
 
 - Prevented first-time service-worker activation from reloading the homepage and recreating the volunteer popup
 - Changed service-worker updates to remain waiting until the visitor accepts the update banner
 - Applied the same controller-change guard to the static and React PWA implementations
 - Extended popup regression tests to detect unexpected full-page navigation on desktop, tablet, and mobile
 
-### v1.8.3 — BA-F-0007 Official DPWH Completion
+### v1.8.3: BA-F-0007 Official DPWH Completion
 
 - Retrieved all 40 pages and all 1,996 unique La Union contracts directly from the official DPWH Transparency API
 - Published 201 verified whole-word Agoo matches covering 2016–2026, including nine contracts absent from the previous public-mirror snapshot
 - Refreshed twelve existing contracts from current official fields and recorded 176 completed, 7 ongoing, 17 for-procurement, and 1 not-yet-started project
 - Added a reproducible paginated DPWH synchronization script and marked BA-F-0007 completed
 
-### v1.8.2 — Official LGU Website Correction
+### v1.8.2: Official LGU Website Correction
 
 - Replaced the invalid legacy LGU website host across source pages, documentation, metadata, and downloadable-form links with `agoolaunion.gov.ph`
 - Updated legislative links to use the official LGU department-and-offices directory
 - Corrected the sitemap so the official LGU homepage and Sangguniang Bayan resource resolve to their appropriate official pages
 
-### v1.8.1 — BA-F-0001/0002 Corrective Audit
+### v1.8.1: BA-F-0001/0002 Corrective Audit
 
 - Corrected the remaining Better Solano configuration references and the homepage map bounding box
 - Removed the contaminated resolution register and added a visible official-source verification notice
@@ -297,7 +297,7 @@ betteragoo/
 - Published only verified 2024 Agoo regional CMCI standings: 1st overall, 1st in Infrastructure, and 3rd in Economic Dynamism among Region I's 1st–2nd class municipalities
 - Corrected BA-F-0002's 2015–2020 annual population growth rate requirement to the reconciled 0.76%
 
-### v1.8.0 — Phase 6 Fiscal Transparency & Infrastructure Baseline
+### v1.8.0: Phase 6 Fiscal Transparency & Infrastructure Baseline
 
 - Replaced the sample Q1/Q2 comparison with Agoo's BLGF first reporting period for FY 2025 and clearly identified it as Q1 without presenting unsupported Q2 data
 - Published the full income, expenditure, social-services, and fund-movement breakdown in `data/fiscal_transparency.json`
@@ -307,7 +307,7 @@ betteragoo/
 - Added visible source, snapshot, retrieval, rounding, and API-availability notes to the budget page
 - At the `1.8.0` baseline, the official DPWH API was blocked by a Cloudflare challenge, so the direct audit was deferred and later completed in `1.8.3`
 
-### v1.7.0 — Phase 5 Public Services Baseline
+### v1.7.0: Phase 5 Public Services Baseline
 
 - Versioned the municipal services registry and expanded it from 57 to 63 searchable entries
 - Verified 11 live Agoo Filipizen routes for business, taxation, payment orders, market rental, water, construction requirements, and terminal passes
@@ -320,7 +320,7 @@ betteragoo/
 - Corrected all stale `bettersolano.org` URLs in `sitemap.xml` and refreshed its modification dates
 - Recorded BA-F-0006 as partially completed: an official Agoo Citizen's Charter is still required to certify all walk-in requirements, fees, processing times, and personnel
 
-### v1.6.0 — Phase 4 Content Migration: Emergency & Contacts
+### v1.6.0: Phase 4 Content Migration: Emergency & Contacts
 
 - Added a canonical Agoo emergency-hotline dataset covering MDRRMO, RHU–MHO, BFP, PNP, Coast Guard, LUMC, LUELCO, and La Union Rescue 911
 - Synchronized eight primary contacts across all 51 static hotline bars and the React header
@@ -334,7 +334,7 @@ betteragoo/
 - Normalized internal footer links to site-root paths so the same footer works from nested routes
 - Synchronized the React `Footer.tsx` links and wordmark with the canonical footer to prevent the production build from reintroducing divergent content
 
-### v1.5.0 — Phase 3 Content Migration: History & Timeline
+### v1.5.0: Phase 3 Content Migration: History & Timeline
 
 - Rebuilt the homepage timeline with verified milestones from Agoo's pre-colonial trading era through the present
 - Added the 1578 founding by Franciscan friars and the 1582 Augustinian administration
@@ -346,7 +346,7 @@ betteragoo/
 - Completed the barangay portion of BA-F-0003 by correcting all 49 names and replacing fabricated population values with the supplied 2020/2015 census dataset (66,028 total population in 2020); elected-official profiles remain pending
 - Verified the production build across desktop, tablet, and mobile viewports
 
-### v1.1.15 — Header, PWA, Version Automation & Code Quality
+### v1.1.15: Header, PWA, Version Automation & Code Quality
 
 #### PWA Install Prompt & Update Lifecycle
 
@@ -425,7 +425,7 @@ betteragoo/
 ### Internationalization (i18n)
 
 - Upgraded translation engine; the current dictionaries contain 5,545 keys per language with perfect en/fil/ilo parity
-- Fixed Brief History timeline cards — full paragraph translations now applied via `data-i18n` on `<p>` elements (previously only proper nouns inside `<strong>` tags were translated, leaving surrounding English text intact)
+- Fixed Brief History timeline cards: full paragraph translations now applied via `data-i18n` on `<p>` elements (previously only proper nouns inside `<strong>` tags were translated, leaving surrounding English text intact)
 - Corrected Filipino translations: proper religious title "Padre" (not "Ama"), fully translated historical paragraphs (no half-English)
 - Corrected Ilocano translations: proper Ilocano vocabulary ("Ababa a Pakasaritaan" not Filipino "Maikling Kasaysayan", "Dimteng" not "Dumating", "Ili" not "Lungsod"), fully translated paragraphs
 - Added 54 translation keys for Agoo Quiz footer link across all page contexts
@@ -540,10 +540,22 @@ See [LICENSE](LICENSE) for full details.
 | Discord  | [Join Community](https://discord.com/invite/qeSu7RJkjQ)           |
 | GitHub   | [BetterAgoo/betteragoo](https://github.com/BetterAgoo/betteragoo) |
 
+## Pages NOT YET finalized
+/services/certificates
+/services/business
+/services/tax-payments
+/services/social-services
+/services/health - hospitals to be checked
+/services/agriculture
+/services/infrastructure
+/services/education
+/services/environment
+/government/
+
+
 ## Acknowledgments
 
 - [BetterGov.ph](https://bettergov.ph) for the civic-tech initiative in the Philippines
-- [Abakada.org](https://abakada.org) for supporting civic technology efforts
 - LGU Agoo for public data availability and transparency
 - All volunteers and contributors who dedicate their time
 - Open-source community for the tools and libraries used
