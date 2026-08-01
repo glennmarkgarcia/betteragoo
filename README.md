@@ -541,16 +541,16 @@ See [LICENSE](LICENSE) for full details.
 | GitHub   | [BetterAgoo/betteragoo](https://github.com/BetterAgoo/betteragoo) |
 
 ## Pages NOT YET finalized
-/services/certificates
-/services/business
-/services/tax-payments
-/services/social-services
-/services/health - hospitals to be checked
-/services/agriculture
-/services/infrastructure
-/services/education
-/services/environment
-/government/
+- /services/certificates
+- /services/business
+- /services/tax-payments
+- /services/social-services
+- /services/health - hospitals to be checked
+- /services/agriculture
+- /services/infrastructure
+- /services/education
+- /services/environment
+- /government/
 
 
 ## Acknowledgments
