@@ -124,7 +124,7 @@ PASS2_FIL = {
     "June 30": "Hunyo 30",
     "September 30": "Setyembre 30",
     "December 31": "Disyembre 31",
-    "Last Updated: December 2, 2025": "Huling Na-update: Disyembre 2, 2025",
+    "Last Updated: August 4, 2026": "Huling Na-update: Disyembre 2, 2025",
 
     # Government/Office titles
     "Office Head": "Pinuno ng Opisina",

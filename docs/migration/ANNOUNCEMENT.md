@@ -1,6 +1,6 @@
 # Announcement: React + TypeScript Version Available
 
-> **Maintenance note (August 1, 2026):** On the current `main` workspace, the static homepage remains canonical and `build.sh` merges only the React health route into production. The React workspace uses Next.js 15.5.19 and React 18.3.1 at project release `1.8.4`. The announcement below describes the original parallel-version launch.
+> **Maintenance note (August 4, 2026):** On the current `main` workspace, the static homepage remains canonical and `build.sh` merges only the React health route into production. The React workspace uses Next.js 15.5.19 and React 18.3.1 at project release `1.8.8`; shared contact links use `betteragoo@gmail.com`, while the shared header uses the right-aligned **Emergency Hotlines** link, synchronized BetterAgoo.org branding, and hamburger navigation through `1399px`. The announcement below describes the original parallel-version launch.
 
 ## Summary
 
@@ -64,7 +64,7 @@ We welcome feedback on both versions. Please:
 
 - Open an issue with the `react` label for React-specific feedback
 - Join the discussion in our Discord community
-- Email volunteer@betteragoo.org with questions
+- Email betteragoo@gmail.com with questions
 
 ## Acknowledgments
 

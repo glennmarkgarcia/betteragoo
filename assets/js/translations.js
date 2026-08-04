@@ -14,6 +14,7 @@ const translations = {
     'emergency-header-coast-guard': 'Coast Guard',
     'emergency-header-lumc': 'LUMC',
     'emergency-header-luelco': 'LUELCO',
+    'header-hotlines-link': 'Emergency Hotlines',
     'emergency-directory-subtitle': 'Tap any number to call the appropriate emergency service.',
     'emergency-directory-updated': 'Last updated: July 29, 2026',
     'emergency-network-smart': 'Smart',
@@ -761,7 +762,7 @@ const translations = {
     'a11y-text-alternatives': 'Text Alternatives',
     'a11y-typescript': 'TypeScript',
     'a11y-volunteer-with-us': 'Volunteer with us',
-    'a11y-volunteerbetteragooorg': 'volunteer@betteragoo.org',
+    'a11y-volunteerbetteragooorg': 'betteragoo@gmail.com',
     'a11y-wcag-21-level-aa': 'WCAG 2.1 Level AA',
     'a11y-works-on-all-devices-and-screen-sizes': 'Works on all devices and screen sizes.',
     'acct-1-day': '1 day',
@@ -2364,7 +2365,7 @@ const translations = {
     'faq-visit-the-municipal-treasurers-office-at-the':
       "Visit the Municipal Treasurer's Office at the Municipal Hall with your Tax Declaration or latest Official Receipt. Payment is in cash. Property taxes are due quarterly, but you may pay annually to avail of discounts.",
     'faq-volunteer-with-us': 'Volunteer with us',
-    'faq-volunteerbetteragooorg': 'volunteer@betteragoo.org',
+    'faq-volunteerbetteragooorg': 'betteragoo@gmail.com',
     'faq-what-are-the-office-hours-of-the-municipal-hall':
       'What are the office hours of the Municipal Hall?',
     'faq-what-benefits-do-senior-citizens-receive': 'What benefits do senior citizens receive?',
@@ -5064,7 +5065,7 @@ const translations = {
     'privacy-infrastructure': 'Infrastructure',
     'privacy-introduction': 'Introduction',
     'privacy-ip-address-anonymized-where-possible': 'IP address (anonymized where possible)',
-    'privacy-last-updated-december-2-2025': 'Last Updated: December 2, 2025',
+    'privacy-last-updated-august-4-2026': 'Last Updated: August 4, 2026',
     'privacy-legal-basis': 'Legal Basis',
     'privacy-legal-basis-for-processing': 'Legal Basis for Processing',
     'privacy-legal-obligation': 'Legal Obligation:',
@@ -5140,7 +5141,7 @@ const translations = {
     'privacy-under-the-data-privacy-act-of-2012-you-have-the':
       'Under the Data Privacy Act of 2012, you have the following rights regarding your personal information:',
     'privacy-volunteer-with-us': 'Volunteer with us',
-    'privacy-volunteerbetteragooorg': 'volunteer@betteragoo.org',
+    'privacy-volunteerbetteragooorg': 'betteragoo@gmail.com',
     'privacy-we-collect-minimal-information-necessary-to':
       'We collect minimal information necessary to operate this civic platform effectively:',
     'privacy-we-do-not-sell-trade-or-rent-your-personal':
@@ -6099,7 +6100,7 @@ const translations = {
     'terms-verify-information-directly-from-original-and':
       'Verify information directly from original and official sources',
     'terms-volunteer-with-us': 'Volunteer with us',
-    'terms-volunteerbetteragooorg': 'volunteer@betteragoo.org',
+    'terms-volunteerbetteragooorg': 'betteragoo@gmail.com',
     'terms-warranties-of-merchantability': 'Warranties of merchantability',
     'terms-website-availability': 'Website Availability',
     'terms-when-reaching-out-kindly-include': 'When reaching out, kindly include:',
@@ -6460,6 +6461,7 @@ const translations = {
     'emergency-header-coast-guard': 'Tanod Baybayin',
     'emergency-header-lumc': 'LUMC',
     'emergency-header-luelco': 'LUELCO',
+    'header-hotlines-link': 'Mga Emergency Hotline',
     'emergency-directory-subtitle':
       'Pindutin ang anumang numero upang tawagan ang naaangkop na serbisyong pang-emerhensiya.',
     'emergency-directory-updated': 'Huling na-update: Hulyo 29, 2026',
@@ -7192,7 +7194,7 @@ const translations = {
     'a11y-text-alternatives': 'Mga Alternatibong Teksto',
     'a11y-typescript': 'TypeScript',
     'a11y-volunteer-with-us': 'Mag-volunteer sa amin',
-    'a11y-volunteerbetteragooorg': 'volunteer@betteragoo.org',
+    'a11y-volunteerbetteragooorg': 'betteragoo@gmail.com',
     'a11y-wcag-21-level-aa': 'WCAG 2.1 Level AA',
     'a11y-works-on-all-devices-and-screen-sizes': 'Gumagana sa lahat ng device at laki ng screen.',
     'acct-1-day': '1 araw',
@@ -8810,7 +8812,7 @@ const translations = {
     'faq-visit-the-municipal-treasurers-office-at-the':
       'Bumisita sa Opisina ng Ingat-Yaman ng Munisipyo sa Munisipyo na may iyong Tax Declaration o pinakabagong Opisyal na Resibo. Ang pagbabayad ay sa cash. Ang mga buwis sa ari-arian ay dapat bayaran quarterly, ngunit maaari kang magbayad taun-taon upang makakuha ng diskwento.',
     'faq-volunteer-with-us': 'Mag-volunteer sa amin',
-    'faq-volunteerbetteragooorg': 'volunteer@betteragoo.org',
+    'faq-volunteerbetteragooorg': 'betteragoo@gmail.com',
     'faq-what-are-the-office-hours-of-the-municipal-hall':
       'What ay ang office hours ng ang Munisipyo?',
     'faq-what-benefits-do-senior-citizens-receive':
@@ -11507,7 +11509,7 @@ const translations = {
     'privacy-infrastructure': 'Imprastraktura',
     'privacy-introduction': 'Panimula',
     'privacy-ip-address-anonymized-where-possible': 'IP address (anonymized kung maaari)',
-    'privacy-last-updated-december-2-2025': 'Huling Na-update: Disyembre 2, 2025',
+    'privacy-last-updated-august-4-2026': 'Huling Na-update: Disyembre 2, 2025',
     'privacy-legal-basis': 'Legal na Batayan',
     'privacy-legal-basis-for-processing': 'Legal na Batayan para sa Pagproseso',
     'privacy-legal-obligation': 'Legal na Obligasyon:',
@@ -11585,7 +11587,7 @@ const translations = {
     'privacy-under-the-data-privacy-act-of-2012-you-have-the':
       'Under ang Data Privacy Act ng 2012, ikaw ay maaari ang following mga karapatan regarding iyong personal na impormasyon:',
     'privacy-volunteer-with-us': 'Mag-volunteer sa amin',
-    'privacy-volunteerbetteragooorg': 'volunteer@betteragoo.org',
+    'privacy-volunteerbetteragooorg': 'betteragoo@gmail.com',
     'privacy-we-collect-minimal-information-necessary-to':
       'We kolektahin minimal impormasyon necessary to operate this civic platform effectively:',
     'privacy-we-do-not-sell-trade-or-rent-your-personal':
@@ -12552,7 +12554,7 @@ const translations = {
     'terms-verify-information-directly-from-original-and':
       'Verify impormasyon directly mula sa original sa opisyal na sources',
     'terms-volunteer-with-us': 'Mag-volunteer sa amin',
-    'terms-volunteerbetteragooorg': 'volunteer@betteragoo.org',
+    'terms-volunteerbetteragooorg': 'betteragoo@gmail.com',
     'terms-warranties-of-merchantability': 'Mga garantiya ng kakayahang ibenta',
     'terms-website-availability': 'Pagkakaroon ng Website',
     'terms-when-reaching-out-kindly-include': 'When reaching out, kindly isama:',
@@ -12912,6 +12914,7 @@ const translations = {
     'emergency-header-coast-guard': 'Coast Guard',
     'emergency-header-lumc': 'LUMC',
     'emergency-header-luelco': 'LUELCO',
+    'header-hotlines-link': 'Dagiti Emergency Hotline',
     'emergency-directory-subtitle':
       'Pinduten ti aniaman a numero tapno matawagan ti umno a serbisio ti emerhensia.',
     'emergency-directory-updated': 'Naudi a napabaro: Hulio 29, 2026',
@@ -13647,7 +13650,7 @@ const translations = {
     'a11y-text-alternatives': 'Dagiti Alternatibo a Teksto',
     'a11y-typescript': 'TypeScript',
     'a11y-volunteer-with-us': 'Ag-volunteer kadakami',
-    'a11y-volunteerbetteragooorg': 'volunteer@betteragoo.org',
+    'a11y-volunteerbetteragooorg': 'betteragoo@gmail.com',
     'a11y-wcag-21-level-aa': 'WCAG 2.1 Level AA',
     'a11y-works-on-all-devices-and-screen-sizes':
       'Agtrabtrabaho iti amin a device ken kadakkel ti screen.',
@@ -15277,7 +15280,7 @@ const translations = {
     'faq-visit-the-municipal-treasurers-office-at-the':
       'Bisitaen ti Opisina ti Tesorero ti Munisipalidad iti Munisipalidad nga addaan iti Tax Declaration wenno kaudian nga Opisyal a Resibo. Ti panagbayad ket cash. Dagiti buwis iti kukua ket masapul a bayadan quarterly, ngem mabalinmo ti agbayad iti tinawen tapno magun-od ti diskwento.',
     'faq-volunteer-with-us': 'Ag-volunteer kadakami',
-    'faq-volunteerbetteragooorg': 'volunteer@betteragoo.org',
+    'faq-volunteerbetteragooorg': 'betteragoo@gmail.com',
     'faq-what-are-the-office-hours-of-the-municipal-hall':
       'What ay ti office hours ti ti Munisipalidad?',
     'faq-what-benefits-do-senior-citizens-receive':
@@ -17980,7 +17983,7 @@ const translations = {
     'privacy-infrastructure': 'Imprastraktura',
     'privacy-introduction': 'Pangyuna',
     'privacy-ip-address-anonymized-where-possible': 'IP address (anonymized no maaari)',
-    'privacy-last-updated-december-2-2025': 'Huling Na-update: Disiembre 2, 2025',
+    'privacy-last-updated-august-4-2026': 'Huling Na-update: Disiembre 2, 2025',
     'privacy-legal-basis': 'Legal na Batayan',
     'privacy-legal-basis-for-processing': 'Legal a Batayan para iti Panagproseso',
     'privacy-legal-obligation': 'Legal na Obligasyon:',
@@ -18058,7 +18061,7 @@ const translations = {
     'privacy-under-the-data-privacy-act-of-2012-you-have-the':
       'Under ti Data Privacy Act ti 2012, ikaw ay maaari ti following dagiti karapatan regarding iyong personal na impormasion:',
     'privacy-volunteer-with-us': 'Ag-volunteer kadakami',
-    'privacy-volunteerbetteragooorg': 'volunteer@betteragoo.org',
+    'privacy-volunteerbetteragooorg': 'betteragoo@gmail.com',
     'privacy-we-collect-minimal-information-necessary-to':
       'We kolektaen minimal impormasion necessary to operate this civic platform effectively:',
     'privacy-we-do-not-sell-trade-or-rent-your-personal':
@@ -19026,7 +19029,7 @@ const translations = {
     'terms-verify-information-directly-from-original-and':
       'Verify impormasion directly manipud iti original iti opisyal na sources',
     'terms-volunteer-with-us': 'Ag-volunteer kadakami',
-    'terms-volunteerbetteragooorg': 'volunteer@betteragoo.org',
+    'terms-volunteerbetteragooorg': 'betteragoo@gmail.com',
     'terms-warranties-of-merchantability': 'Dagiti garantiya ti kakayahang ibenta',
     'terms-website-availability': 'Pannakagun-od ti Website',
     'terms-when-reaching-out-kindly-include': 'When reaching out, kindly iraman:',

@@ -1,7 +1,7 @@
 # LGU Synchronization Protocol
 
 **LGU Name:** Municipality of Agoo, La Union
-**Last Sync Date:** 2026-08-01
+**Last Sync Date:** 2026-08-04
 
 ## Roles & Responsibilities
 
@@ -27,6 +27,8 @@
 
 The following hotlines must be verified monthly against official LGU records:
 
+The complete public directory is centralized at `/contact/#emergency-hotlines`. Every standard source header links to that section using the localized, right-aligned **Emergency Hotlines** label; phone numbers must not be duplicated in the header bar.
+
 | Service                      | Primary number | Secondary number                               | Source                                     |
 | ---------------------------- | -------------- | ---------------------------------------------- | ------------------------------------------ |
 | MDRRMO – Agoo                | 0929 558 7444  | 0995 054 5741                                  | Supplied Agoo Emergency Hotlines reference |
@@ -49,7 +51,14 @@ The following hotlines must be verified monthly against official LGU records:
 - **React counterpart:** `react-app/src/components/layout/Footer.tsx`, which must remain aligned for React development and exported routes. The current production merge replaces only `services/health.html`; the static `index.html` remains the production homepage source.
 - **Current attribution:** One WKNDPRJKT terminal wordmark linked to `https://wkndprjkt.com`; former partner-logo links are no longer part of the footer.
 - **Link convention:** Internal footer links and the footer logo use site-root paths so the canonical block can be copied unchanged to nested pages.
-- **Last parity check:** August 1, 2026 — 51/51 source footers exact; the 1.8.4 production build contains the canonical links and WKNDPRJKT attribution across all footer-bearing routes.
+- **Last parity check:** August 4, 2026 — 51/51 source footers exact; the 1.8.8 production build contains the canonical links, `betteragoo@gmail.com`, and WKNDPRJKT attribution across all footer-bearing routes.
+
+## Shared Header Synchronization
+
+- **Static source of truth:** The `.logo-container` in root `index.html`.
+- **Static scope:** All 51 standard source HTML headers use the same root-relative PNG logo, BetterAgoo.org wordmark, and unofficial community-portal tagline.
+- **React counterpart:** `react-app/src/components/layout/Header.tsx` mirrors the canonical logo block for React development and exported routes.
+- **Responsive contract:** Hamburger navigation and `.hide-on-mobile` apply through `1399px`; horizontal desktop navigation and hover dropdowns begin at `1400px`. The separate tablet content layout remains at `1024px`.
 
 ---
 
@@ -133,3 +142,7 @@ The following hotlines must be verified monthly against official LGU records:
 | 2026-07-30 | BA-F-0006 services baseline: 63 registry entries, 11 live Filipizen routes, and official-charter verification status | Glenn Mark P. Garcia |
 | 2026-07-31 | BA-F-0007 official DPWH audit: 40 pages, 1,996 source contracts, and 201 verified Agoo matches                       | Glenn Mark P. Garcia |
 | 2026-08-01 | Release 1.8.4: first service-worker claim no longer reloads or recreates the volunteer popup                         | Glenn Mark P. Garcia |
+| 2026-08-04 | Release 1.8.5: consolidated header emergency numbers into the Contact-page hotline directory                         | Glenn Mark P. Garcia |
+| 2026-08-04 | Release 1.8.6: renamed the header link to Emergency Hotlines and aligned it to the right                             | Glenn Mark P. Garcia |
+| 2026-08-04 | Release 1.8.7 / BA-F-0008: refreshed project email, volunteer modal, styling, and official Facebook route            | Glenn Mark P. Garcia |
+| 2026-08-04 | Release 1.8.8 / BA-F-0009: extended hamburger navigation through 1399px and synchronized shared logo branding        | Glenn Mark P. Garcia |

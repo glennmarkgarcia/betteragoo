@@ -3,7 +3,7 @@
 /* Large Desktop */
 @media (min-width: 1200px) {
   .container {
-    max-width: 1200px;
+    max-width: 1400px;
   }
 
   .grid-4 {
@@ -34,8 +34,8 @@
   }
 }
 
-/* Tablet */
-@media (max-width: 1024px) {
+/* Collapsed Header & Navigation */
+@media (max-width: 1399px) {
   :root {
     --header-height: 56px;
   }
@@ -63,7 +63,7 @@
   .mobile-menu-toggle {
     order: 2;
     flex-shrink: 0;
-    margin: 0 auto;
+    margin: unset;
   }
 
   .header-actions {
@@ -198,7 +198,10 @@
     color: var(--color-primary);
     background-color: var(--color-bg-alt);
   }
+}
 
+/* Tablet Content */
+@media (max-width: 1024px) {
   .hero-section {
     padding: 64px 0;
   }
@@ -581,7 +584,7 @@
   border-radius: 4px;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1399px) {
   .mobile-menu-toggle {
     display: flex;
     align-items: center;

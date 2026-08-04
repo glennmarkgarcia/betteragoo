@@ -1,6 +1,6 @@
 # Release Notes: React + TypeScript Version
 
-> **Maintenance note (August 1, 2026):** The active workspace now uses Next.js 15.5.19, React 18.3.1, and release `1.8.4`. Its PWA manager ignores the first service-worker controller claim, waits for visitor approval before activating updates, and reloads once after an accepted controller replacement. The original `1.0.0-react` notes below remain a historical release record.
+> **Maintenance note (August 4, 2026):** The active workspace now uses Next.js 15.5.19, React 18.3.1, and release `1.8.8`. The canonical homepage uses the refreshed volunteer modal, `betteragoo@gmail.com`, and the supplied `MunicipalityofAgooLaUnion` Facebook route. Its shared header provides a right-aligned **Emergency Hotlines** link, uses the synchronized BetterAgoo.org logo block, and collapses to hamburger navigation through `1399px`. The PWA manager preserves the approved-update lifecycle. The original `1.0.0-react` notes below remain a historical release record.
 
 **Version:** 1.0.0-react  
 **Branch:** react-typescript  
@@ -78,7 +78,7 @@ Report issues or provide feedback:
 
 - GitHub Issues with `react` label
 - Discord community
-- Email: volunteer@betteragoo.org
+- Email: betteragoo@gmail.com
 
 ## Contributors
 

@@ -13,6 +13,7 @@ const translations: Record<string, Record<string, string>> = {
     'emergency-header-coast-guard': 'Coast Guard',
     'emergency-header-lumc': 'LUMC',
     'emergency-header-luelco': 'LUELCO',
+    'header-hotlines-link': 'Emergency Hotlines',
     'emergency-directory-subtitle': 'Tap any number to call the appropriate emergency service.',
     'emergency-directory-updated': 'Last updated: July 29, 2026',
     'emergency-network-smart': 'Smart',
@@ -536,6 +537,7 @@ const translations: Record<string, Record<string, string>> = {
     'emergency-header-coast-guard': 'Tanod Baybayin',
     'emergency-header-lumc': 'LUMC',
     'emergency-header-luelco': 'LUELCO',
+    'header-hotlines-link': 'Mga Emergency Hotline',
     'emergency-directory-subtitle':
       'Pindutin ang anumang numero upang tawagan ang naaangkop na serbisyong pang-emerhensiya.',
     'emergency-directory-updated': 'Huling na-update: Hulyo 29, 2026',
@@ -1069,6 +1071,7 @@ const translations: Record<string, Record<string, string>> = {
     'emergency-header-coast-guard': 'Coast Guard',
     'emergency-header-lumc': 'LUMC',
     'emergency-header-luelco': 'LUELCO',
+    'header-hotlines-link': 'Dagiti Emergency Hotline',
     'emergency-directory-subtitle':
       'Pinduten ti aniaman a numero tapno matawagan ti umno a serbisio ti emerhensia.',
     'emergency-directory-updated': 'Naudi a napabaro: Hulio 29, 2026',

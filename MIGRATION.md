@@ -147,6 +147,13 @@ Government, budget, statistics, contact, and the remaining service routes curren
 
 Both versions share the same CSS files from `public/assets/css/`. The React version imports these stylesheets in the root layout.
 
+### Shared Header and Responsive Navigation
+
+- Root `index.html` is the source of truth for the static `.logo-container`; all 51 standard static pages use the same root-relative logo image, BetterAgoo.org wordmark, and unofficial community-portal tagline.
+- `react-app/src/components/layout/Header.tsx` mirrors that branding for React-generated routes.
+- Both implementations use collapsed hamburger navigation at viewport widths up to and including `1399px`; desktop navigation and hover dropdown behavior begin at `1400px`.
+- The header breakpoint is independent of the `1024px` tablet content breakpoint so grids and page content do not switch layouts prematurely.
+
 ### State Management
 
 **Static HTML:** DOM manipulation with vanilla JavaScript
@@ -239,7 +246,7 @@ export default function ExampleCard({ title, description }: ExampleCardProps) {
 
 - Open an issue on GitHub with the `react` label
 - Join our Discord community for real-time discussion
-- Email: volunteer@betteragoo.org
+- Email: betteragoo@gmail.com
 
 ---
 

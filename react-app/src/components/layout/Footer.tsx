@@ -130,7 +130,7 @@ export default function Footer() {
             >
               {t('footer-cost')} <span className="footer-cost-value">₱0</span>
             </div>
-            <a href="mailto:volunteer@betteragoo.org" className="footer-contribute">
+            <a href="mailto:betteragoo@gmail.com" className="footer-contribute">
               <i className="bi bi-envelope-heart"></i> {t('footer-volunteer')}
             </a>
             <a
@@ -142,11 +142,7 @@ export default function Footer() {
               <i className="bi bi-github"></i> {t('footer-contribute')}
             </a>
             <div className="footer-partners">
-              <a
-                className="wordmark"
-                href="https://wkndprjkt.com"
-                aria-label="WKNDPRJKT home"
-              >
+              <a className="wordmark" href="https://wkndprjkt.com" aria-label="WKNDPRJKT home">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="20"

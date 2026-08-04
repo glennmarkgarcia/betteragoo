@@ -2,7 +2,7 @@
 
 A civic-tech initiative providing transparent access to municipal services, programs, and public funds of LGU Agoo, La Union, Philippines.
 
-![Version](https://img.shields.io/badge/version-1.8.4-green)
+![Version](https://img.shields.io/badge/version-1.8.8-green)
 ![License](https://img.shields.io/badge/license-MIT%20%7C%20CC%20BY%204.0-blue)
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white)
@@ -73,26 +73,26 @@ Visit the live website: [https://betteragoo.org](https://betteragoo.org)
 
 ## Key Features
 
-| Feature                          | Description                                                                                                                                                                                                                  |
-| -------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Municipal Services Directory** | Comprehensive guide to all LGU services with requirements, fees, and processing times                                                                                                                                        |
-| **Government Officials**         | Directory of elected officials and department heads with contact information                                                                                                                                                 |
-| **Budget Transparency**          | Financial reports, income/expenditure breakdowns, and infrastructure projects                                                                                                                                                |
-| **Legislative Documents**        | Searchable database of ordinances and resolutions from Sangguniang Bayan                                                                                                                                                     |
-| **Municipal Statistics**         | Demographics, economic data, and competitive index rankings                                                                                                                                                                  |
-| **Appointment Services**         | Online appointment scheduling integration with the Mayor's Office (OASYS), featuring branded Lottie animation                                                                                                                |
-| **Agoo Quiz**                    | Interactive quiz about Agoo history and culture, linked from homepage CTA and footer across all pages                                                                                                                        |
-| **Real-time Information**        | Live weather updates, currency exchange rates, and Philippine time                                                                                                                                                           |
-| **Emergency Hotline Marquee**    | Clickable scrolling marquee for emergency contacts on tablet and mobile viewports, with pause-on-hover/focus accessibility                                                                                                   |
-| **Progressive Web App**          | Installable PWA with an install prompt, versioned static/runtime caching, offline emergency fallback, and user-approved worker updates that reload once after controller replacement without reloading on first installation |
-| **Release Version Management**   | Semantic release version sourced from `version.json`, explicitly bumped for releases, and synchronized across all HTML files, package metadata, and the React app                                                            |
-| **Multi-language Support**       | Full i18n coverage in English, Filipino, and Ilocano (5,545 keys per language with perfect parity)                                                                                                                           |
-| **Clean URLs**                   | SEO-friendly URLs without `.html` extensions, powered by Apache mod_rewrite                                                                                                                                                  |
-| **Brief History of Agoo**        | Interactive timeline from the pre-colonial era to the present, with fully translated cards in English, Filipino, and Ilocano                                                                                                 |
-| **Mobile Navigation**            | Responsive menu with GPU-accelerated open/close transitions, body scroll lock, animation guard against rapid toggles, debounced resize handling, touch-safe hover scoping, click-outside-to-close, and focus trap            |
-| **Accessibility**                | WCAG 2.1 compliant with skip links, ARIA labels, keyboard navigation, and semantic HTML                                                                                                                                      |
-| **SEO Optimized**                | Meta tags, Open Graph, Twitter Cards, structured data, and XML sitemap                                                                                                                                                       |
-| **Performance**                  | 90%+ size reduction through minification, GZIP compression, Babel transpilation, and browser caching                                                                                                                         |
+| Feature                          | Description                                                                                                                                                                                                                       |
+| -------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Municipal Services Directory** | Comprehensive guide to all LGU services with requirements, fees, and processing times                                                                                                                                             |
+| **Government Officials**         | Directory of elected officials and department heads with contact information                                                                                                                                                      |
+| **Budget Transparency**          | Financial reports, income/expenditure breakdowns, and infrastructure projects                                                                                                                                                     |
+| **Legislative Documents**        | Searchable database of ordinances and resolutions from Sangguniang Bayan                                                                                                                                                          |
+| **Municipal Statistics**         | Demographics, economic data, and competitive index rankings                                                                                                                                                                       |
+| **Appointment Services**         | Online appointment scheduling integration with the Mayor's Office (OASYS), featuring branded Lottie animation                                                                                                                     |
+| **Agoo Quiz**                    | Interactive quiz about Agoo history and culture, linked from homepage CTA and footer across all pages                                                                                                                             |
+| **Real-time Information**        | Live weather updates, currency exchange rates, and Philippine time                                                                                                                                                                |
+| **Emergency Hotline Directory**  | One localized header link to the complete callable hotline directory on the Contact page, plus an offline emergency fallback                                                                                                      |
+| **Progressive Web App**          | Installable PWA with an install prompt, versioned static/runtime caching, offline emergency fallback, and user-approved worker updates that reload once after controller replacement without reloading on first installation      |
+| **Release Version Management**   | Semantic release version sourced from `version.json`, explicitly bumped for releases, and synchronized across all HTML files, package metadata, and the React app                                                                 |
+| **Multi-language Support**       | Full i18n coverage in English, Filipino, and Ilocano (5,546 keys per language with perfect parity)                                                                                                                                |
+| **Clean URLs**                   | SEO-friendly URLs without `.html` extensions, powered by Apache mod_rewrite                                                                                                                                                       |
+| **Brief History of Agoo**        | Interactive timeline from the pre-colonial era to the present, with fully translated cards in English, Filipino, and Ilocano                                                                                                      |
+| **Mobile Navigation**            | Hamburger navigation through 1399px with GPU-accelerated open/close transitions, body scroll lock, animation guard against rapid toggles, debounced resize handling, touch-safe dropdowns, click-outside-to-close, and focus trap |
+| **Accessibility**                | WCAG 2.1 compliant with skip links, ARIA labels, keyboard navigation, and semantic HTML                                                                                                                                           |
+| **SEO Optimized**                | Meta tags, Open Graph, Twitter Cards, structured data, and XML sitemap                                                                                                                                                            |
+| **Performance**                  | 90%+ size reduction through minification, GZIP compression, Babel transpilation, and browser caching                                                                                                                              |
 
 ## Quick Start
 
@@ -197,9 +197,9 @@ The site supports three languages with full translation coverage:
 
 | Language | Code  | Status                |
 | -------- | ----- | --------------------- |
-| English  | `en`  | Complete (5,545 keys) |
-| Filipino | `fil` | Complete (5,545 keys) |
-| Ilocano  | `ilo` | Complete (5,545 keys) |
+| English  | `en`  | Complete (5,546 keys) |
+| Filipino | `fil` | Complete (5,546 keys) |
+| Ilocano  | `ilo` | Complete (5,546 keys) |
 
 The static site uses a `TranslationEngine` in `assets/js/translations.js` with `data-i18n` attributes on HTML elements. The React version uses a `LanguageContext` provider with a `t()` function. Both systems support fallback to English for any missing keys.
 
@@ -265,6 +265,33 @@ betteragoo/
 ```
 
 ## Recent Changes
+
+### v1.8.8: Responsive Header Breakpoint & Logo Synchronization
+
+- Extended the collapsed hamburger navigation through `1399px`; the horizontal desktop navigation now begins at `1400px`
+- Applied `.hide-on-mobile` and the reset toggle margin through the same `1399px` boundary without changing the separate `1024px` tablet content layout
+- Synchronized the canonical homepage logo image, BetterAgoo.org wordmark, and unofficial community-portal tagline across all 51 static pages and the React header
+- Advanced the synchronized service-worker cache generation to `v8`
+
+### v1.8.7: Homepage Communications & Modal Refresh
+
+- Replaced the former volunteer mailbox across static pages, React, translations, and documentation with `betteragoo@gmail.com`
+- Refocused the volunteer modal on the site's work-in-progress status and Graphic Design, LGU Data Gatherer, and Digital Marketing roles
+- Updated the canonical homepage to use the navy hotline treatment, hide the appointment CTA, and load `MunicipalityofAgooLaUnion` Facebook links and feed
+- Advanced the synchronized service-worker cache generation to `v7`
+
+### v1.8.6: Emergency Hotline Link Refinement
+
+- Renamed the shared header link from **Hotlines** to **Emergency Hotlines**
+- Right-aligned the link in the hotline bar across desktop, tablet, mobile, and React-generated routes
+- Advanced the synchronized service-worker cache generation to `v6`
+
+### v1.8.5: Consolidated Emergency Hotline Navigation
+
+- Replaced the repeated emergency numbers above all 51 static headers with one localized **Hotlines** link
+- Linked directly to the complete Emergency Hotlines directory on the Contact page
+- Added smooth anchor scrolling with a reduced-motion fallback and sticky-header offset
+- Removed the obsolete mobile hotline marquee and the duplicate React hotline bar
 
 ### v1.8.4: First-Load Popup Stability
 
@@ -366,7 +393,9 @@ betteragoo/
 
 - Removed CodeQL Advanced workflow (`.github/workflows/codeql.yml`) as it is no longer required
 
-#### Responsive Header & Hotline Marquee
+#### Responsive Header & Hotline Marquee (Historical)
+
+> The marquee described below was retired in `1.8.5` and replaced by one centralized link, now labeled **Emergency Hotlines** and right-aligned as of `1.8.6`.
 
 - Standardized header vertical spacing (padding, min-height, logo size) across desktop (12px/48px), tablet (10px/40px), mobile (8px/36px), and small mobile (6px/32px) breakpoints
 - Raised tablet breakpoint from 991px to 1024px to properly capture iPad Pro portrait (1024px) and iPad Air landscape
@@ -394,7 +423,7 @@ betteragoo/
 
 #### React App Sync
 
-- Created `HotlineBar.tsx` component with tablet/mobile marquee matching static site behavior
+- Created `HotlineBar.tsx`; as of `1.8.6`, it renders the same right-aligned **Emergency Hotlines** link as the static site
 - Created `InfoBar.tsx` component with live exchange rates, weather, and Philippine time
 - Created `SearchAutocomplete.tsx` component with service search dropdown
 - Created `PWAManager.tsx` component handling the install prompt and user-approved SW updates
@@ -424,7 +453,7 @@ betteragoo/
 
 ### Internationalization (i18n)
 
-- Upgraded translation engine; the current dictionaries contain 5,545 keys per language with perfect en/fil/ilo parity
+- Upgraded translation engine; the current dictionaries contain 5,546 keys per language with perfect en/fil/ilo parity
 - Fixed Brief History timeline cards: full paragraph translations now applied via `data-i18n` on `<p>` elements (previously only proper nouns inside `<strong>` tags were translated, leaving surrounding English text intact)
 - Corrected Filipino translations: proper religious title "Padre" (not "Ama"), fully translated historical paragraphs (no half-English)
 - Corrected Ilocano translations: proper Ilocano vocabulary ("Ababa a Pakasaritaan" not Filipino "Maikling Kasaysayan", "Dimteng" not "Dumating", "Ili" not "Lungsod"), fully translated paragraphs
@@ -534,13 +563,14 @@ See [LICENSE](LICENSE) for full details.
 | Channel  | Link                                                              |
 | -------- | ----------------------------------------------------------------- |
 | Website  | [betteragoo.org](https://betteragoo.org)                          |
-| Email    | volunteer@betteragoo.org                                          |
+| Email    | betteragoo@gmail.com                                              |
 | Facebook | [@betteragoo.org](https://www.facebook.com/betteragoo.org)        |
 | LinkedIn | [BetterAgoo](https://www.linkedin.com/company/betteragoo/)        |
 | Discord  | [Join Community](https://discord.com/invite/qeSu7RJkjQ)           |
 | GitHub   | [BetterAgoo/betteragoo](https://github.com/BetterAgoo/betteragoo) |
 
 ## Pages NOT YET finalized
+
 - /services/certificates
 - /services/business
 - /services/tax-payments
@@ -551,7 +581,6 @@ See [LICENSE](LICENSE) for full details.
 - /services/education
 - /services/environment
 - /government/
-
 
 ## Acknowledgments
 

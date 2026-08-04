@@ -138,6 +138,13 @@ Types:
 - Use CSS custom properties (variables)
 - Ensure responsive design
 - Test on mobile devices
+- Keep the shared header breakpoint aligned across `assets/css/responsive.css`, `assets/css/style.css`, `assets/js/main.js`, and `react-app/src/components/layout/Header.tsx`: collapsed navigation applies through `1399px`, and desktop navigation starts at `1400px`.
+
+### Shared Header
+
+- Treat the `.logo-container` in root `index.html` as the canonical static logo block.
+- When its image, wordmark, or tagline changes, synchronize all 51 standard static headers and the React `Header.tsx` counterpart.
+- Use site-root asset paths in the canonical block so it works unchanged on nested pages.
 
 ### JavaScript
 
@@ -195,7 +202,7 @@ Pull requests are reviewed for:
 - **Discord:** [Join our community](https://discord.com/invite/qeSu7RJkjQ)
 - **Facebook:** [@betteragoo.org](https://www.facebook.com/betteragoo.org)
 - **LinkedIn:** [Connect with us](https://www.linkedin.com/company/betteragoo)
-- **Email:** volunteer@betteragoo.org
+- **Email:** betteragoo@gmail.com
 
 ## Recognition
 

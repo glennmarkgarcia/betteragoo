@@ -155,71 +155,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Utility: detect mobile breakpoint
   var isMobileNav = function () {
-    return window.matchMedia('(max-width: 1024px)').matches;
+    return window.matchMedia('(max-width: 1399px)').matches;
   };
-
-  // Hotline Marquee (tablet + mobile)
-  var initHotlineMarquee = function () {
-    var isTabletOrBelow = function () {
-      return window.matchMedia('(max-width: 1024px)').matches;
-    };
-    var hotlineItems = document.querySelector('.hotline-items');
-    if (!hotlineItems) return;
-
-    var track = null;
-    var originalItems = Array.from(hotlineItems.children);
-
-    var buildMarquee = function () {
-      if (!isTabletOrBelow() || track) return;
-      track = document.createElement('div');
-      track.className = 'hotline-items-track';
-      track.setAttribute('aria-label', 'Emergency contacts scrolling');
-
-      var originalGroup = document.createElement('div');
-      originalGroup.className = 'hotline-items-group';
-      originalItems.forEach(function (item) {
-        originalGroup.appendChild(item);
-      });
-
-      var cloneGroup = originalGroup.cloneNode(true);
-      cloneGroup.setAttribute('aria-hidden', 'true');
-      Array.from(cloneGroup.querySelectorAll('a, button')).forEach(function (item) {
-        item.setAttribute('tabindex', '-1');
-      });
-
-      track.appendChild(originalGroup);
-      track.appendChild(cloneGroup);
-      hotlineItems.appendChild(track);
-    };
-
-    var destroyMarquee = function () {
-      if (!track) return;
-      while (hotlineItems.firstChild) {
-        hotlineItems.removeChild(hotlineItems.firstChild);
-      }
-      originalItems.forEach(function (item) {
-        hotlineItems.appendChild(item);
-      });
-      track = null;
-    };
-
-    var handleResize = function () {
-      if (isTabletOrBelow()) {
-        buildMarquee();
-      } else {
-        destroyMarquee();
-      }
-    };
-
-    handleResize();
-    var resizeTimer;
-    window.addEventListener('resize', function () {
-      clearTimeout(resizeTimer);
-      resizeTimer = setTimeout(handleResize, 150);
-    });
-  };
-
-  initHotlineMarquee();
 
   // Mobile Menu Toggle
   var createMobileMenu = function () {

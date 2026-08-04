@@ -7,7 +7,7 @@
 | 1.8.x   | Yes       |
 | < 1.8   | No        |
 
-The current supported release is `1.8.4`.
+The current supported release is `1.8.8`.
 
 ## Reporting a Vulnerability
 
@@ -17,7 +17,7 @@ We take security seriously at BetterAgoo.org. If you discover a security vulnera
 
 **Do NOT open a public GitHub issue for security vulnerabilities.**
 
-Instead, please email: **volunteer@betteragoo.org**
+Instead, please email: **betteragoo@gmail.com**
 
 Include in your report:
 
@@ -97,7 +97,7 @@ Out of scope:
 
 ## Contact
 
-For security concerns: **volunteer@betteragoo.org**
+For security concerns: **betteragoo@gmail.com**
 
 For general inquiries: Open a GitHub issue or join our [Discord](https://discord.com/invite/qeSu7RJkjQ)
 
