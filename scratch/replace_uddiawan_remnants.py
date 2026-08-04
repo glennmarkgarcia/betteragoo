@@ -14,7 +14,6 @@ replacements = [
     ("Multi-Purpose Building, Uddiawan", "Multi-Purpose Building, Ambitacay"),
     ("Multi-Purpose Bldg. (Health Facility), Uddiawan", "Multi-Purpose Bldg. (Health Facility), Ambitacay"),
     ("Uddiawan Communal Irrigators Association Inc.", "Ambitacay Communal Irrigators Association Inc."),
-    ("Atty. Philip A. Dacayo", "Hon. Frank O. Sibuma"),
     ("La Union State University - Bayombong Campus", "Don Mariano Marcos Memorial State University - South La Union Campus"),
     ("'gov-uddiawan': 'Uddiawan',", "'gov-ambitacay': 'Ambitacay',"),
     ("'stats-uddiawan': 'Uddiawan',", "'stats-ambitacay': 'Ambitacay',"),

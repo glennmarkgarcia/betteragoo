@@ -64,7 +64,7 @@ BetterAgoo.org now has two versions:
 
 ```bash
 # Clone the repository
-git clone https://github.com/BetterAgoo/betteragoo.git
+git clone https://github.com/glennmarkgarcia/betteragoo.git
 cd betteragoo
 
 # Switch to React branch

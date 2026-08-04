@@ -98,7 +98,7 @@ Visit the live website: [https://betteragoo.org](https://betteragoo.org)
 
 ```bash
 # Clone the repository
-git clone https://github.com/BetterAgoo/betteragoo.git
+git clone https://github.com/glennmarkgarcia/betteragoo.git
 
 # Navigate to project directory
 cd betteragoo
@@ -129,7 +129,7 @@ py serve.py --port 8000 --directory .
 1. **Clone the repository**
 
 ```bash
-git clone https://github.com/BetterAgoo/betteragoo.git
+git clone https://github.com/glennmarkgarcia/betteragoo.git
 cd betteragoo
 ```
 
@@ -564,10 +564,10 @@ See [LICENSE](LICENSE) for full details.
 | -------- | ----------------------------------------------------------------- |
 | Website  | [betteragoo.org](https://betteragoo.org)                          |
 | Email    | betteragoo@gmail.com                                              |
-| Facebook | [@betteragoo.org](https://www.facebook.com/betteragoo.org)        |
+| Facebook | [@betteragoo.org](https://www.facebook.com/MunicipalityofAgooLaUnion)        |
 | LinkedIn | [BetterAgoo](https://www.linkedin.com/company/betteragoo/)        |
 | Discord  | [Join Community](https://discord.com/invite/qeSu7RJkjQ)           |
-| GitHub   | [BetterAgoo/betteragoo](https://github.com/BetterAgoo/betteragoo) |
+| GitHub   | [BetterAgoo/betteragoo](https://github.com/glennmarkgarcia/betteragoo) |
 
 ## Pages NOT YET finalized
 

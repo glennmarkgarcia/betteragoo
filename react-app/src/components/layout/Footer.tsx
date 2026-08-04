@@ -30,7 +30,7 @@ export default function Footer() {
             <p className="footer-tagline">{t('footer-tagline')}</p>
             <div className="footer-social-new">
               <a
-                href="https://www.facebook.com/betteragoo.org"
+                href="https://www.facebook.com/MunicipalityofAgooLaUnion"
                 className="footer-social-btn"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -38,6 +38,7 @@ export default function Footer() {
               >
                 <i className="bi bi-facebook"></i>
               </a>
+              {/* LinkedIn and Discord are temporarily disabled until official accounts are available.
               <a
                 href="https://www.linkedin.com/company/betteragoo/"
                 className="footer-social-btn"
@@ -56,6 +57,7 @@ export default function Footer() {
               >
                 <i className="bi bi-discord"></i>
               </a>
+              */}
             </div>
           </div>
           <div className="footer-column">
@@ -134,7 +136,7 @@ export default function Footer() {
               <i className="bi bi-envelope-heart"></i> {t('footer-volunteer')}
             </a>
             <a
-              href="https://github.com/BetterAgoo/betteragoo"
+              href="https://github.com/glennmarkgarcia/betteragoo"
               className="footer-contribute"
               target="_blank"
               rel="noopener noreferrer"

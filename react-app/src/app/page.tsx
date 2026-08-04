@@ -630,7 +630,7 @@ export default function HomePage() {
           <div className="home-leadership-grid">
             <div className="home-leader-card">
               <div className="home-leader-badge">{t('title-mayor')}</div>
-              <h3>Hon. Philip A. Dacayo</h3>
+              <h3>Hon. Frank O. Sibuma</h3>
               <div className="home-leader-contacts">
                 <a href="mailto:TBA">
                   <i className="bi bi-envelope"></i> TBA
@@ -642,7 +642,7 @@ export default function HomePage() {
             </div>
             <div className="home-leader-card">
               <div className="home-leader-badge">{t('title-vice-mayor')}</div>
-              <h3>Hon. Eduardo D. Tiongson</h3>
+              <h3>Hon. Antonio P. Eslao</h3>
               <div className="home-leader-contacts">
                 <a href="mailto:TBA">
                   <i className="bi bi-envelope"></i> TBA

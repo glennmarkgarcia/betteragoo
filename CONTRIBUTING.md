@@ -29,7 +29,7 @@ For detailed differences and migration guidance, see [MIGRATION.md](MIGRATION.md
 #### Setup
 
 ```bash
-git clone https://github.com/BetterAgoo/betteragoo.git
+git clone https://github.com/glennmarkgarcia/betteragoo.git
 cd betteragoo
 npm install
 npm run dev
@@ -48,7 +48,7 @@ Open http://localhost:8000 in your browser.
 #### Setup
 
 ```bash
-git clone https://github.com/BetterAgoo/betteragoo.git
+git clone https://github.com/glennmarkgarcia/betteragoo.git
 cd betteragoo
 git checkout react-typescript
 cd react-app
@@ -62,7 +62,7 @@ Open http://localhost:3000 in your browser.
 
 ### Reporting Bugs
 
-1. Check existing [issues](https://github.com/BetterAgoo/betteragoo/issues) to avoid duplicates
+1. Check existing [issues](https://github.com/glennmarkgarcia/betteragoo/issues) to avoid duplicates
 2. Create a new issue with:
    - Clear, descriptive title
    - Steps to reproduce
@@ -200,7 +200,7 @@ Pull requests are reviewed for:
 ## Community
 
 - **Discord:** [Join our community](https://discord.com/invite/qeSu7RJkjQ)
-- **Facebook:** [@betteragoo.org](https://www.facebook.com/betteragoo.org)
+- **Facebook:** [@betteragoo.org](https://www.facebook.com/MunicipalityofAgooLaUnion)
 - **LinkedIn:** [Connect with us](https://www.linkedin.com/company/betteragoo)
 - **Email:** betteragoo@gmail.com
 

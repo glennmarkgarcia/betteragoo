@@ -9,26 +9,13 @@ def update_officials_html():
     with open(GOV_INDEX_HTML, 'r', encoding='utf-8', errors='ignore') as f:
         content = f.read()
         
-    # Replace SEO and headers
-    content = content.replace("Mayor Philip A. Dacayo", "Mayor Frank O. Sibuma")
-    content = content.replace("Mayor Philip Dacayo", "Mayor Frank Sibuma")
-    content = content.replace("Vice Mayor Tiongson", "Vice Mayor Antonio P. Eslao")
-    
-    # Replace Mayor card names and contacts
-    content = content.replace(
-        '<h4 class="executive-name" data-i18n="gov-hon-philip-a-dacayo">\n                  Hon. Philip A. Dacayo\n                </h4>',
-        '<h4 class="executive-name" data-i18n="gov-hon-frank-o-sibuma">\n                  Hon. Frank O. Sibuma\n                </h4>'
-    )
+    # Replace Mayor card contacts
     content = content.replace(
         '<a href="tel:0783265002"><i class="bi bi-telephone"></i> (078) 326-5002</a>',
         '<a href="tel:TBA"><i class="bi bi-telephone"></i> TBA</a>'
     )
     
-    # Replace Vice Mayor card names and contacts
-    content = content.replace(
-        '<h4 class="executive-name" data-i18n="gov-hon-eduardo-d-tiongson">\n                  Hon. Eduardo D. Tiongson\n                </h4>',
-        '<h4 class="executive-name" data-i18n="gov-hon-antonio-p-eslao">\n                  Hon. Antonio P. Eslao\n                </h4>'
-    )
+    # Replace Vice Mayor card contacts
     content = content.replace(
         '<a href="tel:0783265003"><i class="bi bi-telephone"></i> (078) 326-5003</a>',
         '<a href="tel:TBA"><i class="bi bi-telephone"></i> TBA</a>'
