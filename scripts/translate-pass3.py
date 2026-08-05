@@ -875,7 +875,7 @@ KEEP_AS_IS = {
     'PhilHealth', 'GSIS', 'SSS', 'Pag-IBIG', 'BFP', 'PNP', 'DILG',
     'MDRRMO', 'MSWDO', 'SEEDO', 'MPDO', 'BIR', 'DTI', 'SEC', 'DENR',
     'DPWH', 'DSWD', 'PSA', 'NBI', 'COA', 'CSC', 'DBM', 'DOH',
-    'MTOF', 'BPLS', 'RPT', 'CTC', 'RPTA', 'Filipizen',
+    'MTOF', 'BPLS', 'RPT', 'CTC', 'RPTA', 'eLGU BPLS',
     'BetterSolano.org', 'Better Solano', 'Abakada.org',
     'Sangguniang Bayan', 'Sangguniang Panlalawigan',
     'Nueva Vizcaya', 'Solano', 'Bayombong', 'Facebook', 'Google',

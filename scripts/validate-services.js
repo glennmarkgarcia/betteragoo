@@ -69,8 +69,8 @@ assert(
 );
 for (const service of onlineServices) {
   assert(
-    service.url.startsWith('https://www.filipizen.com/partners/launion_agoo/'),
-    `${service.id} is not an Agoo Filipizen partner route`
+    service.url.startsWith('https://agoolaunion.gov.ph/'),
+    `${service.id} is not an Agoo eLGU BPLS online route`
   );
 }
 
@@ -98,6 +98,6 @@ async function checkOnlineRoutes() {
   }
 
   console.log(
-    `Service validation passed: ${services.length} entries, ${onlineServices.length} verified Agoo Filipizen routes, 3 search queries.`
+    `Service validation passed: ${services.length} entries, ${onlineServices.length} verified Agoo eLGU BPLS routes, 3 search queries.`
   );
 })();

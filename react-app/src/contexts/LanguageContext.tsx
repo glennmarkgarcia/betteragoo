@@ -344,10 +344,10 @@ const translations: Record<string, Record<string, string>> = {
     'biz-closure-desc': 'Process business closure and clearance',
     'biz-cedula': 'Cedula (CTC)',
     'biz-cedula-desc': 'Community tax certificate for individuals and businesses',
-    'biz-online-badge': 'Online Services via Filipizen',
+    'biz-online-badge': 'Online Services via eLGU BPLS',
     'biz-online-title': 'Online Business Transactions',
     'biz-online-subtitle':
-      'Complete your business transactions online through the official Filipizen portal',
+      'Complete your business transactions online through the official eLGU BPLS portal',
     'biz-billing': 'Business Online Billing & Payment',
     'biz-billing-desc': 'View and pay your business tax bills online',
 
@@ -359,10 +359,10 @@ const translations: Record<string, Record<string, string>> = {
     'tax-property-desc': 'Annual tax on land and improvements',
     'tax-business': 'Business Tax',
     'tax-business-desc': 'Quarterly and annual business tax payments',
-    'tax-online-badge': 'Online Services via Filipizen',
+    'tax-online-badge': 'Online Services via eLGU BPLS',
     'tax-online-title': 'Online Tax Transactions',
     'tax-online-subtitle':
-      'Complete your tax payments online through the official Filipizen portal',
+      'Complete your tax payments online through the official eLGU BPLS portal',
 
     // Social Services Page
     'social-page-title': 'Social Services',
@@ -877,10 +877,10 @@ const translations: Record<string, Record<string, string>> = {
     'biz-closure-desc': 'Proseso ng pagsasara at clearance ng negosyo',
     'biz-cedula': 'Sedula (CTC)',
     'biz-cedula-desc': 'Community tax certificate para sa mga indibidwal at negosyo',
-    'biz-online-badge': 'Online Services sa pamamagitan ng Filipizen',
+    'biz-online-badge': 'Online Services sa pamamagitan ng eLGU BPLS',
     'biz-online-title': 'Online na Transaksyon sa Negosyo',
     'biz-online-subtitle':
-      'Kumpletuhin ang iyong mga transaksyon sa negosyo online sa pamamagitan ng opisyal na portal ng Filipizen',
+      'Kumpletuhin ang iyong mga transaksyon sa negosyo online sa pamamagitan ng opisyal na portal ng eLGU BPLS',
     'biz-billing': 'Online Billing at Pagbabayad ng Negosyo',
     'biz-billing-desc': 'Tingnan at bayaran ang iyong business tax bills online',
 
@@ -892,10 +892,10 @@ const translations: Record<string, Record<string, string>> = {
     'tax-property-desc': 'Taunang buwis sa lupa at mga pagpapabuti',
     'tax-business': 'Buwis sa Negosyo',
     'tax-business-desc': 'Quarterly at taunang pagbabayad ng buwis sa negosyo',
-    'tax-online-badge': 'Online Services sa pamamagitan ng Filipizen',
+    'tax-online-badge': 'Online Services sa pamamagitan ng eLGU BPLS',
     'tax-online-title': 'Online na Transaksyon sa Buwis',
     'tax-online-subtitle':
-      'Kumpletuhin ang iyong mga pagbabayad ng buwis online sa pamamagitan ng opisyal na portal ng Filipizen',
+      'Kumpletuhin ang iyong mga pagbabayad ng buwis online sa pamamagitan ng opisyal na portal ng eLGU BPLS',
 
     // Social Services Page - Filipino
     'social-page-title': 'Serbisyong Panlipunan',
@@ -1415,10 +1415,10 @@ const translations: Record<string, Record<string, string>> = {
     'biz-closure-desc': 'Proseso ti panagrikep ken clearance ti negosio',
     'biz-cedula': 'Sedula (CTC)',
     'biz-cedula-desc': 'Community tax certificate para kadagiti indibidual ken negosio',
-    'biz-online-badge': 'Online Services babaen ti Filipizen',
+    'biz-online-badge': 'Online Services babaen ti eLGU BPLS',
     'biz-online-title': 'Online a Transaksion ti Negosio',
     'biz-online-subtitle':
-      'Kompleto dagiti transaksionmo iti negosio online babaen ti opisial a portal ti Filipizen',
+      'Kompleto dagiti transaksionmo iti negosio online babaen ti opisial a portal ti eLGU BPLS',
     'biz-billing': 'Online Billing ken Panagbayad ti Negosio',
     'biz-billing-desc': 'Kitaen ken bayadan dagiti business tax bills online',
 
@@ -1431,10 +1431,10 @@ const translations: Record<string, Record<string, string>> = {
     'tax-property-desc': 'Tawenantawen a buwis ti daga ken dagiti pagpasayaat',
     'tax-business': 'Buwis ti Negosio',
     'tax-business-desc': 'Quarterly ken tawenantawen a panagbayad ti buwis ti negosio',
-    'tax-online-badge': 'Online Services babaen ti Filipizen',
+    'tax-online-badge': 'Online Services babaen ti eLGU BPLS',
     'tax-online-title': 'Online a Transaksion ti Buwis',
     'tax-online-subtitle':
-      'Kompleto dagiti panagbayad ti buwis online babaen ti opisial a portal ti Filipizen',
+      'Kompleto dagiti panagbayad ti buwis online babaen ti opisial a portal ti eLGU BPLS',
 
     // Social Services Page - Ilocano
     'social-page-title': 'Serbisio Sosyal',

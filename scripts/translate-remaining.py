@@ -32,7 +32,7 @@ KEEP_AS_IS = {
     'DAR', 'DICT', 'DOE', 'DOF', 'DOJ', 'DOST', 'DND', 'NEDA',
     'NAPC', 'PCSO', 'PAGASA', 'PHIVOLCS', 'NDRRMC', 'OCD',
     'R2TMC', 'MTOF', 'BPLS', 'RPT', 'CTC', 'RPTA',
-    'Filipizen', 'BetterSolano.org', 'Better Solano',
+    'eLGU BPLS', 'BetterSolano.org', 'Better Solano',
     'Abakada.org', 'volunteer@bettersolano.org',
     'accounting@solano.gov.ph', 'Facebook', 'Google',
     'Sangguniang Bayan', 'Sangguniang Panlalawigan',

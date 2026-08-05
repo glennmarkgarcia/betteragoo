@@ -318,7 +318,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     dropdownItems.forEach(function (item) {
       var trigger = item.querySelector('a[aria-haspopup]') || item.querySelector(':scope > a');
-      var menu = item.querySelector('.dropdown-menu');
+      var menu = item.querySelector('.dropdown-menu') || item.querySelector('.mega-menu');
 
       if (!trigger || !menu) return;
 
@@ -351,26 +351,29 @@ document.addEventListener('DOMContentLoaded', () => {
         trigger.setAttribute('aria-expanded', 'false');
       };
 
-      // Mobile: tap/click on dropdown trigger toggles submenu instead of navigating
+      // Tap/click on dropdown/mega-menu trigger toggles submenu on both mobile and touch desktop
       trigger.addEventListener('click', function (e) {
-        if (!isMobileNav()) return;
-        e.preventDefault();
-        e.stopPropagation();
-        if (item.classList.contains('dropdown-open')) {
-          closeDropdown();
-        } else {
+        if (!item.classList.contains('dropdown-open')) {
+          e.preventDefault();
+          e.stopPropagation();
           openDropdown();
+        } else if (isMobileNav()) {
+          e.preventDefault();
+          e.stopPropagation();
+          closeDropdown();
         }
       });
 
-      // iOS Safari: ensure touch events trigger dropdown reliably
+      // iOS Safari / Touch devices: ensure touch events toggle dropdown reliably
       trigger.addEventListener('touchend', function (e) {
-        if (!isMobileNav()) return;
-        e.preventDefault();
-        if (item.classList.contains('dropdown-open')) {
-          closeDropdown();
-        } else {
+        if (!item.classList.contains('dropdown-open')) {
+          e.preventDefault();
+          e.stopPropagation();
           openDropdown();
+        } else if (isMobileNav()) {
+          e.preventDefault();
+          e.stopPropagation();
+          closeDropdown();
         }
       });
 

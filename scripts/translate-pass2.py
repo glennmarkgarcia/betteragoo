@@ -541,7 +541,7 @@ PASS2_FIL_2 = {
     "Your Rights": "Ang Iyong mga Karapatan",
     "not": "hindi",
     "transparency": "transparency",
-    "via Filipizen": "sa pamamagitan ng Filipizen",
+    "via eLGU BPLS": "sa pamamagitan ng eLGU BPLS",
     "Appointment": "Appointment",
     "Email": "Email",
     "Email Address": "Email Address",

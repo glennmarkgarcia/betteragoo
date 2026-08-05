@@ -1203,140 +1203,140 @@
       "title": "Business Online Billing & Payment",
       "category": "Online Services",
       "categoryId": "online",
-      "description": "View and pay your business tax bills online via Filipizen",
+      "description": "View and pay your business tax bills online via eLGU BPLS",
       "keywords": [
         "online",
         "billing",
         "payment",
         "business tax",
-        "filipizen",
+        "elgu-bpls",
         "e-payment",
         "digital"
       ],
       "fee": "Varies",
       "processingTime": "Instant",
       "office": "BPLS Office",
-      "url": "https://www.filipizen.com/partners/launion_agoo/bpls/billing"
+      "url": "https://agoolaunion.gov.ph/"
     },
     {
       "id": "online-new-business",
       "title": "New Business Application Online",
       "category": "Online Services",
       "categoryId": "online",
-      "description": "Apply for a new business permit online via Filipizen",
-      "keywords": ["online", "new business", "application", "permit", "filipizen", "e-services"],
+      "description": "Apply for a new business permit online via eLGU BPLS",
+      "keywords": ["online", "new business", "application", "permit", "elgu-bpls", "e-services"],
       "fee": "Varies",
       "processingTime": "3–5 days (with office follow-up)",
       "office": "BPLS Office",
-      "url": "https://www.filipizen.com/partners/launion_agoo/bpls/newbusiness"
+      "url": "https://agoolaunion.gov.ph/"
     },
     {
       "id": "online-business-renewal",
       "title": "Business Permit Renewal Online",
       "category": "Online Services",
       "categoryId": "online",
-      "description": "Renew your existing business permit online via Filipizen",
-      "keywords": ["online", "renewal", "business permit", "filipizen", "e-services", "renew"],
+      "description": "Renew your existing business permit online via eLGU BPLS",
+      "keywords": ["online", "renewal", "business permit", "elgu-bpls", "e-services", "renew"],
       "fee": "Varies",
       "processingTime": "Same day (online assessment)",
       "office": "BPLS Office",
-      "url": "https://www.filipizen.com/partners/launion_agoo/bpls/renewbusiness"
+      "url": "https://agoolaunion.gov.ph/"
     },
     {
       "id": "online-rpt-billing",
       "title": "Real Property Tax Online Billing & Payment",
       "category": "Online Services",
       "categoryId": "online",
-      "description": "View and pay your real property tax (amilyar) online via Filipizen",
-      "keywords": ["online", "property tax", "amilyar", "billing", "payment", "filipizen", "RPT"],
+      "description": "View and pay your real property tax (amilyar) online via eLGU BPLS",
+      "keywords": ["online", "property tax", "amilyar", "billing", "payment", "elgu-bpls", "RPT"],
       "fee": "1% basic + 1% SEF of assessed value",
       "processingTime": "Instant",
       "office": "Municipal Treasurer's Office",
-      "url": "https://www.filipizen.com/partners/launion_agoo/rptis/billing"
+      "url": "https://agoolaunion.gov.ph/"
     },
     {
       "id": "online-payment-order",
       "title": "Online Payment Order",
       "category": "Online Services",
       "categoryId": "online",
-      "description": "Process payment orders for various municipal fees online via Filipizen",
-      "keywords": ["online", "payment order", "fees", "filipizen", "e-payment", "municipal fees"],
+      "description": "Process payment orders for various municipal fees online via eLGU BPLS",
+      "keywords": ["online", "payment order", "fees", "elgu-bpls", "e-payment", "municipal fees"],
       "fee": "Varies",
       "processingTime": "Instant",
       "office": "Municipal Treasurer's Office",
-      "url": "https://www.filipizen.com/partners/launion_agoo/po/billing"
+      "url": "https://agoolaunion.gov.ph/"
     },
     {
       "id": "online-market-billing",
       "title": "Public Market Online Billing & Payment",
       "category": "Online Services",
       "categoryId": "online",
-      "description": "View and pay Agoo public market rental bills online via Filipizen",
-      "keywords": ["online", "market", "rental", "stall", "billing", "payment", "filipizen"],
+      "description": "View and pay Agoo public market rental bills online via eLGU BPLS",
+      "keywords": ["online", "market", "rental", "stall", "billing", "payment", "elgu-bpls"],
       "fee": "Varies by account",
       "processingTime": "Online",
       "office": "Agoo Public Market Administration",
-      "url": "https://www.filipizen.com/partners/launion_agoo/market/billing"
+      "url": "https://agoolaunion.gov.ph/"
     },
     {
       "id": "online-water-billing",
       "title": "Water Online Billing & Payment",
       "category": "Online Services",
       "categoryId": "online",
-      "description": "Access Agoo water billing and payment services through Filipizen",
-      "keywords": ["online", "water", "waterworks", "billing", "payment", "filipizen"],
+      "description": "Access Agoo water billing and payment services through eLGU BPLS",
+      "keywords": ["online", "water", "waterworks", "billing", "payment", "elgu-bpls"],
       "fee": "Varies by account",
       "processingTime": "Online",
       "office": "Agoo Water Services",
-      "url": "https://www.filipizen.com/partners/launion_agoo/water/billing"
+      "url": "https://agoolaunion.gov.ph/"
     },
     {
       "id": "online-waterworks-billing",
       "title": "Waterworks Online Billing & Payment",
       "category": "Online Services",
       "categoryId": "online",
-      "description": "Access Agoo waterworks billing and payment services through Filipizen",
-      "keywords": ["online", "waterworks", "water", "billing", "payment", "filipizen"],
+      "description": "Access Agoo waterworks billing and payment services through eLGU BPLS",
+      "keywords": ["online", "waterworks", "water", "billing", "payment", "elgu-bpls"],
       "fee": "Varies by account",
       "processingTime": "Online",
       "office": "Agoo Waterworks",
-      "url": "https://www.filipizen.com/partners/launion_agoo/waterworks/billing"
+      "url": "https://agoolaunion.gov.ph/"
     },
     {
       "id": "online-building-requirements",
       "title": "Building Permit Requirements Online",
       "category": "Online Services",
       "categoryId": "online",
-      "description": "Open Agoo's Filipizen building permit application requirements page",
-      "keywords": ["online", "building", "permit", "requirements", "construction", "filipizen"],
-      "fee": "See Filipizen assessment",
+      "description": "Open Agoo's eLGU BPLS building permit application requirements page",
+      "keywords": ["online", "building", "permit", "requirements", "construction", "elgu-bpls"],
+      "fee": "See eLGU BPLS assessment",
       "processingTime": "Online information",
       "office": "Office of the Building Official",
-      "url": "https://www.filipizen.com/partners/launion_agoo/obo/requirement/building"
+      "url": "https://agoolaunion.gov.ph/"
     },
     {
       "id": "online-occupancy-requirements",
       "title": "Certificate of Occupancy Requirements Online",
       "category": "Online Services",
       "categoryId": "online",
-      "description": "Open Agoo's Filipizen certificate of occupancy requirements page",
-      "keywords": ["online", "occupancy", "certificate", "requirements", "building", "filipizen"],
-      "fee": "See Filipizen assessment",
+      "description": "Open Agoo's eLGU BPLS certificate of occupancy requirements page",
+      "keywords": ["online", "occupancy", "certificate", "requirements", "building", "elgu-bpls"],
+      "fee": "See eLGU BPLS assessment",
       "processingTime": "Online information",
       "office": "Office of the Building Official",
-      "url": "https://www.filipizen.com/partners/launion_agoo/obo/requirement/occupancy"
+      "url": "https://agoolaunion.gov.ph/"
     },
     {
       "id": "online-terminal-pass",
       "title": "Terminal Pass Online",
       "category": "Online Services",
       "categoryId": "online",
-      "description": "Access Agoo's terminal pass service through Filipizen",
-      "keywords": ["online", "terminal", "pass", "transport", "ticketing", "filipizen"],
-      "fee": "See Filipizen assessment",
+      "description": "Access Agoo's terminal pass service through eLGU BPLS",
+      "keywords": ["online", "terminal", "pass", "transport", "ticketing", "elgu-bpls"],
+      "fee": "See eLGU BPLS assessment",
       "processingTime": "Online",
       "office": "Agoo Terminal Administration",
-      "url": "https://www.filipizen.com/partners/launion_agoo/ticketing/terminalpass"
+      "url": "https://agoolaunion.gov.ph/"
     }
   ]
 }

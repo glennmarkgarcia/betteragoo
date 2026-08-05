@@ -44,10 +44,8 @@ export default function Header() {
   }, [unlockBodyScroll]);
 
   const toggleDropdown = useCallback((index: number, e: React.MouseEvent) => {
-    if (isMobileNav()) {
-      e.preventDefault();
-      setOpenDropdown((prev) => (prev === index ? null : index));
-    }
+    e.preventDefault();
+    setOpenDropdown((prev) => (prev === index ? null : index));
   }, []);
 
   // Close menu on route change
@@ -143,15 +141,8 @@ export default function Header() {
             aria-label="Main Navigation"
           >
             <ul>
-              <li>
-                <Link href="/" className={pathname === '/' ? 'active' : ''}>
-                  {t('nav-home')}
-                </Link>
-              </li>
-              <li>
-                <Link href="/#brief-history">{t('nav-history')}</Link>
-              </li>
-              <li className={`has-dropdown ${openDropdown === 0 ? 'dropdown-open' : ''}`}>
+              {/* SERVICES MEGA MENU */}
+              <li className={`has-dropdown has-mega-menu ${openDropdown === 0 ? 'dropdown-open' : ''}`}>
                 <Link
                   href="/services"
                   aria-haspopup="true"
@@ -160,72 +151,345 @@ export default function Header() {
                 >
                   {t('nav-services')}
                 </Link>
-                <ul className="dropdown-menu">
-                  <li>
-                    <Link href="/services/certificates">{t('dropdown-certificates')}</Link>
-                  </li>
-                  <li>
-                    <Link href="/services/business">{t('dropdown-business')}</Link>
-                  </li>
-                  <li>
-                    <Link href="/services/tax-payments">{t('dropdown-tax-payments')}</Link>
-                  </li>
-                  <li>
-                    <Link href="/services/social-services">{t('dropdown-social-services')}</Link>
-                  </li>
-                  <li>
-                    <Link href="/services/health">{t('dropdown-health')}</Link>
-                  </li>
-                  <li>
-                    <Link href="/services/agriculture">{t('dropdown-agriculture')}</Link>
-                  </li>
-                  <li>
-                    <Link href="/services/infrastructure">{t('dropdown-infrastructure')}</Link>
-                  </li>
-                  <li>
-                    <Link href="/services/education">{t('dropdown-education')}</Link>
-                  </li>
-                  <li>
-                    <Link href="/services/public-safety">{t('dropdown-public-safety')}</Link>
-                  </li>
-                  <li>
-                    <Link href="/services/environment">{t('dropdown-environment')}</Link>
-                  </li>
-                </ul>
+                <div className="mega-menu">
+                  <div className="container">
+                    <div className="mega-menu-grid">
+                      {/* Col 1: Online Services */}
+                      <div className="mega-menu-col">
+                        <div className="mega-menu-col-title">
+                          <i className="bi bi-globe2"></i>
+                          <span>{t('mega-online-services')}</span>
+                        </div>
+                        <Link href="/services" className="mega-menu-link mega-menu-hub-link">
+                          <i className="bi bi-grid-fill"></i>
+                          <div className="mega-menu-link-content">
+                            <span className="mega-menu-link-title">Services Overview & Search</span>
+                            <span className="mega-menu-link-desc">Browse all 88 municipal walk-in & online services</span>
+                          </div>
+                        </Link>
+                        <a href="https://agoolaunion.gov.ph/" target="_blank" rel="noopener noreferrer" className="mega-menu-link">
+                          <i className="bi bi-shop"></i>
+                          <div className="mega-menu-link-content">
+                            <span className="mega-menu-link-title">Business Permit Billing</span>
+                            <span className="mega-menu-link-desc">Pay or renew business permits online</span>
+                          </div>
+                        </a>
+                        <a href="https://agoolaunion.gov.ph/" target="_blank" rel="noopener noreferrer" className="mega-menu-link">
+                          <i className="bi bi-cash-coin"></i>
+                          <div className="mega-menu-link-content">
+                            <span className="mega-menu-link-title">Real Property Tax (Amilyar)</span>
+                            <span className="mega-menu-link-desc">View bill & pay land/property tax</span>
+                          </div>
+                        </a>
+                        <a href="https://agoolaunion.gov.ph/" target="_blank" rel="noopener noreferrer" className="mega-menu-link">
+                          <i className="bi bi-box-arrow-up-right"></i>
+                          <div className="mega-menu-link-content">
+                            <span className="mega-menu-link-title">View All Online Routes</span>
+                            <span className="mega-menu-link-desc">11 live Agoo eLGU BPLS online routes</span>
+                          </div>
+                        </a>
+                      </div>
+
+                      {/* Col 2: Vital Records */}
+                      <div className="mega-menu-col">
+                        <div className="mega-menu-col-title">
+                          <i className="bi bi-file-earmark-text"></i>
+                          <span>{t('mega-certificates-records')}</span>
+                        </div>
+                        <Link href="/service-details/birth-certificate" className="mega-menu-link">
+                          <i className="bi bi-file-earmark-person"></i>
+                          <div className="mega-menu-link-content">
+                            <span className="mega-menu-link-title">Birth Certificate</span>
+                            <span className="mega-menu-link-desc">Local certified copy (₱80 / 5–15 mins)</span>
+                          </div>
+                        </Link>
+                        <Link href="/service-details/marriage-certificate" className="mega-menu-link">
+                          <i className="bi bi-heart"></i>
+                          <div className="mega-menu-link-content">
+                            <span className="mega-menu-link-title">Marriage Certificate</span>
+                            <span className="mega-menu-link-desc">Local registration & license (₱380)</span>
+                          </div>
+                        </Link>
+                        <Link href="/service-details/death-certificate" className="mega-menu-link">
+                          <i className="bi bi-file-earmark-x"></i>
+                          <div className="mega-menu-link-content">
+                            <span className="mega-menu-link-title">Death Certificate</span>
+                            <span className="mega-menu-link-desc">Burial & transfer permits (Free / ₱50)</span>
+                          </div>
+                        </Link>
+                        <Link href="/service-details/civil-registrar" className="mega-menu-link">
+                          <i className="bi bi-building"></i>
+                          <div className="mega-menu-link-content">
+                            <span className="mega-menu-link-title">BREQS PSA Outlet</span>
+                            <span className="mega-menu-link-desc">Order PSA Birth/CENOMAR on-site</span>
+                          </div>
+                        </Link>
+                      </div>
+
+                      {/* Col 3: Business & Taxes */}
+                      <div className="mega-menu-col">
+                        <div className="mega-menu-col-title">
+                          <i className="bi bi-shop"></i>
+                          <span>{t('mega-business-taxes')}</span>
+                        </div>
+                        <Link href="/service-details/business-permits-licensing" className="mega-menu-link">
+                          <i className="bi bi-briefcase"></i>
+                          <div className="mega-menu-link-content">
+                            <span className="mega-menu-link-title">Business Permits (BPLS)</span>
+                            <span className="mega-menu-link-desc">New business (10 mins) & Renewal (5 mins)</span>
+                          </div>
+                        </Link>
+                        <Link href="/services/tax-payments" className="mega-menu-link">
+                          <i className="bi bi-receipt"></i>
+                          <div className="mega-menu-link-content">
+                            <span className="mega-menu-link-title">Cedula & Local Taxes</span>
+                            <span className="mega-menu-link-desc">Community Tax Certificate (₱5+ / 5 mins)</span>
+                          </div>
+                        </Link>
+                        <Link href="/service-details/municipal-assessor" className="mega-menu-link">
+                          <i className="bi bi-houses"></i>
+                          <div className="mega-menu-link-content">
+                            <span className="mega-menu-link-title">Tax Declarations</span>
+                            <span className="mega-menu-link-desc">Certified copies (₱105) & Property inspection</span>
+                          </div>
+                        </Link>
+                        <Link href="/service-details/tricycle-franchising" className="mega-menu-link">
+                          <i className="bi bi-truck"></i>
+                          <div className="mega-menu-link-content">
+                            <span className="mega-menu-link-title">Tricycle Franchising</span>
+                            <span className="mega-menu-link-desc">MTOP permit (₱1,440/yr) & 3-yr renewal</span>
+                          </div>
+                        </Link>
+                      </div>
+
+                      {/* Col 4: Permits & Community */}
+                      <div className="mega-menu-col">
+                        <div className="mega-menu-col-title">
+                          <i className="bi bi-hammer"></i>
+                          <span>{t('mega-permits-social')}</span>
+                        </div>
+                        <Link href="/service-details/municipal-engineering" className="mega-menu-link">
+                          <i className="bi bi-building-gear"></i>
+                          <div className="mega-menu-link-content">
+                            <span className="mega-menu-link-title">Building & Occupancy</span>
+                            <span className="mega-menu-link-desc">Building permits & Occupancy certificates</span>
+                          </div>
+                        </Link>
+                        <Link href="/service-details/mswdo-services" className="mega-menu-link">
+                          <i className="bi bi-people"></i>
+                          <div className="mega-menu-link-content">
+                            <span className="mega-menu-link-title">Social Assistance (MSWDO)</span>
+                            <span className="mega-menu-link-desc">AICS medical/burial assistance & Senior ID</span>
+                          </div>
+                        </Link>
+                        <Link href="/service-details/municipal-agriculture" className="mega-menu-link">
+                          <i className="bi bi-tree"></i>
+                          <div className="mega-menu-link-content">
+                            <span className="mega-menu-link-title">Agriculture & Fisheries</span>
+                            <span className="mega-menu-link-desc">Free seedlings (55 mins) & Banca permits</span>
+                          </div>
+                        </Link>
+                        <Link href="/services/health" className="mega-menu-link">
+                          <i className="bi bi-heart-pulse"></i>
+                          <div className="mega-menu-link-content">
+                            <span className="mega-menu-link-title">Health & RHU Services</span>
+                            <span className="mega-menu-link-desc">Free consultations & Vaccination</span>
+                          </div>
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </li>
-              <li>
-                <Link href="/government">{t('nav-government')}</Link>
-              </li>
-              <li>
-                <Link href="/statistics">{t('nav-statistics')}</Link>
-              </li>
-              <li className={`has-dropdown ${openDropdown === 1 ? 'dropdown-open' : ''}`}>
+
+              {/* GOVERNANCE & TRANSPARENCY MEGA MENU */}
+              <li className={`has-dropdown has-mega-menu ${openDropdown === 1 ? 'dropdown-open' : ''}`}>
                 <Link
-                  href="/legislative"
+                  href="/government"
                   aria-haspopup="true"
                   aria-expanded={openDropdown === 1 ? 'true' : 'false'}
                   onClick={(e) => toggleDropdown(1, e)}
                 >
-                  {t('nav-legislative')}
+                  {t('nav-governance')}
                 </Link>
-                <ul className="dropdown-menu">
-                  <li>
-                    <Link href="/legislative/ordinance-framework">
-                      {t('dropdown-ordinance-framework')}
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/legislative/resolution-framework">
-                      {t('dropdown-resolution-framework')}
-                    </Link>
-                  </li>
-                </ul>
+                <div className="mega-menu">
+                  <div className="container">
+                    <div className="mega-menu-grid">
+                      {/* Col 1: Executive Offices */}
+                      <div className="mega-menu-col">
+                        <div className="mega-menu-col-title">
+                          <i className="bi bi-building"></i>
+                          <span>{t('mega-executive-offices')}</span>
+                        </div>
+                        <Link href="/government" className="mega-menu-link mega-menu-hub-link">
+                          <i className="bi bi-bank2"></i>
+                          <div className="mega-menu-link-content">
+                            <span className="mega-menu-link-title">Government & LGU Overview</span>
+                            <span className="mega-menu-link-desc">Executive offices, Sangguniang Bayan & 49 Barangays</span>
+                          </div>
+                        </Link>
+                        <Link href="/government" className="mega-menu-link">
+                          <i className="bi bi-person-badge"></i>
+                          <div className="mega-menu-link-content">
+                            <span className="mega-menu-link-title">Office of the Mayor</span>
+                            <span className="mega-menu-link-desc">Hon. Frank O. Sibuma, Municipal Mayor</span>
+                          </div>
+                        </Link>
+                        <Link href="/government/officials" className="mega-menu-link">
+                          <i className="bi bi-person-workspace"></i>
+                          <div className="mega-menu-link-content">
+                            <span className="mega-menu-link-title">Municipal Officials</span>
+                            <span className="mega-menu-link-desc">Executive & Department Heads Directory</span>
+                          </div>
+                        </Link>
+                      </div>
+
+                      {/* Col 2: Legislative SB */}
+                      <div className="mega-menu-col">
+                        <div className="mega-menu-col-title">
+                          <i className="bi bi-bank"></i>
+                          <span>{t('mega-legislative-sb')}</span>
+                        </div>
+                        <Link href="/legislative" className="mega-menu-link">
+                          <i className="bi bi-journal-text"></i>
+                          <div className="mega-menu-link-content">
+                            <span className="mega-menu-link-title">Sangguniang Bayan</span>
+                            <span className="mega-menu-link-desc">Vice Mayor Antonio P. Eslao & Councilors</span>
+                          </div>
+                        </Link>
+                        <Link href="/legislative/ordinance-framework" className="mega-menu-link">
+                          <i className="bi bi-file-earmark-ruled"></i>
+                          <div className="mega-menu-link-content">
+                            <span className="mega-menu-link-title">Ordinances</span>
+                            <span className="mega-menu-link-desc">Municipal Revenue Code & Local Laws</span>
+                          </div>
+                        </Link>
+                        <Link href="/legislative/resolution-framework" className="mega-menu-link">
+                          <i className="bi bi-file-text"></i>
+                          <div className="mega-menu-link-content">
+                            <span className="mega-menu-link-title">Resolutions</span>
+                            <span className="mega-menu-link-desc">Sangguniang Bayan Resolutions Register</span>
+                          </div>
+                        </Link>
+                      </div>
+
+                      {/* Col 3: Fiscal Transparency */}
+                      <div className="mega-menu-col">
+                        <div className="mega-menu-col-title">
+                          <i className="bi bi-cash-coin"></i>
+                          <span>{t('mega-fiscal-transparency')}</span>
+                        </div>
+                        <Link href="/budget" className="mega-menu-link">
+                          <i className="bi bi-pie-chart"></i>
+                          <div className="mega-menu-link-content">
+                            <span className="mega-menu-link-title">FY 2025 BLGF Statement</span>
+                            <span className="mega-menu-link-desc">₱141.59M Income & ₱332.91M Fund Balance</span>
+                          </div>
+                        </Link>
+                      </div>
+
+                      {/* Col 4: Infrastructure & Barangays */}
+                      <div className="mega-menu-col">
+                        <div className="mega-menu-col-title">
+                          <i className="bi bi-cone-striped"></i>
+                          <span>{t('mega-infrastructure-community')}</span>
+                        </div>
+                        <Link href="/budget#infrastructure-investments" className="mega-menu-link">
+                          <i className="bi bi-diagram-3"></i>
+                          <div className="mega-menu-link-content">
+                            <span className="mega-menu-link-title">Local Infrastructure</span>
+                            <span className="mega-menu-link-desc">14 Municipal Projects (₱628M)</span>
+                          </div>
+                        </Link>
+                        <Link href="/budget#dpwh-projects" className="mega-menu-link">
+                          <i className="bi bi-geo-alt"></i>
+                          <div className="mega-menu-link-content">
+                            <span className="mega-menu-link-title">DPWH National Projects</span>
+                            <span className="mega-menu-link-desc">201 Official Agoo Contracts (₱3.52B)</span>
+                          </div>
+                        </Link>
+                        <Link href="/government#barangays" className="mega-menu-link">
+                          <i className="bi bi-houses"></i>
+                          <div className="mega-menu-link-content">
+                            <span className="mega-menu-link-title">All 49 Barangays</span>
+                            <span className="mega-menu-link-desc">Barangay Directory & Population Rankings</span>
+                          </div>
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </li>
-              <li>
-                <Link href="/budget">{t('nav-transparency')}</Link>
+
+              {/* ABOUT AGOO & DATA MEGA MENU */}
+              <li className={`has-dropdown has-mega-menu ${openDropdown === 2 ? 'dropdown-open' : ''}`}>
+                <Link
+                  href="/statistics"
+                  aria-haspopup="true"
+                  aria-expanded={openDropdown === 2 ? 'true' : 'false'}
+                  onClick={(e) => toggleDropdown(2, e)}
+                >
+                  {t('nav-about-agoo')}
+                </Link>
+                <div className="mega-menu">
+                  <div className="container">
+                    <div className="mega-menu-grid mega-menu-grid-3">
+                      <div className="mega-menu-col">
+                        <div className="mega-menu-col-title">
+                          <i className="bi bi-graph-up-arrow"></i>
+                          <span>{t('mega-demographics-census')}</span>
+                        </div>
+                        <Link href="/statistics" className="mega-menu-link mega-menu-hub-link">
+                          <i className="bi bi-pie-chart-fill"></i>
+                          <div className="mega-menu-link-content">
+                            <span className="mega-menu-link-title">Statistics & Data Hub</span>
+                            <span className="mega-menu-link-desc">Demographic facts, census trends & CMCI rankings</span>
+                          </div>
+                        </Link>
+                        <Link href="/statistics" className="mega-menu-link">
+                          <i className="bi bi-bar-chart-line"></i>
+                          <div className="mega-menu-link-content">
+                            <span className="mega-menu-link-title">2020 Census Stats</span>
+                            <span className="mega-menu-link-desc">66,028 Population & 52.84 km² Area</span>
+                          </div>
+                        </Link>
+                      </div>
+                      <div className="mega-menu-col">
+                        <div className="mega-menu-col-title">
+                          <i className="bi bi-award"></i>
+                          <span>{t('mega-cmci-awards')}</span>
+                        </div>
+                        <Link href="/statistics#cmci-rankings" className="mega-menu-link">
+                          <i className="bi bi-trophy"></i>
+                          <div className="mega-menu-link-content">
+                            <span className="mega-menu-link-title">2024 Region I Awards</span>
+                            <span className="mega-menu-link-desc">1st Overall & 1st Infrastructure</span>
+                          </div>
+                        </Link>
+                      </div>
+                      <div className="mega-menu-col">
+                        <div className="mega-menu-col-title">
+                          <i className="bi bi-clock-history"></i>
+                          <span>{t('mega-history-heritage')}</span>
+                        </div>
+                        <Link href="/#brief-history" className="mega-menu-link">
+                          <i className="bi bi-landmark"></i>
+                          <div className="mega-menu-link-content">
+                            <span className="mega-menu-link-title">Basilica Town & Port</span>
+                            <span className="mega-menu-link-desc">Founded 1578 & "Puerto de Japón"</span>
+                          </div>
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </li>
+
+              {/* CONTACT */}
               <li>
-                <Link href="/contact">{t('nav-contact')}</Link>
+                <Link href="/contact" className={pathname === '/contact' ? 'active' : ''}>
+                  {t('nav-contact')}
+                </Link>
               </li>
             </ul>
           </nav>

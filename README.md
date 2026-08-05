@@ -2,7 +2,7 @@
 
 A civic-tech initiative providing transparent access to municipal services, programs, and public funds of LGU Agoo, La Union, Philippines.
 
-![Version](https://img.shields.io/badge/version-1.8.8-green)
+![Version](https://img.shields.io/badge/version-1.9.1-green)
 ![License](https://img.shields.io/badge/license-MIT%20%7C%20CC%20BY%204.0-blue)
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white)
@@ -75,7 +75,7 @@ Visit the live website: [https://betteragoo.org](https://betteragoo.org)
 
 | Feature                          | Description                                                                                                                                                                                                                       |
 | -------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Municipal Services Directory** | 88-entry verified services registry sourced from the official LGU Agoo Citizen's Charter (March 2023); includes exact fees, processing times, requirements, responsible offices, and 11 verified Agoo Filipizen online routes |
+| **Municipal Services Directory** | 88-entry verified services registry sourced from the official LGU Agoo Citizen's Charter (March 2023); includes exact fees, processing times, requirements, responsible offices, and 11 verified Agoo eLGU BPLS online routes |
 | **Government Officials**         | Directory of elected officials and department heads with contact information                                                                                                                                                      |
 | **Budget Transparency**          | Financial reports, income/expenditure breakdowns, and infrastructure projects                                                                                                                                                     |
 | **Legislative Documents**        | Searchable database of ordinances and resolutions from Sangguniang Bayan                                                                                                                                                          |
@@ -337,13 +337,13 @@ betteragoo/
 ### v1.7.0: Phase 5 Public Services Baseline
 
 - Versioned the municipal services registry and expanded it from 57 to 63 searchable entries
-- Verified 11 live Agoo Filipizen routes for business, taxation, payment orders, market rental, water, construction requirements, and terminal passes
+- Verified 11 live Agoo eLGU BPLS routes for business, taxation, payment orders, market rental, water, construction requirements, and terminal passes
 - Added the verified online routes to the business, taxation, and infrastructure service pages
 - Replaced Solano-specific SEEDO public-market and slaughterhouse branding and routes with Agoo service-administration labels
 - Removed the incorrect Solano barangay-health-station list and unverified health-facility counts from the static and React health pages
 - Added verified Agoo RHU–MHO contact routing to the health directory
 - Added visible service-accuracy notices and changed unverified local fee/time values to “Confirm with office”
-- Added automated schema, link, legacy-term, search-query, and live Filipizen route validation
+- Added automated schema, link, legacy-term, search-query, and live eLGU BPLS route validation
 - Corrected all stale `bettersolano.org` URLs in `sitemap.xml` and refreshed its modification dates
 - Recorded BA-F-0006 as partially completed: an official Agoo Citizen's Charter is still required to certify all walk-in requirements, fees, processing times, and personnel
 

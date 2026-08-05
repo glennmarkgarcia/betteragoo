@@ -1,6 +1,6 @@
 {
   "name": "bs-web",
-  "version": "1.8.8",
+  "version": "1.9.1",
   "description": "BetterAgoo.org - Official Portal for LGU Agoo",
   "scripts": {
     "dev": "npx serve . -p 8000",

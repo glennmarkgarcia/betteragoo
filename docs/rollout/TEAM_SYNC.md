@@ -78,7 +78,7 @@ The complete public directory is centralized at `/contact/#emergency-hotlines`. 
 - **File to update:** `data/services.json`
 - **Approver:** MPDC
 - **Current status:** The official Agoo Citizen's Charter was not available from a public official source during the 30 July 2026 review. Release `1.7.0` therefore labels walk-in requirements, fees, processing times, routing, and personnel for confirmation.
-- **Verified scope:** 11 Agoo Filipizen routes passed live HTTP validation on 30 July 2026.
+- **Verified scope:** 11 Agoo eLGU BPLS routes passed live HTTP validation on 30 July 2026.
 - **Validation:** Run `npm run services:validate` and `npm run services:validate:online`.
 
 ### Legislative Data (Ordinances & Resolutions)
@@ -139,7 +139,7 @@ The complete public directory is centralized at `/contact/#emergency-hotlines`. 
 | Date       | Change                                                                                                               | Verified By          |
 | ---------- | -------------------------------------------------------------------------------------------------------------------- | -------------------- |
 | 2026-02-03 | Initial TEAM_SYNC.md created                                                                                         | Glenn Mark P. Garcia |
-| 2026-07-30 | BA-F-0006 services baseline: 63 registry entries, 11 live Filipizen routes, and official-charter verification status | Glenn Mark P. Garcia |
+| 2026-07-30 | BA-F-0006 services baseline: 63 registry entries, 11 live eLGU BPLS routes, and official-charter verification status | Glenn Mark P. Garcia |
 | 2026-07-31 | BA-F-0007 official DPWH audit: 40 pages, 1,996 source contracts, and 201 verified Agoo matches                       | Glenn Mark P. Garcia |
 | 2026-08-01 | Release 1.8.4: first service-worker claim no longer reloads or recreates the volunteer popup                         | Glenn Mark P. Garcia |
 | 2026-08-04 | Release 1.8.5: consolidated header emergency numbers into the Contact-page hotline directory                         | Glenn Mark P. Garcia |
