@@ -13,8 +13,8 @@ function assert(condition, message) {
   if (!condition) errors.push(message);
 }
 
-assert(registry.schemaVersion === '1.7.0', 'schemaVersion must be 1.7.0');
-assert(registry.lastReviewed === '2026-07-30', 'lastReviewed must record this migration review');
+assert(registry.schemaVersion === '1.8.0', 'schemaVersion must be 1.8.0');
+assert(registry.lastReviewed === '2026-08-05', 'lastReviewed must record this migration review');
 assert(Array.isArray(services), 'services must be an array');
 
 const ids = new Set();

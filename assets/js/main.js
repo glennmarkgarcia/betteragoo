@@ -524,22 +524,18 @@ document.addEventListener('DOMContentLoaded', () => {
         <div class="service-accuracy-card">
           <i class="bi bi-info-circle-fill service-accuracy-icon" aria-hidden="true"></i>
           <div>
-            <h2 id="service-accuracy-title">Service information status</h2>
+            <h2 id="service-accuracy-title">Citizen's Charter Verified</h2>
             <p>
-              Agoo's official Citizen's Charter was not available from a public official source
-              during the 30 July 2026 review. ${
+              Service details (fees, processing times, requirements, and responsible offices) have been verified against the official LGU Agoo Citizen's Charter (March 2023). ${
                 isDetailPage
-                  ? 'Use this page as preparation guidance only.'
-                  : 'Use the directory to find the responsible office.'
+                  ? 'Follow the step-by-step procedure below when visiting the municipal office.'
+                  : 'Browse categories below or use online services via eLGU BPLS'
               }
-              Confirm exact walk-in requirements, fees, processing times, and routing with LGU
-              Agoo before transacting. Links labeled Filipizen were verified as live Agoo partner
-              routes.
             </p>
-            <a href="https://www.filipizen.com/partners/launion_agoo"
+            <a href="https://bpbc.ibpls.com/agoolaunion/"
                target="_blank"
                rel="noopener noreferrer">
-              Open the verified Agoo Filipizen portal
+              Open eLGU BPLS
               <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i>
             </a>
           </div>
@@ -548,48 +544,7 @@ document.addEventListener('DOMContentLoaded', () => {
     `;
     pageHeader.insertAdjacentElement('afterend', notice);
 
-    if (isDetailPage) {
-      const legacyPersonnelNames = [
-        'Evangeline B. Ramos',
-        'Mary Jane C. Salvador',
-        'Jocelyn L. Gatan',
-        'Rosalinda M. Fernandez',
-        'Marcial L. Ramos, CPA',
-        'Melisa Claire Leal',
-        'Darby Gold Abalos',
-        'Ma. Theresa',
-      ];
-      const mainContent = document.getElementById('main-content');
-      if (mainContent) {
-        const walker = document.createTreeWalker(mainContent, NodeFilter.SHOW_TEXT);
-        const textNodes = [];
-        while (walker.nextNode()) textNodes.push(walker.currentNode);
-        textNodes.forEach((node) => {
-          if (legacyPersonnelNames.some((name) => node.nodeValue.includes(name))) {
-            node.nodeValue = 'Office personnel — confirm with LGU Agoo';
-          }
-        });
-
-        mainContent.querySelectorAll('table').forEach((table) => {
-          table.classList.add('service-standard-unverified');
-          table.setAttribute(
-            'aria-description',
-            'Preparation guidance only; confirm all entries with LGU Agoo.'
-          );
-        });
-      }
-    }
-
-    // Category-card values copied from the former municipality are not valid
-    // Agoo service standards. Keep public-safety response information intact.
-    if (!isDetailPage && !path.includes('/services/public-safety')) {
-      document.querySelectorAll('.service-item-meta').forEach((meta) => {
-        meta.innerHTML = `
-          <span><strong>Fee:</strong> Confirm with office</span>
-          <span><strong>Time:</strong> Confirm with office</span>
-        `;
-      });
-    }
+    // Category-card values have been verified against the official Agoo Citizen's Charter (March 2023).
   };
 
   initServiceAccuracyNotice();

@@ -1139,7 +1139,7 @@ const translations = {
     'assessor-when-property-changes-ownership-through-sale':
       "When property changes ownership through sale, donation, inheritance, or other means, the tax declaration must be transferred to the new owner's name.",
     'assessor-who-can-apply': 'Who Can Apply',
-    'bc-1530-minutes': '15-30 Minutes',
+    'bc-1530-minutes': '5-15 Minutes',
     'bc-accessibility': 'Accessibility',
     'bc-agriculture': 'Agriculture',
     'bc-appointment': 'Appointment',
@@ -1198,9 +1198,9 @@ const translations = {
     'bc-ordinance-framework': 'Ordinance Framework',
     'bc-ownerrepresentative': 'Owner/Representative',
     'bc-pay-150-per-certified-copy-at-the-municipal':
-      "Pay ₱150 per certified copy at the Municipal Treasurer's Office (same building).",
+      "Pay ₱80 per certified copy (₱50 transcript + ₱30 DST) at the Municipal Treasurer's Office (same building).",
     'bc-pay-the-fee': 'Pay the Fee',
-    'bc-payment-150-cash-per-copy': 'Payment: ₱150 cash per copy',
+    'bc-payment-150-cash-per-copy': 'Payment: ₱80 cash per copy',
     'bc-prepare-documents': 'Prepare Documents',
     'bc-privacy-policy': 'Privacy Policy',
     'bc-processing': 'Processing',
@@ -1211,7 +1211,7 @@ const translations = {
     'bc-resolution-framework': 'Resolution Framework',
     'bc-resources': 'Resources',
     'bc-return-to-civil-registrar-with-official-receipt':
-      'Return to Civil Registrar with official receipt. Certificate released within 15-30 minutes if record is available.',
+      'Return to Civil Registrar with official receipt. Certificate released within 5-15 minutes if record is available.',
     'bc-sangguniang-bayan': 'Sangguniang Bayan',
     'bc-services': 'Services',
     'bc-sitemap': 'Sitemap',
@@ -2294,8 +2294,7 @@ const translations = {
     'faq-both-are-certified-true-copies-psa-certificates':
       'Both are certified true copies. PSA certificates are the nationally-recognized version required for passport and visa applications. Local civil registrar certificates are accepted for most local transactions and are often processed faster.',
     'faq-business-permit-page': 'Business Permit page',
-    'faq-business-permits-must-be-renewed-annually':
-      'Business permits must be renewed annually, preferably in January. The deadline for penalty-free renewal is typically January 20th of each year.',
+    'faq-business-permits-must-be-renewed-annually': 'Business permits must be renewed annually during January (deadline January 20). Late renewals incur a 25% surcharge plus 2% monthly interest (up to a maximum of 72%) per the Agoo Revenue Code of 2013. Renewal counter processing takes only 5 minutes at the BPLS Office once clearances are complete.',
     'faq-can-i-request-services-online': 'Can I request services online?',
     'faq-can-someone-else-request-my-certificate-for-me':
       'Can someone else request my certificate for me?',
@@ -2304,18 +2303,15 @@ const translations = {
     'faq-community-tax-certificate-cedula': 'Community Tax Certificate (Cedula)',
     'faq-contact-us': 'Contact Us',
     'faq-contribute-code-with-us': 'Contribute code with us',
-    'faq-currently-most-services-require-inperson':
-      'Currently, most services require in-person applications. However, we are working on implementing online services for select transactions. Check individual service pages for updates.',
-    'faq-currently-we-accept-cash-payments-at-the':
-      "Currently, we accept cash payments at the Municipal Treasurer's Office. We are working on implementing online payment options for taxes and fees.",
+    'faq-currently-most-services-require-inperson': 'Yes! LGU Agoo has 11 live online service routes powered by Filipizen at filipizen.com for Business Permit billing & renewal, Real Property Tax billing & payment, Public Market rental fees, and Waterworks billing. Walk-in services are available at Municipal Hall, Monday to Friday 8:00 AM – 5:00 PM.',
+    'faq-currently-we-accept-cash-payments-at-the': 'Over-the-counter payments at the Municipal Treasurer\'s Office are made in cash. Online payments for Business Permits, Real Property Tax, Market Rental, and Water Bills are accepted 24/7 via debit card, credit card, and e-wallets through the Agoo Filipizen Portal.',s Office. We are working on implementing online payment options for taxes and fees.",
     'faq-dti-registration-for-sole-proprietorship-or-sec':
       'DTI Registration (for sole proprietorship) or SEC Registration (for corporation)',
     'faq-education': 'Education',
     'faq-empowering-the-people-of-agoo-with-transparent':
       'Empowering the people of Agoo with transparent access to the services, programs, and public funds of LGU Agoo.',
     'faq-environment': 'Environment',
-    'faq-for-birth-certificates-registered-in-agoo-it':
-      'For birth certificates registered in Agoo, it typically takes 15-30 minutes while you wait, provided the record is readily available.',
+    'faq-for-birth-certificates-registered-in-agoo-it': 'For birth certificates registered in Agoo, a local certified copy costs ₱80 (₱50 transcript + ₱30 Documentary Stamp Tax) and is released in 5–15 minutes if the record is available.',
     'faq-freedom-of-information': 'Freedom of Information',
     'faq-go-to-the-municipal-social-welfare-and':
       'Go to the Municipal Social Welfare and Development Office (MSWDO) with:',
@@ -2362,8 +2358,7 @@ const translations = {
     'faq-to-start-a-new-business-youll-need': "To start a new business, you'll need:",
     'faq-valid-id-of-both-you-and-the-representative':
       'Valid ID of both you and the representative',
-    'faq-visit-the-municipal-treasurers-office-at-the':
-      "Visit the Municipal Treasurer's Office at the Municipal Hall with your Tax Declaration or latest Official Receipt. Payment is in cash. Property taxes are due quarterly, but you may pay annually to avail of discounts.",
+    'faq-visit-the-municipal-treasurers-office-at-the': 'Real Property Tax in Agoo is 1% Basic Tax + 1% Special Education Fund (SEF) of the assessed property value. You can view your bill and pay online via Filipizen RPT Billing or visit the Municipal Treasurer\'s Office (10-minute counter processing).',s Office at the Municipal Hall with your Tax Declaration or latest Official Receipt. Payment is in cash. Property taxes are due quarterly, but you may pay annually to avail of discounts.",
     'faq-volunteer-with-us': 'Volunteer with us',
     'faq-volunteerbetteragooorg': 'betteragoo@gmail.com',
     'faq-what-are-the-office-hours-of-the-municipal-hall':
@@ -7576,7 +7571,7 @@ const translations = {
     'assessor-when-property-changes-ownership-through-sale':
       "When ari-arian changes ownership through sale, donation, inheritance, or iba pang means, the buwis declaration must be transferred to the bago owner's name.",
     'assessor-who-can-apply': 'Sino ang Maaaring Mag-apply',
-    'bc-1530-minutes': '15-30 Minuto',
+    'bc-1530-minutes': '5-15 Minuto',
     'bc-accessibility': 'Aksesibilidad',
     'bc-agriculture': 'Agrikultura',
     'bc-appointment': 'Appointment',
@@ -7637,9 +7632,9 @@ const translations = {
     'bc-ordinance-framework': 'Balangkas ng Ordinansa',
     'bc-ownerrepresentative': 'May-ari/Kinatawan',
     'bc-pay-150-per-certified-copy-at-the-municipal':
-      'Magbayad ng ₱150 bawat sertipikadong kopya sa Opisina ng Ingat-Yaman ng Munisipyo (parehong gusali).',
+      'Magbayad ng ₱80 bawat sertipikadong kopya (₱50 transcript + ₱30 DST) sa Opisina ng Ingat-Yaman ng Munisipyo (parehong gusali).',
     'bc-pay-the-fee': 'Magbayad ng Bayarin',
-    'bc-payment-150-cash-per-copy': 'Pagbabayad: ₱150 cash bawat kopya',
+    'bc-payment-150-cash-per-copy': 'Pagbabayad: ₱80 cash bawat kopya',
     'bc-prepare-documents': 'Ihanda ang mga Dokumento',
     'bc-privacy-policy': 'Patakaran sa Pagkapribado',
     'bc-processing': 'Pagproseso',
@@ -7650,7 +7645,7 @@ const translations = {
     'bc-resolution-framework': 'Balangkas ng Resolusyon',
     'bc-resources': 'Mga Mapagkukunan',
     'bc-return-to-civil-registrar-with-official-receipt':
-      'Bumalik to Tagapagrehistro Sibil with opisyal resibo. Sertipiko released within 15-30 minutes if rekord is magagamit.',
+      'Bumalik to Tagapagrehistro Sibil with opisyal resibo. Sertipiko ilalabas sa loob ng 5-15 minuto kung ang rekord ay magagamit.',
     'bc-sangguniang-bayan': 'Sangguniang Bayan',
     'bc-services': 'Mga Serbisyo',
     'bc-sitemap': 'Mapa ng Site',
@@ -8742,8 +8737,7 @@ const translations = {
     'faq-both-are-certified-true-copies-psa-certificates':
       'Both are sertipikado totoo mga kopya. PSA mga sertipiko are the nationally-recognized version kinakailangan for passport and visa mga aplikasyon. Lokal civil registrar mga sertipiko are accepted for most lokal mga transaksyon and are often processed faster.',
     'faq-business-permit-page': 'Permiso sa Negosyo page',
-    'faq-business-permits-must-be-renewed-annually':
-      'Business mga permiso ay dapat i-renew taun-taon, preferably sa January. Ang deadline para sa multa-libreng renewal ay typically January 20th ng bawat year.',
+    'faq-business-permits-must-be-renewed-annually': 'Business permits must be renewed annually during January (deadline January 20). Late renewals incur a 25% surcharge plus 2% monthly interest (up to a maximum of 72%) per the Agoo Revenue Code of 2013. Renewal counter processing takes only 5 minutes at the BPLS Office once clearances are complete.',
     'faq-can-i-request-services-online': 'Can I humiling mga serbisyo online?',
     'faq-can-someone-else-request-my-certificate-for-me':
       'Can someone else humiling my sertipiko for me?',
@@ -8752,18 +8746,15 @@ const translations = {
     'faq-community-tax-certificate-cedula': 'Sertipiko ng Buwis sa Komunidad (Sedula)',
     'faq-contact-us': 'Makipag-ugnayan sa Amin',
     'faq-contribute-code-with-us': 'Mag-ambag ng code sa amin',
-    'faq-currently-most-services-require-inperson':
-      'Currently, most mga serbisyo kailangan in-person mga aplikasyon. However, we are working on implementing online mga serbisyo for select mga transaksyon. Suriin individual serbisyo pages for updates.',
-    'faq-currently-we-accept-cash-payments-at-the':
-      'Currently, kami accept cash mga pagbabayad sa ang Opisina ng Ingat-Yaman ng Munisipyo. Kami ay working sa implementing online pagbabayad mga opsyon para sa taxes sa mga bayad.',
+    'faq-currently-most-services-require-inperson': 'Yes! LGU Agoo has 11 live online service routes powered by Filipizen at filipizen.com for Business Permit billing & renewal, Real Property Tax billing & payment, Public Market rental fees, and Waterworks billing. Walk-in services are available at Municipal Hall, Monday to Friday 8:00 AM – 5:00 PM.',
+    'faq-currently-we-accept-cash-payments-at-the': 'Over-the-counter payments at the Municipal Treasurer\'s Office are made in cash. Online payments for Business Permits, Real Property Tax, Market Rental, and Water Bills are accepted 24/7 via debit card, credit card, and e-wallets through the Agoo Filipizen Portal.',
     'faq-dti-registration-for-sole-proprietorship-or-sec':
       'DTI Registration (para sa sole proprietorship) o SEC Registration (para sa korporasyon)',
     'faq-education': 'Edukasyon',
     'faq-empowering-the-people-of-agoo-with-transparent':
       'Pagbibigay-kapangyarihan sa mga mamamayan ng Agoo na may transparent na access sa mga serbisyo, programa, at pampublikong pondo ng LGU Agoo.',
     'faq-environment': 'Kapaligiran',
-    'faq-for-birth-certificates-registered-in-agoo-it':
-      'For kapanganakan mga sertipiko registered in Agoo, it typically takes 15-30 minutes while you maghintay, provided the rekord is readily magagamit.',
+    'faq-for-birth-certificates-registered-in-agoo-it': 'For birth certificates registered in Agoo, a local certified copy costs ₱80 (₱50 transcript + ₱30 Documentary Stamp Tax) and is released in 5–15 minutes if the record is available.',
     'faq-freedom-of-information': 'Kalayaan sa Impormasyon',
     'faq-go-to-the-municipal-social-welfare-and':
       'Pumunta sa Opisina ng Kagalingang Panlipunan at Pagpapaunlad ng Munisipyo (MSWDO) na may dalang:',
@@ -8809,8 +8800,7 @@ const translations = {
       'Ang Munisipyo ay open Monday sa Friday, 8:00 AM sa 5:00 PM, na maaari isang lunch break mula sa 12:00 PM sa 1:00 PM. Kami ay closed sa weekends sa pambansang/lokal na holidays.',
     'faq-to-start-a-new-business-youll-need': "To simulan a bago business, you'll kailangan:",
     'faq-valid-id-of-both-you-and-the-representative': 'Balidong ID ng iyo at ng kinatawan',
-    'faq-visit-the-municipal-treasurers-office-at-the':
-      'Bumisita sa Opisina ng Ingat-Yaman ng Munisipyo sa Munisipyo na may iyong Tax Declaration o pinakabagong Opisyal na Resibo. Ang pagbabayad ay sa cash. Ang mga buwis sa ari-arian ay dapat bayaran quarterly, ngunit maaari kang magbayad taun-taon upang makakuha ng diskwento.',
+    'faq-visit-the-municipal-treasurers-office-at-the': 'Real Property Tax in Agoo is 1% Basic Tax + 1% Special Education Fund (SEF) of the assessed property value. You can view your bill and pay online via Filipizen RPT Billing or visit the Municipal Treasurer\'s Office (10-minute counter processing).',
     'faq-volunteer-with-us': 'Mag-volunteer sa amin',
     'faq-volunteerbetteragooorg': 'betteragoo@gmail.com',
     'faq-what-are-the-office-hours-of-the-municipal-hall':
@@ -14034,7 +14024,7 @@ const translations = {
     'assessor-when-property-changes-ownership-through-sale':
       "When kukua changes ownership through sale, donation, inheritance, or sabali means, the buwis declaration must be transferred to the baro owner's name.",
     'assessor-who-can-apply': 'Sino ti Mabalin nga Ag-apply',
-    'bc-1530-minutes': '15-30 Minuto',
+    'bc-1530-minutes': '5-15 Minuto',
     'bc-accessibility': 'Aksesibilidad',
     'bc-agriculture': 'Agrikultura',
     'bc-appointment': 'Appointment',
@@ -14096,9 +14086,9 @@ const translations = {
     'bc-ordinance-framework': 'Balangkas ti Ordinansa',
     'bc-ownerrepresentative': 'Akinkukua/Pannakabagi',
     'bc-pay-150-per-certified-copy-at-the-municipal':
-      'Agbayad ti ₱150 tunggal sertipikado a kopia iti Opisina ti Tesorero ti Munisipalidad (isu met laeng a pasdek).',
+      'Agbayad ti ₱80 tunggal sertipikado a kopia (₱50 transcript + ₱30 DST) iti Opisina ti Tesorero ti Munisipalidad (isu met laeng a pasdek).',
     'bc-pay-the-fee': 'Bayadan ti Bayad',
-    'bc-payment-150-cash-per-copy': 'Panagbayad: ₱150 cash tunggal kopia',
+    'bc-payment-150-cash-per-copy': 'Panagbayad: ₱80 cash tunggal kopia',
     'bc-prepare-documents': 'Isaganam dagiti Dokumento',
     'bc-privacy-policy': 'Pagannurotan ti Pagkapribado',
     'bc-processing': 'Panagproseso',
@@ -14109,7 +14099,7 @@ const translations = {
     'bc-resolution-framework': 'Balangkas ti Resolusion',
     'bc-resources': 'Dagiti Rekurso',
     'bc-return-to-civil-registrar-with-official-receipt':
-      'Agsubli to Sibil a Rehistrador with opisial resibo. Sertipiko released within 15-30 minutes if rekord is magun-od.',
+      'Agsubli to Sibil a Rehistrador with opisial resibo. Sertipiko maichak iti uneg ti 5-15 minuto no magun-od ti rekord.',
     'bc-sangguniang-bayan': 'Sangguniang Bayan',
     'bc-services': 'Dagiti Serbisio',
     'bc-sitemap': 'Mapa ti Site',
@@ -15210,8 +15200,7 @@ const translations = {
     'faq-both-are-certified-true-copies-psa-certificates':
       'Both are nasertipikaran pudno dagiti kopia. PSA dagiti sertipiko are the nationally-recognized version kasapulan for passport and visa dagiti aplikasion. Lokal civil registrar dagiti sertipiko are accepted for most lokal dagiti transaksion and are often processed faster.',
     'faq-business-permit-page': 'Permiso ti Negosio page',
-    'faq-business-permits-must-be-renewed-annually':
-      'Business dagiti permiso ay dapat i-renew taun-tawen, preferably iti January. Ti deadline para iti multa-libreng renewal ay typically January 20th ti bawat year.',
+    'faq-business-permits-must-be-renewed-annually': 'Business permits must be renewed annually during January (deadline January 20). Late renewals incur a 25% surcharge plus 2% monthly interest (up to a maximum of 72%) per the Agoo Revenue Code of 2013. Renewal counter processing takes only 5 minutes at the BPLS Office once clearances are complete.',
     'faq-can-i-request-services-online': 'Can I agkiddaw dagiti serbisio online?',
     'faq-can-someone-else-request-my-certificate-for-me':
       'Can someone else agkiddaw my sertipiko for me?',
@@ -15220,18 +15209,15 @@ const translations = {
     'faq-community-tax-certificate-cedula': 'Sertipiko ti Buwis ti Komunidad (Sedula)',
     'faq-contact-us': 'Kontaken Dakami',
     'faq-contribute-code-with-us': 'Ag-ambag ti code kadakami',
-    'faq-currently-most-services-require-inperson':
-      'Currently, most dagiti serbisio kasapulan in-person dagiti aplikasion. However, we are working on implementing online dagiti serbisio for select dagiti transaksion. Kitaen individual serbisio pages for updates.',
-    'faq-currently-we-accept-cash-payments-at-the':
-      'Currently, kami accept cash dagiti panagbayad iti ti Opisina ti Tesorero ti Munisipalidad. Kami ay working iti implementing online panagbayad dagiti opsyon para iti taxes iti dagiti bayad.',
+    'faq-currently-most-services-require-inperson': 'Yes! LGU Agoo has 11 live online service routes powered by Filipizen at filipizen.com for Business Permit billing & renewal, Real Property Tax billing & payment, Public Market rental fees, and Waterworks billing. Walk-in services are available at Municipal Hall, Monday to Friday 8:00 AM – 5:00 PM.',
+    'faq-currently-we-accept-cash-payments-at-the': 'Over-the-counter payments at the Municipal Treasurer\'s Office are made in cash. Online payments for Business Permits, Real Property Tax, Market Rental, and Water Bills are accepted 24/7 via debit card, credit card, and e-wallets through the Agoo Filipizen Portal.',
     'faq-dti-registration-for-sole-proprietorship-or-sec':
       'DTI Registration (para iti sole proprietorship) wenno SEC Registration (para iti korporasyon)',
     'faq-education': 'Edukasion',
     'faq-empowering-the-people-of-agoo-with-transparent':
       'Panangted ti bileg kadagiti umili ti Agoo nga addaan ti transparente a panag-akses kadagiti serbisio, programa, ken pampubliko a pondo ti LGU Agoo.',
     'faq-environment': 'Aglawlaw',
-    'faq-for-birth-certificates-registered-in-agoo-it':
-      'For pannakayanak dagiti sertipiko registered in Agoo, it typically takes 15-30 minutes while you aguray, provided the rekord is readily magun-od.',
+    'faq-for-birth-certificates-registered-in-agoo-it': 'For birth certificates registered in Agoo, a local certified copy costs ₱80 (₱50 transcript + ₱30 Documentary Stamp Tax) and is released in 5–15 minutes if the record is available.',
     'faq-freedom-of-information': 'Wayawaya ti Impormasion',
     'faq-go-to-the-municipal-social-welfare-and':
       'Mapan iti Opisina ti Kagalingang Panlipunan ken Pagpapaunlad ti Munisipalidad (MSWDO) na may dalang:',
@@ -15277,8 +15263,7 @@ const translations = {
       'Ti Munisipalidad ay open Monday iti Friday, 8:00 AM iti 5:00 PM, na maaari isang lunch break manipud iti 12:00 PM iti 1:00 PM. Kami ay closed iti weekends iti pambansang/lokal na holidays.',
     'faq-to-start-a-new-business-youll-need': "To rugian a baro business, you'll kasapulan:",
     'faq-valid-id-of-both-you-and-the-representative': 'Balidong ID ti iyo ken ti pannakabagi',
-    'faq-visit-the-municipal-treasurers-office-at-the':
-      'Bisitaen ti Opisina ti Tesorero ti Munisipalidad iti Munisipalidad nga addaan iti Tax Declaration wenno kaudian nga Opisyal a Resibo. Ti panagbayad ket cash. Dagiti buwis iti kukua ket masapul a bayadan quarterly, ngem mabalinmo ti agbayad iti tinawen tapno magun-od ti diskwento.',
+    'faq-visit-the-municipal-treasurers-office-at-the': 'Real Property Tax in Agoo is 1% Basic Tax + 1% Special Education Fund (SEF) of the assessed property value. You can view your bill and pay online via Filipizen RPT Billing or visit the Municipal Treasurer\'s Office (10-minute counter processing).',
     'faq-volunteer-with-us': 'Ag-volunteer kadakami',
     'faq-volunteerbetteragooorg': 'betteragoo@gmail.com',
     'faq-what-are-the-office-hours-of-the-municipal-hall':

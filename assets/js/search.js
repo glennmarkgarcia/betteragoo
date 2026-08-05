@@ -221,8 +221,8 @@
         category: 'Certificates & Vital Records',
         keywords: ['birth', 'certificate'],
         office: 'Local Civil Registrar',
-        fee: 'Confirm with office',
-        processingTime: 'Confirm with office',
+        fee: '₱80 (local)',
+        processingTime: '5-15 mins',
         url: '../service-details/birth-certificate.html',
       },
       {
@@ -231,8 +231,8 @@
         category: 'Business Trade & Investment',
         keywords: ['business', 'permit'],
         office: 'BPLS',
-        fee: 'Confirm with office',
-        processingTime: 'Confirm with office',
+        fee: 'Varies per Agoo Revenue Code 2013',
+        processingTime: '5-10 mins',
         url: 'business.html',
       },
     ];

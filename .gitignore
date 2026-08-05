@@ -5,3 +5,4 @@ dist/
 react-app/out/
 out/
 *.backup
+.pdf_parsed_cache

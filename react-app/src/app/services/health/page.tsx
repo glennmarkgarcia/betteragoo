@@ -59,10 +59,10 @@ export default function HealthPage() {
               <p className="service-item-desc">{t('health-consultation-desc')}</p>
               <div className="service-item-meta">
                 <span>
-                  <strong>{t('label-fee')}</strong> Confirm with office
+                  <strong>{t('label-fee')}</strong> Free
                 </span>
                 <span>
-                  <strong>{t('label-time')}</strong> Confirm with office
+                  <strong>{t('label-time')}</strong> Same day
                 </span>
               </div>
             </div>
@@ -75,10 +75,10 @@ export default function HealthPage() {
               <p className="service-item-desc">{t('health-vaccination-desc')}</p>
               <div className="service-item-meta">
                 <span>
-                  <strong>{t('label-fee')}</strong> Confirm with office
+                  <strong>{t('label-fee')}</strong> Free
                 </span>
                 <span>
-                  <strong>{t('label-time')}</strong> Confirm with office
+                  <strong>{t('label-time')}</strong> Same day
                 </span>
               </div>
             </div>
@@ -91,10 +91,10 @@ export default function HealthPage() {
               <p className="service-item-desc">{t('health-maternal-desc')}</p>
               <div className="service-item-meta">
                 <span>
-                  <strong>{t('label-fee')}</strong> Confirm with office
+                  <strong>{t('label-fee')}</strong> Free
                 </span>
                 <span>
-                  <strong>{t('label-time')}</strong> Confirm with office
+                  <strong>{t('label-time')}</strong> Same day
                 </span>
               </div>
             </div>
@@ -107,10 +107,10 @@ export default function HealthPage() {
               <p className="service-item-desc">{t('health-medicine-desc')}</p>
               <div className="service-item-meta">
                 <span>
-                  <strong>{t('label-fee')}</strong> Confirm with office
+                  <strong>{t('label-fee')}</strong> Free (subsidy)
                 </span>
                 <span>
-                  <strong>{t('label-time')}</strong> Confirm with office
+                  <strong>{t('label-time')}</strong> 1-3 days
                 </span>
               </div>
             </div>
