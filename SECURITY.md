@@ -7,7 +7,7 @@
 | 1.8.x   | Yes       |
 | < 1.8   | No        |
 
-The current supported release is `1.8.8`.
+The current supported release is `1.9.1`.
 
 ## Reporting a Vulnerability
 

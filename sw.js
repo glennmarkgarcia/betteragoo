@@ -3,7 +3,7 @@
  * Enterprise-grade PWA with versioned caching, runtime strategies, and offline resilience.
  */
 
-var CACHE_VERSION = 'v28';
+var CACHE_VERSION = 'v30';
 var STATIC_CACHE = 'betteragoo-static-' + CACHE_VERSION;
 var RUNTIME_CACHE = 'betteragoo-runtime-' + CACHE_VERSION;
 var OFFLINE_URL = '/offline.html';

@@ -17,10 +17,10 @@ A **React + TypeScript** version of BetterAgoo.org is now available for contribu
 
 | Version            | Branch             | Status             | Documentation                |
 | ------------------ | ------------------ | ------------------ | ---------------------------- |
-| Static HTML        | `main`             | Stable             | This README                  |
+| Static HTML        | `main`             | Stable             | This README & [CHANGELOG.md](CHANGELOG.md) |
 | React + TypeScript | `react-typescript` | Active Development | [MIGRATION.md](MIGRATION.md) |
 
-Both versions are actively maintained. New contributors may choose either version based on their preference. For migration guidance, see [MIGRATION.md](MIGRATION.md).
+Both versions are actively maintained. For a complete version-by-version release history, see [CHANGELOG.md](CHANGELOG.md).
 
 ## Open Source for LGUs
 
