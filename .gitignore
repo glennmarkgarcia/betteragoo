@@ -6,3 +6,7 @@ react-app/out/
 out/
 *.backup
 .pdf_parsed_cache
+others/quiz/data/
+others/quiz/.wrangler/
+.wrangler/
+

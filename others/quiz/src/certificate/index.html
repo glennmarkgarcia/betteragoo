@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Official Civic Quest Certificate | BetterAgoo.org</title>
+  
+  <!-- Open Graph Meta Tags for Facebook Sharing -->
+  <meta property="og:title" content="Agoo Civic Quest Diploma of Honor">
+  <meta property="og:description" content="Official Certificate of Civic Conquest earned in the 10 Civic Trials of Agoo, La Union!">
+  <meta property="og:image" content="https://quiz.betteragoo.org/assets/agoo_eagle_mascot.png">
+  <meta property="og:type" content="website">
+
+  <!-- Google Fonts & Bootstrap Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Cinzel:wght@600;700;800;900&family=Outfit:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <style>
+    :root {
+      --bg-obsidian: #090a0f;
+      --bg-charcoal: #12151f;
+      --card-parchment: #171b26;
+      --card-parchment-light: #1f2433;
+      --card-parchment-border: #2a3045;
+      
+      --gold-leaf: #d4af37;
+      --gold-bright: #f5d061;
+      --gold-dim: #99751e;
+      --gold-border: #c59b27;
+      --gold-gradient: linear-gradient(135deg, #f5d061 0%, #d4af37 50%, #99751e 100%);
+      --gold-glow: 0 0 16px rgba(212, 175, 55, 0.4);
+      
+      --color-text-bright: #f8fafc;
+      --color-text-parchment: #e2e8f0;
+      --color-text-muted: #94a3b8;
+      
+      --font-title: 'Cinzel Decorative', 'Cinzel', serif;
+      --font-heading: 'Cinzel', serif;
+      --font-display: 'Outfit', sans-serif;
+      --font-body: 'Inter', sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-obsidian);
+      background-image: radial-gradient(circle at 50% 30%, rgba(30, 41, 59, 0.5) 0%, rgba(9, 10, 15, 0.95) 100%), url('../assets/quiz-bg.png');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      color: var(--color-text-parchment);
+      font-family: var(--font-body);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 20px 14px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .cert-container {
+      width: 100%;
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
+    /* Action Bar (Top / Bottom) */
+    .cert-action-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 24px;
+      width: 100%;
+    }
+
+    .btn-facebook-share {
+      background: #1877f2;
+      color: #ffffff;
+      border: 1px solid #2884fb;
+      border-radius: 12px;
+      padding: 12px 22px;
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 0.98rem;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      box-shadow: 0 4px 14px rgba(24, 119, 242, 0.4);
+      transition: transform 0.15s ease, background 0.15s ease, box-shadow 0.15s ease;
+      text-decoration: none;
+    }
+
+    .btn-facebook-share:hover {
+      background: #166fe5;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(24, 119, 242, 0.6);
+    }
+
+    .btn-cert-secondary {
+      background: rgba(31, 36, 51, 0.85);
+      color: var(--gold-bright);
+      border: 1px solid var(--gold-border);
+      border-radius: 12px;
+      padding: 12px 18px;
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 0.92rem;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: transform 0.15s ease, background 0.15s ease, border-color 0.15s ease;
+      text-decoration: none;
+    }
+
+    .btn-cert-secondary:hover {
+      background: rgba(45, 53, 75, 0.95);
+      border-color: var(--gold-bright);
+      transform: translateY(-1px);
+    }
+
+    /* Royal Certificate Parchment Frame */
+    .cert-frame {
+      background: linear-gradient(135deg, rgba(18, 21, 31, 0.96) 0%, rgba(23, 27, 38, 0.98) 100%);
+      border: 3px double var(--gold-leaf);
+      outline: 1px solid rgba(212, 175, 55, 0.3);
+      outline-offset: 8px;
+      border-radius: 20px;
+      padding: clamp(24px, 5vw, 48px) clamp(20px, 5vw, 44px);
+      position: relative;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.85), inset 0 0 35px rgba(212, 175, 55, 0.12);
+      text-align: center;
+      overflow: hidden;
+    }
+
+    /* Corner Flourishes */
+    .cert-frame::before, .cert-frame::after {
+      content: '❖';
+      position: absolute;
+      font-size: 1.4rem;
+      color: var(--gold-bright);
+      opacity: 0.7;
+    }
+    .cert-frame::before { top: 12px; left: 16px; }
+    .cert-frame::after { top: 12px; right: 16px; }
+
+    .cert-header {
+      margin-bottom: 20px;
+    }
+
+    .cert-mascot-wrapper {
+      width: 76px;
+      height: 76px;
+      border-radius: 50%;
+      border: 2px solid var(--gold-bright);
+      padding: 3px;
+      background: var(--gold-gradient);
+      margin: 0 auto 14px auto;
+      box-shadow: var(--gold-glow);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .cert-mascot-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+
+    .cert-subtitle-top {
+      font-family: var(--font-heading);
+      font-size: 0.85rem;
+      color: var(--gold-leaf);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 4px;
+    }
+
+    .cert-main-title {
+      font-family: var(--font-title);
+      font-size: clamp(1.4rem, 4vw, 2.2rem);
+      background: var(--gold-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      line-height: 1.25;
+      margin-bottom: 12px;
+    }
+
+    .cert-decree-text {
+      font-family: var(--font-heading);
+      font-size: 0.95rem;
+      color: var(--color-text-muted);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .cert-hero-name {
+      font-family: var(--font-title);
+      font-size: clamp(1.8rem, 5.5vw, 3rem);
+      color: var(--gold-bright);
+      text-shadow: 0 3px 12px rgba(0, 0, 0, 0.8), 0 0 20px rgba(212, 175, 55, 0.4);
+      margin-bottom: 14px;
+      line-height: 1.2;
+    }
+
+    .cert-congratulations {
+      font-size: clamp(0.92rem, 2.6vw, 1.05rem);
+      color: var(--color-text-parchment);
+      line-height: 1.6;
+      max-width: 680px;
+      margin: 0 auto 24px auto;
+    }
+
+    /* Large Centered Badge Section */
+    .cert-badge-center {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin: 16px 0 28px 0;
+    }
+
+    .cert-badge-halo {
+      position: absolute;
+      width: 240px;
+      height: 240px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(212, 175, 55, 0.25) 0%, rgba(212, 175, 55, 0) 70%);
+      pointer-events: none;
+      animation: pulseGlow 3s infinite alternate ease-in-out;
+    }
+
+    @keyframes pulseGlow {
+      0% { transform: scale(0.95); opacity: 0.6; }
+      100% { transform: scale(1.1); opacity: 1; }
+    }
+
+    .cert-badge-image {
+      width: clamp(180px, 35vw, 240px);
+      height: clamp(180px, 35vw, 240px);
+      object-fit: contain;
+      filter: drop-shadow(0 10px 30px rgba(212, 175, 55, 0.55));
+      position: relative;
+      z-index: 2;
+      transition: transform 0.3s ease;
+    }
+
+    .cert-badge-image:hover {
+      transform: scale(1.06);
+    }
+
+    .cert-rank-callout {
+      margin-top: 14px;
+      background: rgba(9, 10, 15, 0.85);
+      border: var(--border-gold-leaf);
+      border-radius: 14px;
+      padding: 10px 22px;
+      display: inline-flex;
+      flex-direction: column;
+      gap: 2px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.6);
+      position: relative;
+      z-index: 2;
+    }
+
+    .cert-rank-number {
+      font-family: var(--font-title);
+      font-size: clamp(1.2rem, 3.5vw, 1.6rem);
+      color: var(--gold-bright);
+      font-weight: 900;
+    }
+
+    .cert-division-name {
+      font-family: var(--font-heading);
+      font-size: 0.88rem;
+      color: var(--gold-leaf);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .cert-metrics-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px 20px;
+      margin-top: 20px;
+      font-size: 0.88rem;
+      color: var(--color-text-muted);
+    }
+
+    .cert-metric-pill {
+      background: rgba(30, 41, 59, 0.7);
+      border: var(--border-gold-subtle);
+      border-radius: var(--radius-pill);
+      padding: 6px 16px;
+      color: var(--color-text-parchment);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .cert-footer-signatures {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-top: 36px;
+      padding-top: 24px;
+      border-top: 1px dashed rgba(212, 175, 55, 0.3);
+      flex-wrap: wrap;
+      gap: 20px;
+      text-align: left;
+    }
+
+    .cert-signature-block {
+      flex: 1;
+      min-width: 180px;
+    }
+
+    .cert-seal-icon {
+      font-size: 2.2rem;
+      color: var(--gold-bright);
+      margin-bottom: 4px;
+    }
+
+    .cert-sig-title {
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 0.88rem;
+      color: var(--gold-bright);
+    }
+
+    .cert-sig-sub {
+      font-size: 0.78rem;
+      color: var(--color-text-muted);
+    }
+
+    /* Toast Notification */
+    .toast-msg {
+      position: fixed;
+      bottom: 24px;
+      left: 50%;
+      transform: translateX(-50%) translateY(100px);
+      background: var(--gold-gradient);
+      color: #090a0f;
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 0.92rem;
+      padding: 12px 24px;
+      border-radius: 30px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.7);
+      opacity: 0;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+      z-index: 9999;
+    }
+
+    .toast-msg.active {
+      transform: translateX(-50%) translateY(0);
+      opacity: 1;
+    }
+
+    /* Print Styles */
+    @media print {
+      body {
+        background: #ffffff !important;
+        color: #000000 !important;
+        padding: 0 !important;
+      }
+      .cert-action-bar, .quiz-footer, .toast-msg {
+        display: none !important;
+      }
+      .cert-frame {
+        background: #ffffff !important;
+        color: #000000 !important;
+        border: 4px solid #d4af37 !important;
+        box-shadow: none !important;
+        padding: 40px !important;
+      }
+      .cert-main-title, .cert-hero-name, .cert-rank-number, .cert-sig-title {
+        color: #000000 !important;
+        -webkit-text-fill-color: initial !important;
+        background: none !important;
+      }
+      .cert-rank-callout, .cert-metric-pill {
+        background: #f8fafc !important;
+        border: 1px solid #cbd5e1 !important;
+        color: #000000 !important;
+      }
+      .cert-congratulations, .cert-decree-text, .cert-metrics-row {
+        color: #334155 !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="cert-container">
+
+    <!-- Top Action Bar -->
+    <div class="cert-action-bar">
+      <button class="btn-facebook-share" id="btn-share-facebook">
+        <i class="bi bi-facebook"></i>
+        <span>Share Certificate on Facebook</span>
+      </button>
+
+      <button class="btn-cert-secondary" id="btn-copy-link">
+        <i class="bi bi-link-45deg"></i>
+        <span>Copy Link</span>
+      </button>
+
+      <button class="btn-cert-secondary" onclick="window.print()">
+        <i class="bi bi-printer-fill"></i>
+        <span>Print / Save PDF</span>
+      </button>
+
+      <a href="../" class="btn-cert-secondary">
+        <i class="bi bi-arrow-left"></i>
+        <span>Return to Portal</span>
+      </a>
+    </div>
+
+    <!-- Official Certificate Frame -->
+    <div class="cert-frame">
+
+      <!-- Header Medallion -->
+      <div class="cert-header">
+        <div class="cert-mascot-wrapper">
+          <img src="../assets/agoo_eagle_mascot.png" alt="Agoo Eagle Mascot" class="cert-mascot-img">
+        </div>
+        <div class="cert-subtitle-top">BetterAgoo.org Civic Quest Portal</div>
+        <h1 class="cert-main-title">DIPLOMA OF CIVIC HONOR</h1>
+        <div class="cert-decree-text">THIS OFFICIAL DECREE CONFIRMS THAT</div>
+      </div>
+
+      <!-- Hero Name -->
+      <div class="cert-hero-name" id="cert-hero-name">Valiant Hero</div>
+
+      <!-- Congratulatory Message -->
+      <p class="cert-congratulations" id="cert-congratulations">
+        Has courageously undertaken the 10 Civic Trials of Agoo, La Union, demonstrating exceptional civic literacy, heritage stewardship, and community dedication.
+      </p>
+
+      <!-- Centered Large Rank Badge -->
+      <div class="cert-badge-center">
+        <div class="cert-badge-halo"></div>
+        <img src="../assets/badge_eagle.png" alt="Rank Badge" id="cert-badge-img" class="cert-badge-image">
+        
+        <div class="cert-rank-callout">
+          <div class="cert-rank-number" id="cert-rank-number">RANK #1 OVERALL</div>
+          <div class="cert-division-name" id="cert-division-name">Eagle Master Division</div>
+        </div>
+      </div>
+
+      <!-- Metrics Row -->
+      <div class="cert-metrics-row">
+        <div class="cert-metric-pill">
+          <i class="bi bi-trophy-fill" style="color: var(--gold-bright);"></i>
+          <span id="cert-score-text">Score: 10 / 10 (100%)</span>
+        </div>
+        <div class="cert-metric-pill">
+          <i class="bi bi-stopwatch-fill" style="color: var(--gold-bright);"></i>
+          <span id="cert-time-text">Time Elapsed: 25s</span>
+        </div>
+        <div class="cert-metric-pill">
+          <i class="bi bi-patch-check-fill" style="color: var(--gold-bright);"></i>
+          <span>Official D1 Record Sealed</span>
+        </div>
+      </div>
+
+      <!-- Signatures & Seals -->
+      <div class="cert-footer-signatures">
+        <div class="cert-signature-block">
+          <div class="cert-seal-icon"><i class="bi bi-shield-lock-fill"></i></div>
+          <div class="cert-sig-title">Agoo Civic Quest Board</div>
+          <div class="cert-sig-sub">BetterAgoo.org Realm Authority</div>
+        </div>
+
+        <div class="cert-signature-block" style="text-align: right;">
+          <div class="cert-seal-icon"><i class="bi bi-award-fill"></i></div>
+          <div class="cert-sig-title" id="cert-conferral-date">Conferred: August 8, 2026</div>
+          <div class="cert-sig-sub">Municipality of Agoo, La Union</div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Bottom Return Link -->
+    <div class="cert-action-bar" style="margin-top: 24px; margin-bottom: 0;">
+      <a href="../" class="btn-cert-secondary">
+        <i class="bi bi-arrow-left"></i>
+        <span>Return to Agoo Civic Quest Main Realm</span>
+      </a>
+    </div>
+
+  </div>
+
+  <div class="toast-msg" id="toast-msg">Certificate Link Copied to Clipboard!</div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const params = new URLSearchParams(window.location.search);
+
+      // Parse parameters with sessionStorage fallbacks
+      const name = params.get('name') || sessionStorage.getItem('cert_name') || 'Valiant Civic Hero';
+      const rank = params.get('rank') || sessionStorage.getItem('cert_rank') || '1';
+      const score = params.get('score') || sessionStorage.getItem('cert_score') || '10';
+      const scoreNum = Number(score) || 0;
+
+      let defaultDiv = 'Agoho Trailblazer';
+      if (scoreNum >= 9) defaultDiv = 'Eagle Master';
+      else if (scoreNum >= 8) defaultDiv = 'Basilica Scholar';
+      else if (scoreNum >= 6) defaultDiv = 'Dinengdeng Explorer';
+
+      const division = params.get('division') || sessionStorage.getItem('cert_division') || defaultDiv;
+      const time = params.get('time') || sessionStorage.getItem('cert_time') || '25';
+      const date = params.get('date') || new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
+
+      // Elements
+      const heroNameEl = document.getElementById('cert-hero-name');
+      const badgeImgEl = document.getElementById('cert-badge-img');
+      const rankNumEl = document.getElementById('cert-rank-number');
+      const divisionEl = document.getElementById('cert-division-name');
+      const scoreTextEl = document.getElementById('cert-score-text');
+      const timeTextEl = document.getElementById('cert-time-text');
+      const conferralDateEl = document.getElementById('cert-conferral-date');
+      const congratsEl = document.getElementById('cert-congratulations');
+
+      if (heroNameEl) heroNameEl.innerText = name;
+      if (rankNumEl) rankNumEl.innerText = `RANK #${rank} OVERALL`;
+      if (divisionEl) divisionEl.innerText = division.includes('Division') || division.includes('#') ? division : `${division} Division`;
+      if (scoreTextEl) scoreTextEl.innerText = `Score: ${score} / 10 (${Math.round((scoreNum/10)*100)}%)`;
+      if (timeTextEl) timeTextEl.innerText = `Time Elapsed: ${time}s`;
+      if (conferralDateEl) conferralDateEl.innerText = `Conferred: ${date}`;
+
+      // Badge Resolution
+      let badgeSrc = '../assets/badge_eagle.png';
+      let badgeAlt = 'Eagle Master Badge';
+      const divLower = (division || '').toLowerCase();
+      const rankNum = Number(rank) || 999;
+
+      if (divLower.includes('eagle')) {
+        badgeSrc = '../assets/badge_eagle.png';
+        badgeAlt = 'Eagle Master Badge';
+      } else if (divLower.includes('basilica')) {
+        badgeSrc = '../assets/badge_basilica.png';
+        badgeAlt = 'Basilica Scholar Badge';
+      } else if (divLower.includes('dinengdeng') || divLower.includes('explorer')) {
+        badgeSrc = '../assets/badge_explorer.png';
+        badgeAlt = 'Dinengdeng Explorer Badge';
+      } else if (divLower.includes('agoho') || divLower.includes('trailblazer')) {
+        badgeSrc = '../assets/badge_aroho.png';
+        badgeAlt = 'Agoho Trailblazer Badge';
+      } else if (scoreNum >= 9) {
+        badgeSrc = '../assets/badge_eagle.png';
+        badgeAlt = 'Eagle Master Badge';
+      } else if (scoreNum >= 8) {
+        badgeSrc = '../assets/badge_basilica.png';
+        badgeAlt = 'Basilica Scholar Badge';
+      } else if (scoreNum >= 6) {
+        badgeSrc = '../assets/badge_explorer.png';
+        badgeAlt = 'Dinengdeng Explorer Badge';
+      } else if (scoreNum < 6) {
+        badgeSrc = '../assets/badge_aroho.png';
+        badgeAlt = 'Agoho Trailblazer Badge';
+      } else if (rankNum <= 25) {
+        badgeSrc = '../assets/badge_eagle.png';
+        badgeAlt = 'Eagle Master Badge';
+      } else if (rankNum <= 50) {
+        badgeSrc = '../assets/badge_basilica.png';
+        badgeAlt = 'Basilica Scholar Badge';
+      } else if (rankNum <= 75) {
+        badgeSrc = '../assets/badge_explorer.png';
+        badgeAlt = 'Dinengdeng Explorer Badge';
+      } else {
+        badgeSrc = '../assets/badge_aroho.png';
+        badgeAlt = 'Agoho Trailblazer Badge';
+      }
+
+      if (badgeImgEl) {
+        badgeImgEl.src = badgeSrc;
+        badgeImgEl.alt = badgeAlt;
+      }
+
+      // Congratulatory message customizer
+      if (congratsEl) {
+        if (scoreNum >= 9) {
+          congratsEl.innerText = `Has achieved supreme perfection in the 10 Civic Trials of Agoo, La Union, demonstrating stellar civic knowledge, heritage stewardship, and legendary leadership.`;
+        } else if (scoreNum >= 7) {
+          congratsEl.innerText = `Has successfully passed the 10 Civic Trials of Agoo, La Union with high honors, proving deep understanding of local history, culture, and governance.`;
+        } else {
+          congratsEl.innerText = `Has courageously completed the 10 Civic Trials of Agoo, La Union, embarking on an honorable journey toward civic excellence and community knowledge.`;
+        }
+      }
+
+      // Facebook Share Button
+      const btnShareFacebook = document.getElementById('btn-share-facebook');
+      if (btnShareFacebook) {
+        btnShareFacebook.addEventListener('click', () => {
+          const currentUrl = encodeURIComponent(window.location.href);
+          const shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${currentUrl}`;
+          window.open(shareUrl, 'facebook-share-dialog', 'width=626,height=436');
+        });
+      }
+
+      // Copy Link Button
+      const btnCopyLink = document.getElementById('btn-copy-link');
+      const toastMsg = document.getElementById('toast-msg');
+
+      if (btnCopyLink) {
+        btnCopyLink.addEventListener('click', () => {
+          navigator.clipboard.writeText(window.location.href).then(() => {
+            if (toastMsg) {
+              toastMsg.classList.add('active');
+              setTimeout(() => {
+                toastMsg.classList.remove('active');
+              }, 3000);
+            }
+          });
+        });
+      }
+    });
+  </script>
+</body>
+</html>

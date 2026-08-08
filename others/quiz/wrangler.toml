@@ -1,0 +1,8 @@
+name = "betteragoo-quiz"
+pages_build_output_dir = "dist"
+compatibility_date = "2024-08-01"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "betteragoo-quiz-db"
+database_id = "betteragoo-quiz-db" # Configured in Cloudflare Pages dashboard

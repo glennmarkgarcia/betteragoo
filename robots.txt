@@ -1,5 +1,5 @@
 # Better Agoo - Robots.txt
-# Author: Ramon Logan Jr
+# Author: Glenn Mark P. Garcia
 # This file tells search engine crawlers which pages to index
 
 User-agent: *

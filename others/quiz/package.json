@@ -1,0 +1,11 @@
+{
+  "name": "betteragoo-quiz",
+  "version": "2.0.0",
+  "description": "Interactive Civic Quiz & Leaderboard Application for quiz.betteragoo.org",
+  "scripts": {
+    "build": "node scripts/build.js",
+    "dev": "npx serve dist -p 8080"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}

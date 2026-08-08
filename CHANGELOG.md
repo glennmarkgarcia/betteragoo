@@ -1,4 +1,4 @@
-# Changelog — BetterAgoo.org
+# Changelog: BetterAgoo.org
 
 All notable changes to the **BetterAgoo.org** civic-tech portal project are documented in this file.
 

@@ -1,0 +1,10 @@
+# Ignore Cloudflare D1 data SQL files
+data/
+
+# Ignore Cloudflare Wrangler local state & vars
+.wrangler/
+.dev.vars
+
+# Ignore build output and dependencies
+dist/
+node_modules/
