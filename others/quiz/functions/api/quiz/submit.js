@@ -1,6 +1,8 @@
 const ALLOWED_ORIGINS = [
   'https://quiz.betteragoo.org',
+  'https://www.quiz.betteragoo.org',
   'https://betteragoo.org',
+  'https://www.betteragoo.org',
   'http://localhost:3000',
   'http://localhost:8788',
   'http://127.0.0.1:8788',
