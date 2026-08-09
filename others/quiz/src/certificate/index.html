@@ -599,10 +599,28 @@
         }
       }
 
-      // Facebook Share Button
+      // Facebook Share Button with Auto-Caption Copy & Toast
       const btnShareFacebook = document.getElementById('btn-share-facebook');
+      const toastMsg = document.getElementById('toast-msg');
+
       if (btnShareFacebook) {
         btnShareFacebook.addEventListener('click', () => {
+          const divClean = (division || '').replace(/Division/i, '').trim();
+          const captionText = `I just scored ${score}/10 (${Math.round((scoreNum/10)*100)}%) and earned Rank #${rank} (${divClean}) in the Agoo Civic Quest! Test your knowledge of Agoo, La Union at https://quiz.betteragoo.org`;
+
+          if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(captionText).catch(() => {});
+          }
+
+          if (toastMsg) {
+            toastMsg.innerText = '📋 Caption & link copied! Paste it into your Facebook post.';
+            toastMsg.classList.add('active');
+            setTimeout(() => {
+              toastMsg.innerText = 'Certificate Link Copied to Clipboard!';
+              toastMsg.classList.remove('active');
+            }, 4000);
+          }
+
           const currentUrl = encodeURIComponent(window.location.href);
           const shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${currentUrl}`;
           window.open(shareUrl, 'facebook-share-dialog', 'width=626,height=436');
