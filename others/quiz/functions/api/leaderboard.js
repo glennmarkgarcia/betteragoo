@@ -1,13 +1,56 @@
+const ALLOWED_ORIGINS = [
+  'https://quiz.betteragoo.org',
+  'https://betteragoo.org',
+  'http://localhost:3000',
+  'http://localhost:8788',
+  'http://127.0.0.1:8788',
+];
+
+function getCorsHeaders(request) {
+  const origin = request.headers.get('Origin') || '';
+  const allowed = ALLOWED_ORIGINS.includes(origin) ? origin : ALLOWED_ORIGINS[0];
+  return {
+    'content-type': 'application/json; charset=utf-8',
+    'access-control-allow-origin': allowed,
+    'access-control-allow-methods': 'GET, POST, OPTIONS',
+    'access-control-allow-headers': 'Content-Type',
+    'Vary': 'Origin',
+  };
+}
+
+export async function onRequestOptions(context) {
+  return new Response(null, { status: 204, headers: getCorsHeaders(context.request) });
+}
+
 export async function onRequestGet(context) {
   try {
-    const { env } = context;
-    const url = new URL(context.request.url);
-    const limit = parseInt(url.searchParams.get('limit') || '100', 10);
+    const { env, request } = context;
+    const cors = getCorsHeaders(request);
+
+    // Rate Limiting: Max 30 requests per 60s per IP
+    if (env.QUIZ_SESSIONS) {
+      const ip = request.headers.get('CF-Connecting-IP') || '127.0.0.1';
+      const rateLimitKey = `ratelimit:leaderboard:${ip}`;
+      const windowSeconds = 60;
+      const maxRequests = 30;
+      const currentCount = parseInt((await env.QUIZ_SESSIONS.get(rateLimitKey)) || '0', 10);
+
+      if (currentCount >= maxRequests) {
+        return new Response(
+          JSON.stringify({ success: false, error: 'Too many leaderboard requests. Please wait.' }),
+          { status: 429, headers: { ...cors, 'Retry-After': String(windowSeconds) } }
+        );
+      }
+      await env.QUIZ_SESSIONS.put(rateLimitKey, String(currentCount + 1), { expirationTtl: windowSeconds });
+    }
+
+    const url = new URL(request.url);
+    const limit = Math.min(Math.max(parseInt(url.searchParams.get('limit') || '100', 10), 1), 100);
 
     if (!env.DB) {
       return new Response(
-        JSON.stringify({ error: 'D1 Database binding (DB) not found.' }),
-        { status: 500, headers: { 'content-type': 'application/json' } }
+        JSON.stringify({ success: false, error: 'D1 Database binding (DB) not found.' }),
+        { status: 500, headers: cors }
       );
     }
 
@@ -18,16 +61,15 @@ export async function onRequestGet(context) {
       LIMIT ?
     `).bind(limit).all();
 
-    return new Response(JSON.stringify({ success: true, count: results.length, leaderboard: results }), {
-      headers: {
-        'content-type': 'application/json; charset=utf-8',
-        'access-control-allow-origin': '*',
-      },
-    });
+    return new Response(
+      JSON.stringify({ success: true, count: results.length, leaderboard: results }),
+      { status: 200, headers: cors }
+    );
   } catch (err) {
-    return new Response(JSON.stringify({ success: false, error: err.message }), {
-      status: 500,
-      headers: { 'content-type': 'application/json' },
-    });
+    console.error('[leaderboard] Unhandled error:', err.message, err.stack);
+    return new Response(
+      JSON.stringify({ success: false, error: 'An internal error occurred. Please try again later.' }),
+      { status: 500, headers: getCorsHeaders(context.request) }
+    );
   }
 }

@@ -469,6 +469,8 @@ document.addEventListener('DOMContentLoaded', () => {
           method: 'POST',
           headers: { 'content-type': 'application/json' },
           body: JSON.stringify({
+            sessionId: currentSessionId,
+            answers: userAnswers,
             name: playerData.name,
             player_name: playerData.name,
             gender: playerData.gender,
@@ -582,6 +584,7 @@ document.addEventListener('DOMContentLoaded', () => {
   function normalizeQuestion(q) {
     if (!q) return null;
     return {
+      id: q.id ? String(q.id) : '',
       question: q.question_text || q.question || '',
       options: {
         A: q.option_a || (q.options ? q.options.A : '') || '',
@@ -608,51 +611,61 @@ document.addEventListener('DOMContentLoaded', () => {
       const origCorrectText = q.options[origCorrectKey] || '';
       
       const allKeys = ['A', 'B', 'C', 'D'];
-      const distractorTexts = allKeys
-        .filter(key => key !== origCorrectKey)
-        .map(key => q.options[key])
-        .filter(txt => txt !== undefined);
-
-      // Fisher-Yates shuffle for distractors
-      for (let i = distractorTexts.length - 1; i > 0; i--) {
+      const distractorKeys = allKeys.filter(key => key !== origCorrectKey);
+      
+      // Shuffle distractors
+      const distractorItems = distractorKeys.map(k => ({ origKey: k, text: q.options[k] })).filter(d => d.text !== undefined);
+      for (let i = distractorItems.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
-        [distractorTexts[i], distractorTexts[j]] = [distractorTexts[j], distractorTexts[i]];
+        [distractorItems[i], distractorItems[j]] = [distractorItems[j], distractorItems[i]];
       }
 
-      // Rule: if prevCorrectKey is set (e.g. 'A'), next correct option CANNOT be 'A'
       let availableKeys = allKeys;
       if (prevCorrectKey && allKeys.includes(prevCorrectKey)) {
         availableKeys = allKeys.filter(k => k !== prevCorrectKey);
       }
 
-      const newCorrectKey = availableKeys[Math.floor(Math.random() * availableKeys.length)];
-      prevCorrectKey = newCorrectKey;
+      const newCorrectKey = origCorrectKey ? availableKeys[Math.floor(Math.random() * availableKeys.length)] : 'A';
+      if (origCorrectKey) prevCorrectKey = newCorrectKey;
 
       const newOptions = {};
+      const origLetterMap = {};
       let distractorIdx = 0;
 
-      allKeys.forEach(key => {
-        if (key === newCorrectKey) {
-          newOptions[key] = origCorrectText;
+      allKeys.forEach(displayKey => {
+        if (displayKey === newCorrectKey && origCorrectKey) {
+          newOptions[displayKey] = origCorrectText;
+          origLetterMap[displayKey] = origCorrectKey;
+        } else if (distractorItems[distractorIdx]) {
+          const item = distractorItems[distractorIdx++];
+          newOptions[displayKey] = item.text;
+          origLetterMap[displayKey] = item.origKey;
         } else {
-          newOptions[key] = distractorTexts[distractorIdx++] || '';
+          newOptions[displayKey] = q.options[displayKey] || '';
+          origLetterMap[displayKey] = displayKey;
         }
       });
 
       return {
         ...q,
         options: newOptions,
+        origLetterMap,
         correct_option: newCorrectKey
       };
     }).filter(Boolean);
   }
 
-  // Quiz Engine Logic
+  // Quiz Engine State & Logic
+  let currentSessionId = null;
+  let userAnswers = {};
+
   async function startQuizSession() {
     currentIndex = 0;
     score = 0;
     secondsElapsed = 0;
     currentQuestions = [];
+    currentSessionId = null;
+    userAnswers = {};
 
     if (quizCard) quizCard.classList.add('active');
     if (resultCard) resultCard.classList.remove('active');
@@ -660,14 +673,19 @@ document.addEventListener('DOMContentLoaded', () => {
     startTimer();
 
     try {
-      const res = await fetch('/api/questions/random?count=10');
+      const res = await fetch('/api/quiz/session/start', {
+        method: 'POST',
+        headers: { 'content-type': 'application/json' }
+      });
       const data = await res.json();
       if (data.success && data.questions && data.questions.length > 0) {
+        currentSessionId = data.sessionId;
         currentQuestions = shuffleAndRandomizeQuestions(data.questions);
       } else {
-        throw new Error('Failed to load online questions');
+        throw new Error(data.error || 'Failed to start quiz session');
       }
     } catch (err) {
+      console.warn('Online session start failed, falling back to local questions:', err.message);
       currentQuestions = shuffleAndRandomizeQuestions(getFallbackQuestions());
     }
 
@@ -719,6 +737,8 @@ document.addEventListener('DOMContentLoaded', () => {
           btn.innerHTML = `<strong>${key}</strong><span>${escapeHtml(options[key])}</span>`;
 
           btn.addEventListener('click', () => {
+            const origLetter = q.origLetterMap ? q.origLetterMap[key] : key;
+            if (q.id) userAnswers[q.id] = origLetter;
             handleAnswer(key, q.correct_option, q.explanation, btn);
           });
 

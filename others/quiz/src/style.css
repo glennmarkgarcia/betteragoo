@@ -119,35 +119,20 @@ body {
   }
 }
 
-/* Golden Eagle Medallion Avatar */
-.mascot-avatar-container {
-  position: relative;
-  display: inline-block;
+/* Quiz Header Logo */
+.quiz-logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   flex-shrink: 0;
 }
 
-.mascot-avatar {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  border: 3px solid var(--gold-leaf);
-  box-shadow: 0 0 15px rgba(212, 175, 55, 0.4), 0 4px 10px rgba(0, 0, 0, 0.8);
-  object-fit: cover;
-  background: var(--gold-gradient);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  animation: floatMedallion 5s ease-in-out infinite;
-}
-
-@keyframes floatMedallion {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-5px); }
-}
-
-@media (min-width: 640px) {
-  .mascot-avatar {
-    width: 96px;
-    height: 96px;
-  }
+.quiz-header-logo {
+  max-width: 100%;
+  height: auto;
+  max-height: clamp(80px, 15vw, 130px);
+  object-fit: contain;
+  display: block;
 }
 
 .quiz-title-group {

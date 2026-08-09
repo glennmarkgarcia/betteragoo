@@ -5,4 +5,8 @@ compatibility_date = "2024-08-01"
 [[d1_databases]]
 binding = "DB"
 database_name = "betteragoo-quiz-db"
-database_id = "betteragoo-quiz-db" # Configured in Cloudflare Pages dashboard
+database_id = "e8ed4a3d-061f-4466-afd9-b23b8965d02f"
+
+[[kv_namespaces]]
+binding = "QUIZ_SESSIONS"
+id = "910e1eeaede049be8e9c390ed521407e"

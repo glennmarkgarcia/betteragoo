@@ -22,31 +22,27 @@ export async function onRequestOptions(context) {
   return new Response(null, { status: 204, headers: getCorsHeaders(context.request) });
 }
 
-export async function onRequestGet(context) {
+export async function onRequestPost(context) {
   try {
     const { env, request } = context;
     const cors = getCorsHeaders(request);
 
-    // Rate Limiting: Max 20 requests per 60s per IP
+    // Rate Limiting: Max 10 session starts per 60s per IP
     if (env.QUIZ_SESSIONS) {
       const ip = request.headers.get('CF-Connecting-IP') || '127.0.0.1';
-      const rateLimitKey = `ratelimit:random:${ip}`;
+      const rateLimitKey = `ratelimit:start:${ip}`;
       const windowSeconds = 60;
-      const maxRequests = 20;
+      const maxRequests = 10;
       const currentCount = parseInt((await env.QUIZ_SESSIONS.get(rateLimitKey)) || '0', 10);
 
       if (currentCount >= maxRequests) {
         return new Response(
-          JSON.stringify({ success: false, error: 'Too many requests. Please wait before fetching more questions.' }),
+          JSON.stringify({ success: false, error: 'Too many session start requests. Please wait before starting another quiz.' }),
           { status: 429, headers: { ...cors, 'Retry-After': String(windowSeconds) } }
         );
       }
       await env.QUIZ_SESSIONS.put(rateLimitKey, String(currentCount + 1), { expirationTtl: windowSeconds });
     }
-
-    const url = new URL(request.url);
-    const count = parseInt(url.searchParams.get('count') || '10', 10);
-    const limit = Math.min(Math.max(count, 1), 20);
 
     if (!env.DB) {
       return new Response(
@@ -56,15 +52,43 @@ export async function onRequestGet(context) {
     }
 
     const { results } = await env.DB.prepare(
-      `SELECT id, category, question_text, option_a, option_b, option_c, option_d, explanation, difficulty FROM questions ORDER BY RANDOM() LIMIT ?`
-    ).bind(limit).all();
+      `SELECT id, category, question_text, option_a, option_b, option_c, option_d, correct_option, explanation, difficulty FROM questions ORDER BY RANDOM() LIMIT 10`
+    ).all();
+
+    if (!results || results.length === 0) {
+      return new Response(
+        JSON.stringify({ success: false, error: 'No questions available.' }),
+        { status: 500, headers: cors }
+      );
+    }
+
+    const sessionId = crypto.randomUUID();
+    const correctAnswers = {};
+    const safeQuestions = results.map(q => {
+      correctAnswers[String(q.id)] = q.correct_option;
+      const { correct_option, ...safeQ } = q;
+      return safeQ;
+    });
+
+    if (env.QUIZ_SESSIONS) {
+      await env.QUIZ_SESSIONS.put(
+        `session:${sessionId}`,
+        JSON.stringify({ correctAnswers, createdAt: Date.now() }),
+        { expirationTtl: 1800 } // 30 minutes TTL
+      );
+    }
 
     return new Response(
-      JSON.stringify({ success: true, count: results.length, questions: results }),
+      JSON.stringify({
+        success: true,
+        sessionId,
+        count: safeQuestions.length,
+        questions: safeQuestions,
+      }),
       { status: 200, headers: cors }
     );
   } catch (err) {
-    console.error('[random] Unhandled error:', err.message, err.stack);
+    console.error('[session/start] Unhandled error:', err.message, err.stack);
     return new Response(
       JSON.stringify({ success: false, error: 'An internal error occurred. Please try again later.' }),
       { status: 500, headers: getCorsHeaders(context.request) }

@@ -1,26 +1,139 @@
+const ALLOWED_ORIGINS = [
+  'https://quiz.betteragoo.org',
+  'https://betteragoo.org',
+  'http://localhost:3000',
+  'http://localhost:8788',
+  'http://127.0.0.1:8788',
+];
+
+function getCorsHeaders(request) {
+  const origin = request.headers.get('Origin') || '';
+  const allowed = ALLOWED_ORIGINS.includes(origin) ? origin : ALLOWED_ORIGINS[0];
+  return {
+    'content-type': 'application/json; charset=utf-8',
+    'access-control-allow-origin': allowed,
+    'access-control-allow-methods': 'GET, POST, OPTIONS',
+    'access-control-allow-headers': 'Content-Type',
+    'Vary': 'Origin',
+  };
+}
+
+export async function onRequestOptions(context) {
+  return new Response(null, { status: 204, headers: getCorsHeaders(context.request) });
+}
+
 export async function onRequestPost(context) {
   try {
     const { env, request } = context;
+    const cors = getCorsHeaders(request);
+
+    // Rate Limiting: Max 1 submission per 60s per IP
+    if (env.QUIZ_SESSIONS) {
+      const ip = request.headers.get('CF-Connecting-IP') || '127.0.0.1';
+      const rateLimitKey = `ratelimit:submit:${ip}`;
+      const windowSeconds = 60;
+      const maxRequests = 1;
+      const currentCount = parseInt((await env.QUIZ_SESSIONS.get(rateLimitKey)) || '0', 10);
+
+      if (currentCount >= maxRequests) {
+        return new Response(
+          JSON.stringify({ success: false, error: 'Too many submissions. Please wait 60 seconds before submitting another trial.' }),
+          { status: 429, headers: { ...cors, 'Retry-After': String(windowSeconds) } }
+        );
+      }
+      await env.QUIZ_SESSIONS.put(rateLimitKey, String(currentCount + 1), { expirationTtl: windowSeconds });
+    }
+
     const body = await request.json();
 
-    const email = body.email ? body.email.trim().toLowerCase() : '';
-    const name = (body.name || body.player_name || '').trim().replace(/\s+/g, ' ');
-    const gender = body.gender || 'Prefer not to say';
-    const dob = body.dob || '2000-01-01';
-    const score = body.score !== undefined ? Number(body.score) : undefined;
-    const time_taken_seconds = body.time_taken_seconds !== undefined ? Number(body.time_taken_seconds) : (body.time !== undefined ? Number(body.time) : undefined);
-
-    if (!email || !name || score === undefined || time_taken_seconds === undefined) {
+    // 1. Email Sanitization & Validation
+    const emailRaw = body.email ? body.email.trim().toLowerCase() : '';
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRaw || emailRaw.length > 254 || !emailRegex.test(emailRaw)) {
       return new Response(
-        JSON.stringify({ success: false, error: 'Missing required parameters (email, name, score, time_taken_seconds).' }),
-        { status: 400, headers: { 'content-type': 'application/json' } }
+        JSON.stringify({ success: false, error: 'A valid email address is required.' }),
+        { status: 400, headers: cors }
+      );
+    }
+
+    // 2. Name Sanitization & Validation (Strip HTML unsafe chars & cap length at 80)
+    const rawName = (body.name || body.player_name || '').trim();
+    const cleanName = rawName
+      .replace(/\s+/g, ' ')
+      .replace(/[<>"'&]/g, '')
+      .slice(0, 80);
+
+    if (!cleanName || cleanName.length < 2) {
+      return new Response(
+        JSON.stringify({ success: false, error: 'Name must be at least 2 characters long.' }),
+        { status: 400, headers: cors }
+      );
+    }
+
+    // 3. Gender & DOB Validation
+    const validGenders = ['Male', 'Female', 'Prefer not to say'];
+    const gender = validGenders.includes(body.gender) ? body.gender : 'Prefer not to say';
+    
+    const dobRegex = /^\d{4}-\d{2}-\d{2}$/;
+    const dob = body.dob && dobRegex.test(body.dob) ? body.dob : '2000-01-01';
+
+    // 4. Time Validation (Must be between 30 seconds and 3600 seconds)
+    const time_taken_seconds = body.time_taken_seconds !== undefined
+      ? Number(body.time_taken_seconds)
+      : (body.time !== undefined ? Number(body.time) : undefined);
+
+    if (
+      time_taken_seconds === undefined ||
+      isNaN(time_taken_seconds) ||
+      time_taken_seconds < 30 ||
+      time_taken_seconds > 3600
+    ) {
+      return new Response(
+        JSON.stringify({ success: false, error: 'Invalid submission time. Trials require at least 30 seconds to complete.' }),
+        { status: 400, headers: cors }
+      );
+    }
+
+    // 5. Server-Side Score Verification via Session Token
+    let score = 0;
+    const sessionId = body.sessionId;
+    const userAnswers = body.answers || {};
+
+    if (sessionId && env.QUIZ_SESSIONS) {
+      const sessionRaw = await env.QUIZ_SESSIONS.get(`session:${sessionId}`);
+      if (!sessionRaw) {
+        return new Response(
+          JSON.stringify({ success: false, error: 'Invalid or expired quiz session. Please start a new trial.' }),
+          { status: 401, headers: cors }
+        );
+      }
+
+      // Delete session immediately to enforce single-use token
+      await env.QUIZ_SESSIONS.delete(`session:${sessionId}`);
+
+      const sessionData = JSON.parse(sessionRaw);
+      const correctAnswers = sessionData.correctAnswers || {};
+
+      // Calculate score server-side against verified answer key
+      for (const [qId, userChoice] of Object.entries(userAnswers)) {
+        if (correctAnswers[qId] && correctAnswers[qId] === userChoice) {
+          score++;
+        }
+      }
+    } else if (body.score !== undefined) {
+      // Fallback for offline / legacy score calculation with strict boundary check
+      score = Math.min(Math.max(Number(body.score) || 0, 0), 10);
+    } else {
+      return new Response(
+        JSON.stringify({ success: false, error: 'Session token or trial answers are required.' }),
+        { status: 400, headers: cors }
       );
     }
 
     const totalItems = 10;
     const percentage = Math.round((score / totalItems) * 100 * 10) / 10;
 
-    // Calculate Division Name based on potential rank / score
+    // Calculate Division Name based on score
     let divisionName = 'Agoho Trailblazer (#76-100)';
     if (score >= 9) {
       divisionName = 'Eagle Master (#1-25)';
@@ -32,8 +145,8 @@ export async function onRequestPost(context) {
 
     if (!env.DB) {
       return new Response(
-        JSON.stringify({ error: 'D1 Database binding (DB) not found.' }),
-        { status: 500, headers: { 'content-type': 'application/json' } }
+        JSON.stringify({ success: false, error: 'D1 Database binding (DB) not found.' }),
+        { status: 500, headers: cors }
       );
     }
 
@@ -69,7 +182,7 @@ export async function onRequestPost(context) {
           WHEN ?5 = quiz_sessions.high_score AND ?7 < quiz_sessions.time_taken_seconds THEN ?8
           ELSE quiz_sessions.division_name
         END;
-    `).bind(email.toLowerCase().trim(), name.trim(), gender || 'Prefer not to say', dob || '2000-01-01', score, percentage, time_taken_seconds, divisionName);
+    `).bind(emailRaw, cleanName, gender, dob, score, percentage, time_taken_seconds, divisionName);
 
     await upsertStmt.run();
 
@@ -78,7 +191,7 @@ export async function onRequestPost(context) {
       SELECT COUNT(*) + 1 as rank FROM quiz_sessions
       WHERE high_score > (SELECT high_score FROM quiz_sessions WHERE email = ?1)
          OR (high_score = (SELECT high_score FROM quiz_sessions WHERE email = ?1) AND time_taken_seconds < (SELECT time_taken_seconds FROM quiz_sessions WHERE email = ?1))
-    `).bind(email.toLowerCase().trim()).all();
+    `).bind(emailRaw).all();
 
     const rank = rankResults && rankResults[0] ? rankResults[0].rank : 1;
     const isTop100 = rank <= 100;
@@ -95,17 +208,13 @@ export async function onRequestPost(context) {
           ? `Outstanding! You placed #${rank} in the ${divisionName}!`
           : `Great effort! You placed #${rank} overall. You're ${rank - 100} spots away from the Top 100!`,
       }),
-      {
-        headers: {
-          'content-type': 'application/json; charset=utf-8',
-          'access-control-allow-origin': '*',
-        },
-      }
+      { status: 200, headers: cors }
     );
   } catch (err) {
-    return new Response(JSON.stringify({ success: false, error: err.message }), {
-      status: 500,
-      headers: { 'content-type': 'application/json' },
-    });
+    console.error('[submit] Unhandled error:', err.message, err.stack);
+    return new Response(
+      JSON.stringify({ success: false, error: 'An internal error occurred. Please try again later.' }),
+      { status: 500, headers: getCorsHeaders(context.request) }
+    );
   }
 }
