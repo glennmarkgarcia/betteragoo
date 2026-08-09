@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   let playerData = {
     name: '',
-    gender: 'Female',
+    gender: '',
     dob: '',
     email: ''
   };
@@ -145,8 +145,9 @@ document.addEventListener('DOMContentLoaded', () => {
       }
 
       playerData.name = regNameInput.value.trim().replace(/\s+/g, ' ');
-      playerData.gender = document.getElementById('reg-gender').value;
-      playerData.dob = document.getElementById('reg-dob').value;
+      const selectedGender = document.getElementById('reg-gender') ? document.getElementById('reg-gender').value : '';
+      playerData.gender = selectedGender || 'Prefer not to say';
+      playerData.dob = document.getElementById('reg-dob') ? document.getElementById('reg-dob').value : '';
 
       if (modalRegister) modalRegister.classList.remove('active');
       if (ctaHeroBox) ctaHeroBox.style.display = 'none';

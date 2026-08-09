@@ -1,0 +1,9 @@
+# Cloudflare Pages Security Headers for betteragoo.org
+/*
+  X-Frame-Options: SAMEORIGIN
+  X-Content-Type-Options: nosniff
+  X-XSS-Protection: 1; mode=block
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: geolocation=(self), microphone=(), camera=(), payment=(), usb=()
+  Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://unpkg.com https://cdn.jsdelivr.net https://connect.facebook.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.jsdelivr.net https://unpkg.com https://*.fbcdn.net; font-src 'self' https://fonts.gstatic.com https://cdn.jsdelivr.net; img-src 'self' data: blob: https: https://unpkg.com https://cdn.jsdelivr.net https://*.tile.openstreetmap.org https://www.google-analytics.com https://*.fbcdn.net https://*.facebook.com; connect-src 'self' blob: https://api.open-meteo.com https://api.exchangerate.host https://open.er-api.com https://www.google-analytics.com https://*.tile.openstreetmap.org https://unpkg.com https://cdn.jsdelivr.net https://www.facebook.com https://graph.facebook.com https://connect.facebook.net; frame-src 'self' https://www.openstreetmap.org https://www.google.com https://www.facebook.com https://web.facebook.com https://staticxx.facebook.com; worker-src 'self' blob:; object-src 'none'; base-uri 'self'; form-action 'self';

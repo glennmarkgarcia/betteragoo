@@ -2318,7 +2318,7 @@ const translations = {
     'faq-contact-us': 'Contact Us',
     'faq-contribute-code-with-us': 'Contribute code with us',
     'faq-currently-most-services-require-inperson': 'Yes! LGU Agoo has 11 live online service routes powered by eLGU BPLS at elgu-bpls.com for Business Permit billing & renewal, Real Property Tax billing & payment, Public Market rental fees, and Waterworks billing. Walk-in services are available at Municipal Hall, Monday to Friday 8:00 AM – 5:00 PM.',
-    'faq-currently-we-accept-cash-payments-at-the': 'Over-the-counter payments at the Municipal Treasurer\'s Office are made in cash. Online payments for Business Permits, Real Property Tax, Market Rental, and Water Bills are accepted 24/7 via debit card, credit card, and e-wallets through the Agoo eLGU BPLS portal.',s Office. We are working on implementing online payment options for taxes and fees.",
+    'faq-currently-we-accept-cash-payments-at-the': "Over-the-counter payments at the Municipal Treasurer's Office are made in cash. Online payments for Business Permits, Real Property Tax, Market Rental, and Water Bills are accepted 24/7 via debit card, credit card, and e-wallets through the Agoo eLGU BPLS portal.",
     'faq-dti-registration-for-sole-proprietorship-or-sec':
       'DTI Registration (for sole proprietorship) or SEC Registration (for corporation)',
     'faq-education': 'Education',
@@ -2372,7 +2372,7 @@ const translations = {
     'faq-to-start-a-new-business-youll-need': "To start a new business, you'll need:",
     'faq-valid-id-of-both-you-and-the-representative':
       'Valid ID of both you and the representative',
-    'faq-visit-the-municipal-treasurers-office-at-the': 'Real Property Tax in Agoo is 1% Basic Tax + 1% Special Education Fund (SEF) of the assessed property value. You can view your bill and pay online via eLGU BPLS RPT Billing or visit the Municipal Treasurer\'s Office (10-minute counter processing).',s Office at the Municipal Hall with your Tax Declaration or latest Official Receipt. Payment is in cash. Property taxes are due quarterly, but you may pay annually to avail of discounts.",
+    'faq-visit-the-municipal-treasurers-office-at-the': "Real Property Tax in Agoo is 1% Basic Tax + 1% Special Education Fund (SEF) of the assessed property value. You can view your bill and pay online via eLGU BPLS RPT Billing or visit the Municipal Treasurer's Office (10-minute counter processing).",
     'faq-volunteer-with-us': 'Volunteer with us',
     'faq-volunteerbetteragooorg': 'betteragoo@gmail.com',
     'faq-what-are-the-office-hours-of-the-municipal-hall':
