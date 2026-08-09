@@ -503,7 +503,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
           showSubmissionStatusModal({
             isSuccess: true,
-            subtitle: 'PLEDGE SEALED IN D1 DATABASE',
+            subtitle: 'PLEDGE SEALED IN THE HISTORY BOOK',
             title: 'RECORD INSCRIBED!',
             htmlBody: `
               <div style="font-size: 1.05rem; font-weight: 700; color: var(--gold-bright); margin-bottom: 8px;">
@@ -547,10 +547,10 @@ document.addEventListener('DOMContentLoaded', () => {
         submitBtn.disabled = false;
         submitBtn.innerText = 'Seal My Name in the Records →';
 
-        let offlineDivision = 'Agoho Trailblazer (#76-100)';
-        if (score >= 9) offlineDivision = 'Eagle Master (#1-25)';
-        else if (score >= 8) offlineDivision = 'Basilica Scholar (#26-50)';
-        else if (score >= 6) offlineDivision = 'Dinengdeng Explorer (#51-75)';
+        let offlineDivision = 'Agoho Trailblazer';
+        if (score >= 9) offlineDivision = 'Eagle Master';
+        else if (score >= 8) offlineDivision = 'Basilica Scholar';
+        else if (score >= 6) offlineDivision = 'Dinengdeng Explorer';
 
         const certUrl = `certificate/?name=${encodeURIComponent(playerData.name || 'Valiant Hero')}&rank=1&score=${encodeURIComponent(score)}&division=${encodeURIComponent(offlineDivision)}&time=${encodeURIComponent(secondsElapsed)}`;
 

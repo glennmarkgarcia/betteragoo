@@ -134,13 +134,13 @@ export async function onRequestPost(context) {
     const percentage = Math.round((score / totalItems) * 100 * 10) / 10;
 
     // Calculate Division Name based on score
-    let divisionName = 'Agoho Trailblazer (#76-100)';
+    let divisionName = 'Agoho Trailblazer';
     if (score >= 9) {
-      divisionName = 'Eagle Master (#1-25)';
+      divisionName = 'Eagle Master';
     } else if (score >= 8) {
-      divisionName = 'Basilica Scholar (#26-50)';
+      divisionName = 'Basilica Scholar';
     } else if (score >= 6) {
-      divisionName = 'Dinengdeng Explorer (#51-75)';
+      divisionName = 'Dinengdeng Explorer';
     }
 
     if (!env.DB) {
