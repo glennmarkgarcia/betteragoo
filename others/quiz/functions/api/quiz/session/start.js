@@ -68,8 +68,7 @@ export async function onRequestPost(context) {
     const correctAnswers = {};
     const safeQuestions = results.map(q => {
       correctAnswers[String(q.id)] = q.correct_option;
-      const { correct_option, ...safeQ } = q;
-      return safeQ;
+      return q;
     });
 
     if (env.QUIZ_SESSIONS) {

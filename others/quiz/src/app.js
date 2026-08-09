@@ -607,10 +607,18 @@ document.addEventListener('DOMContentLoaded', () => {
       const q = normalizeQuestion(rawQ);
       if (!q) return null;
 
-      const origCorrectKey = q.correct_option; // 'A', 'B', 'C', or 'D'
-      const origCorrectText = q.options[origCorrectKey] || '';
-      
       const allKeys = ['A', 'B', 'C', 'D'];
+      const origCorrectKey = q.correct_option; // 'A', 'B', 'C', or 'D'
+
+      // Defensive Guard: If correct_option is missing or invalid, do not attempt option shuffling
+      if (!origCorrectKey || !allKeys.includes(origCorrectKey)) {
+        return {
+          ...q,
+          origLetterMap: { A: 'A', B: 'B', C: 'C', D: 'D' }
+        };
+      }
+
+      const origCorrectText = q.options[origCorrectKey] || '';
       const distractorKeys = allKeys.filter(key => key !== origCorrectKey);
       
       // Shuffle distractors
